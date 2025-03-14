@@ -1,0 +1,70 @@
+<?php
+
+namespace App\ListBuilders\Admin;
+
+use App\ListBuilders\ListBuilder;
+use App\ListBuilders\ListBuilderColumn;
+use App\Models\IcoBonus;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Http\Request;
+
+class IcoPurchaseBonusListBuilder extends ListBuilder
+{
+    public static string $name = 'Ico Bonus';
+
+    public static function query(array $extras = [], ?Request $request = null): Builder
+    {
+        $query = IcoBonus::with('member.user');
+
+        return self::buildQuery(
+            $query,
+            $request
+        );
+    }
+
+    public static function columns(): array
+    {
+        return [
+            new ListBuilderColumn(
+                name: 'Date',
+                property: 'created_at',
+                filterType: ListBuilderColumn::TYPE_DATE_RANGE
+            ),
+            new ListBuilderColumn(
+                name: settings('member_name').' ID',
+                property: 'member.code',
+                filterType: ListBuilderColumn::TYPE_TEXT,
+                canCopy: true,
+            ),
+            new ListBuilderColumn(
+                name: settings('member_name').'name',
+                property: 'member.user.name',
+                filterType: ListBuilderColumn::TYPE_TEXT
+            ),
+            new ListBuilderColumn(
+                name: 'Coin Price (Euro)',
+                property: 'coin_price',
+                filterType: ListBuilderColumn::TYPE_NUMBER_RANGE,
+                exportCallback: function ($model) {
+                    return $model->coin_price > 0 ? toHumanReadable($model->coin_price) : '0';
+                },
+            ),
+            new ListBuilderColumn(
+                name: 'Amount (Euro)',
+                property: 'euro_amount',
+                filterType: ListBuilderColumn::TYPE_NUMBER_RANGE,
+                exportCallback: function ($model) {
+                    return $model->euro_amount > 0 ? toHumanReadable($model->euro_amount) : '0';
+                },
+            ),
+            new ListBuilderColumn(
+                name: 'Amount ('.env('APP_CURRENCY').')',
+                property: 'amount',
+                filterType: ListBuilderColumn::TYPE_NUMBER_RANGE,
+                exportCallback: function ($model) {
+                    return $model->amount > 0 ? toHumanReadable($model->amount) : '0';
+                },
+            ),
+        ];
+    }
+}

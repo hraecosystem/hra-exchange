@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('ico_purchases', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('member_id')->constrained();
+            $table->unsignedBigInteger('ico_detail_id')->nullable();
+            $table->foreignId('deposit_id')->nullable()->constrained();
+            $table->decimal('coin_price', 30, 18);
+            $table->decimal('euro_amount', 30, 18);
+            $table->decimal('amount', 30, 18);
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('ico_purchases');
+    }
+};
