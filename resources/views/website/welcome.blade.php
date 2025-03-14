@@ -276,8 +276,6 @@
         }
 
         .hra-epay {
-            margin-left: 2em;
-            margin-right: 2em;
             padding: 2rem 0;
             margin-bottom: 2rem;
         }
@@ -730,46 +728,6 @@
             background-color: #2d2668;
             transform: translateY(-2px);
         }
-
-        .oe.of.zg.wg {
-            display: inline-flex;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: linear-gradient(90deg, #376DF9, #393185);
-            color: white;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 3rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: fadeIn 1s ease-out 0.6s;
-            opacity: 0;
-            animation-fill-mode: forwards;
-        }
-
-        .pa.li.pi.ui.yi.vl.bo {
-            font-size: 3.5rem;
-            font-weight: 700;
-            background: linear-gradient(90deg, #376DF9, #393185);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 2rem;
-            line-height: 1.2;
-        }
-
-        .bottom:after {
-            content: '';
-            position: absolute;
-            width: 60%;
-            height: 3px;
-            background: linear-gradient(90deg, #376DF9 0%, #2d2668 100%);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-        
-        /* Amélioration des animations */
     </style>
 </head>
 
@@ -859,10 +817,10 @@
         <div class="ha qb _d">
             <div class="jc ng">
                 <div class="la  fi">
-                    <h1 class="pa li pi ui yi vl bo bottom">
+                    <h1 class="pa li pi ui yi vl bo bottom" style="color: #393185;">
                         Welcome to HRA Experience Ecosystem
                     </h1>
-                    <p class="la pa gd gi qi xi vl">
+                    <p class="la pa gd gi qi xi vl" style="color: #393185;">
                         Discover a revolutionary platform that transforms travel, payments, and finance through blockchain and digital solutions
                     </p>
                    
@@ -985,7 +943,7 @@
     </div>
 </section>
 
-<section id="components" class="th zh" style="background: linear-gradient(180deg, #393185 0%, #2d2668 100%);">
+<section id="components" class="th zh" style="background: linear-gradient(180deg, #1a237e 0%, #0d47a1 100%);">
     <div class="a">
         <div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
             <span class="fn" style="background: rgba(255, 255, 255, 0.1); color: white;">Our Solutions</span>
@@ -1227,7 +1185,7 @@
     </div>
 </section>
 
-<section id="companies" class="th zh" style="background: linear-gradient(180deg, #393185 0%, #2d2668 100%);">
+<section id="companies" class="th zh" style="background: linear-gradient(180deg, #1a237e 0%, #0d47a1 100%);">
     <div class="companies-header">
         <h1 style="color: white;">Our Companies</h1>
         <p class="companies-subtitle" style="color: rgba(255, 255, 255, 0.8);">Discover our ecosystem of innovative companies</p>
@@ -1623,8 +1581,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Configuration du graphique
-    const options = {
+    var options = {
         series: [30, 20, 15, 15, 10, 10],
         chart: {
             type: 'pie',
@@ -1705,35 +1662,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }]
     };
 
-    // Initialisation du graphique avec gestion d'erreurs
-    function initChart() {
-        try {
-            const chartElement = document.querySelector("#tokenomicsChart");
-            if (!chartElement) {
-                console.error("L'élément #tokenomicsChart n'a pas été trouvé");
-                return;
-            }
-
-            if (typeof ApexCharts === 'undefined') {
-                console.error("La bibliothèque ApexCharts n'est pas chargée");
-                return;
-            }
-
-            const chart = new ApexCharts(chartElement, options);
-            chart.render().catch(error => {
-                console.error("Erreur lors du rendu du graphique:", error);
-            });
-
-        } catch (error) {
-            console.error("Erreur lors de l'initialisation du graphique:", error);
+    try {
+        var chartElement = document.querySelector("#tokenomicsChart");
+        if (chartElement) {
+            var chart = new ApexCharts(chartElement, options);
+            chart.render();
+        } else {
+            console.error("L'élément #tokenomicsChart n'a pas été trouvé");
         }
-    }
-
-    // Attendre que la bibliothèque ApexCharts soit chargée
-    if (document.readyState === 'complete') {
-        initChart();
-    } else {
-        window.addEventListener('load', initChart);
+    } catch (error) {
+        console.error("Erreur lors de l'initialisation du graphique:", error);
     }
 });
 </script>
@@ -2284,6 +2222,7 @@ let currentIndexTestimonial = 1;
 
 // ... existing code ...
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script>
     var options = {
@@ -2348,4 +2287,3 @@ let currentIndexTestimonial = 1;
     var chart = new ApexCharts(document.querySelector("#tokenomicsChart"), options);
     chart.render();
 </script>
-
