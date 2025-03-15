@@ -1268,7 +1268,7 @@
                         </div>
                     </div>
 
-                    <div class="web3-links">
+                    <div class="web3-links"style="color: #393185;" >
                         <a href="https://www.hra-web3.com" target="_blank" rel="noopener noreferrer" class="primary-btn" style="margin: 1em 0; width: 200px; text-align: center;">
                             Visit HRA Web3
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -1339,7 +1339,7 @@
                         </div>
                     </div>
 
-                    <div class="epay-links">
+                    <div class="epay-links" style="color: #393185;">
                         <a href="https://www.hra-epay.com" target="_blank" rel="noopener noreferrer" class="primary-btn" style="margin: 1em 0; width: 200px; text-align: center;">
                             Visit HRA-ePay
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -1410,7 +1410,7 @@
                         </div>
                     </div>
 
-                    <div class="brokers-links">
+                    <div class="brokers-links" style="color: #393185;">
                         <a href="https://www.hra-brokers.com" target="_blank" rel="noopener noreferrer" class="primary-btn" style="margin: 1em 0; width: 200px; text-align: center;">
                             Visit HRA Exchange
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -1481,7 +1481,7 @@
                         </div>
                     </div>
 
-                    <div class="epay-links">
+                    <div class="epay-links" style="color: #393185;">
                         <a href="https://www.littleoummah.com" target="_blank" rel="noopener noreferrer" class="primary-btn" style="margin: 1em 0; width: 200px; text-align: center;">
                             Visit Little Oummah
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
