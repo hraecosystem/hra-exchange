@@ -1235,7 +1235,11 @@
     </div>
 
     <!-- 1. HRA Web3 -->
-    <section class="hra-epay">
+    <section class="hra-epay" style="
+    background: white;
+    border-radius: 25px;
+    padding: 1em;
+">
         <div class="a">
             <div class="epay-header">
                 <h2 style="color: #393185;">HRA Web3</h2>
@@ -1302,7 +1306,11 @@
     </section>
 
     <!-- 2. HRA ePay -->
-    <section class="hra-epay">
+    <section class="hra-epay" style="
+    background: white;
+    border-radius: 25px;
+    padding: 1em;
+">
         <div class="a">
             <div class="epay-header">
                 <h2 style="color: #393185;">HRA ePay</h2>
@@ -1369,7 +1377,11 @@
     </section>
 
     <!-- 3. HRA Financial Brokers -->
-    <section class="hra-epay">
+    <section class="hra-epay" style="
+    background: white;
+    border-radius: 25px;
+    padding: 1em;
+">
         <div class="a">
             <div class="epay-header">
                 <h2 style="color: #393185;">HRA Financial Brokers</h2>
@@ -1436,7 +1448,11 @@
     </section>
 
     <!-- 4. Little Oummah -->
-    <section class="hra-epay">
+    <section class="hra-epay" style="
+    background: white;
+    border-radius: 25px;
+    padding: 1em;
+">
         <div class="a">
             <div class="epay-header">
                 <h2 style="color: #393185;">Little Oummah</h2>
