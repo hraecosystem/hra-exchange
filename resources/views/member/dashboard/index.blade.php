@@ -109,6 +109,45 @@
                         </div>
                     </a>
                 </div>
+                <!--New cards-->
+                <div class="col-lg-12">
+    <div class="card currency-bx overflow-hidden relative bg-warning mb-3">
+        <div class="card-body p-4">
+            <div class="media align-items-center">
+                <div class="media-body">
+                    <h5 class="text-white fs-20">Cold Wallet Balance</h5>
+                    <h1 class="text-white mb-0">
+                        {{ $totalPurchaseCoin }}
+                    </h1>
+                </div>
+                <div class="currency-icon">
+                    <i class="fa-duotone fa-snowflake text-warning"></i>
+                </div>
+            </div>
+        </div>
+        <img class="bg-img" src="{{ asset('images/icons/cold-wallet.png') }}" alt=""/>
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <div class="card currency-bx overflow-hidden relative bg-info mb-3">
+        <div class="card-body p-4">
+            <div class="media align-items-center">
+                <div class="media-body">
+                    <h5 class="text-white fs-20">HRA Card Balance</h5>
+                    <h1 class="text-white mb-0">
+                        {{ $totalPurchaseCoin }}
+                    </h1>
+                </div>
+                <div class="currency-icon">
+                    <i class="fa-duotone fa-credit-card text-info"></i>
+                </div>
+            </div>
+        </div>
+        <img class="bg-img" src="{{ asset('images/hra-card.png') }}" alt=""/>
+    </div>
+</div>
+
             </div>
             @if(settings('social_link'))
                 <div class="row">
