@@ -239,14 +239,7 @@
                                 <h1 class="mb-0 text-primary">
                                     1 {{ env('APP_CURRENCY') }} = € {{ $liveICO->price  }}
                                 </h1>
-                                
-                            </div>
-                            <div class="mb-0">
-                                <h4 class="mb-1"> ICO Details</h4>
-                                <span
-                                    class="">{{ Carbon\Carbon::parse($liveICO['start_date'])->format('jS M Y')  }} - {{ Carbon\Carbon::parse($liveICO['end_date'])->format('jS M Y')  }}</span>
-                            </div>
-                            <div class="card mt-4">
+                                <div class="card mt-4">
     <div class="card-body">
         <h4 class="mb-3">Live HRA Coin Price Chart</h4>
         <iframe
@@ -259,6 +252,13 @@
         </iframe>
     </div>
 </div>
+                            </div>
+                            <div class="mb-0">
+                                <h4 class="mb-1"> ICO Details</h4>
+                                <span
+                                    class="">{{ Carbon\Carbon::parse($liveICO['start_date'])->format('jS M Y')  }} - {{ Carbon\Carbon::parse($liveICO['end_date'])->format('jS M Y')  }}</span>
+                            </div>
+                            
 
                         </div>
                     @endif
