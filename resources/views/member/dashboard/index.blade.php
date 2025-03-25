@@ -246,7 +246,8 @@
                                 <span
                                     class="">{{ Carbon\Carbon::parse($liveICO['start_date'])->format('jS M Y')  }} - {{ Carbon\Carbon::parse($liveICO['end_date'])->format('jS M Y')  }}</span>
                             </div>
-                            
+                            <div class="card mt-4">
+    <div class="card-body">
         <h4 class="mb-3">Live HRA Coin Price Chart</h4>
         <iframe
             src="https://dexscreener.com/bsc/0x5e64326ce6df66cdfa62f8b154097bf536233451?embed=1"
@@ -256,7 +257,8 @@
             style="border:none;overflow:hidden;border-radius:12px;"
             sandbox="allow-scripts allow-same-origin allow-popups">
         </iframe>
- 
+    </div>
+</div>
 
                         </div>
                     @endif
