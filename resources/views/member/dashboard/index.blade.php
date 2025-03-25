@@ -229,7 +229,7 @@
                 </div>
             @endif
         </div>
-        <div class="col-xl-6 assets-al ">
+        <!-- <div class="col-xl-6 assets-al ">
             <div class="card">
                 <div class="card-body text-center">
                     @if($liveICO)
@@ -253,19 +253,35 @@
                 </div>
             </div>
             
-        </div>
-        <div class="col-xl-12 mt-3">
+        </div> -->
+        <div class="col-xl-6 assets-al">
     <div class="card">
-        <div class="card-body">
-            <h4 class="mb-3 text-center">Live HRA Coin Price Chart</h4>
-            <iframe 
-                src="https://dexscreener.com/bsc/0x5e64326ce6df66cdfa62f8b154097bf536233451?embed=1" 
-                frameborder="0" 
-                width="100%" 
-                height="400" 
-                style="border:none;overflow:hidden;border-radius:12px;"
-                sandbox="allow-scripts allow-same-origin allow-popups">
-            </iframe>
+        <div class="card-body text-center">
+            @if($liveICO)
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                        <h4 class="mb-0">Current Coin Price</h4>
+                        <h1 class="mb-0 text-primary">
+                            1 {{ env('APP_CURRENCY') }} = € {{ $liveICO->price  }}
+                        </h1>
+                    </div>
+                    <div class="mb-0">
+                        <h4 class="mb-1">ICO Details</h4>
+                        <span>{{ Carbon\Carbon::parse($liveICO['start_date'])->format('jS M Y') }} - {{ Carbon\Carbon::parse($liveICO['end_date'])->format('jS M Y') }}</span>
+                    </div>
+                </div>
+
+                {{-- PancakeSwap Chart --}}
+                <div class="chart-container" style="width: 100%; height: 400px; border-radius: 12px; overflow: hidden;">
+                    <iframe 
+                        src="https://pancakeswap.finance/info/token/0x5e64326ce6df66cdfa62f8b154097bf536233451" 
+                        width="100%" 
+                        height="100%" 
+                        style="border: none;"
+                        sandbox="allow-scripts allow-same-origin allow-popups">
+                    </iframe>
+                </div>
+            @endif
         </div>
     </div>
 </div>
