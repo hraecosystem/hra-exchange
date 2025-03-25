@@ -1109,11 +1109,11 @@
 <section id="roadmap" class="e ca gh">
     <div class="a">
         <div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
-            <span class="va gi pi ri bj fn"> Roadmap </span>
-            <h2 class="va li pi ui yi vl bo">HRA Coin Roadmap</h2>
+            <span class="va gi pi ri bj fn"> Timeline </span>
+            <h2 class="va li pi ui yi vl bo">HRA Coin Timeline</h2>
             <p class="gi qi xi ul">
                 HRA Coin is developed on the Binance Smart Chain (BSC), a reliable blockchain known for its high speed
-                and low transaction costs. Below is the detailed about our roadmap
+                and low transaction costs.
             </p>
         </div>
         <div class="ha qb de">
@@ -1124,7 +1124,7 @@
                         <div class="e ca ra me nf hh sg gl rn sn ao oo">
                             <span class="d h/2 l sb ec tc qd/2 oe te df kf bl mn nn un io"></span>
                             <span class="d x h/2 sb bc qc qd/2 sd nf gl un"></span>
-                            <h3 class="va ji pi yi vl">Q4 2024</h3>
+                            <h3 class="va ji pi yi vl">1. June 2024</h3>
                             <h3 class="va ji pi yi vl">Preparation & Planning</h3>
                             <p class="za ii qi xi ul">
                                 <b>Planning & Development:</b>
@@ -1137,8 +1137,8 @@
                                 HRA Coin.
                             </p>
                             <p class="za ii qi xi ul">
-                                <b>Private Sale:</b>
-                                Preparations for the Initial Coin Offering for private investors are initiated, including the setup of
+                                <b>ICO Preparation:</b>
+                                Preparations for the Initial Coin Offering (ICO) are initiated, including the setup of
                                 sales platforms.
                             </p>
                         </div>
@@ -1149,16 +1149,17 @@
                         <div class="e ca ra me nf hh sg gl tn sn po">
                             <span class="d h/2 l sb ec tc qd/2 oe te df kf bl on pn un jo"></span>
                             <span class="d y h/2 sb bc qc qd/2 sd nf gl un"></span>
-                            <h3 class="va ji pi yi vl">Q1 2025</h3>
-                            <h3 class="va ji pi yi vl">HRA Coin Private Sale and Development of HRA Ecosystem</h3>
+                            <h3 class="va ji pi yi vl">2. August 2024</h3>
+                            <h3 class="va ji pi yi vl">Website & Marketing</h3>
                             <p class="za ii qi xi ul">
-                                <b>HRA Coin Private Sale on website:</b>
+                                <b>Website Development:</b>
                                 The HRA Coin website is launched, featuring a purchase module where investors can buy
                                 HRA Coin at 1 euro per coin.
                             </p>
                             <p class="za ii qi xi ul">
-                                <b>Development:</b>
-                                Development of HRA platforms e.g HRA exchange, HRA Epay, HRA Airlines, HRA Experience, HRA Crypto Wallet and HRA Centralized Database and MVP ready for launch
+                                <b>Marketing Campaign:</b>
+                                A marketing campaign is initiated to raise awareness of HRA Coin and highlight the
+                                benefits of investing.
                             </p>
                         </div>
                     </div>
@@ -1166,20 +1167,17 @@
                         <div class="e ca ra me nf hh sg gl rn sn ao oo">
                             <span class="d h/2 l sb ec tc qd/2 oe te df kf bl mn nn un io"></span>
                             <span class="d x h/2 sb bc qc qd/2 sd nf gl un"></span>
-                            <h3 class="va ji pi yi vl">Q2 2025</h3>
-                            <h3 class="va ji pi yi vl">Development + Marketing + Launch</h3>
+                            <h3 class="va ji pi yi vl">3. October 2024</h3>
+                            <h3 class="va ji pi yi vl">Strengthening Partnerships</h3>
                             <p class="za ii qi xi ul">
-                                <b>Development:</b>
-                                Completion of development of all of our HRA platforms and availability for all users on web and mobile devices.
+                                <b>Expanding Partnerships:</b>
+                                Partners are confirmed to accept HRA Coin for payments within their
+                                services.
                             </p>
                             <p class="za ii qi xi ul">
-                                <b>Marketing:</b>
-                                Marketing For HRA ecosystem start and community building. Preparation for HRA Coin Launch for public.
+                                <b>Financial Plan:</b>
+                                A detailed financial plan will be created for the ICO launch and the period ahead.
                             </p>
-                            <p class="za ii qi xi ul">
-                                <b>HRA Coin Launch:</b>
-                            Launch of HRA Coin on HRA Exchange and listing on other centralized and decentralized exchanges. Listing on CMC & CG.
-                          </p>
                         </div>
                     </div>
                     <div class="jc ng vn/2"></div>
@@ -1188,19 +1186,17 @@
                         <div class="e ca ra me nf hh sg gl tn sn po">
                             <span class="d h/2 l sb ec tc qd/2 oe te df kf bl on pn un jo"></span>
                             <span class="d y h/2 sb bc qc qd/2 sd nf gl un"></span>
-                            <h3 class="va ji pi yi vl">Q3 2025</h3>
-                            <h3 class="va ji pi yi vl">Partnerships and New Features in platforms</h3>
+                            <h3 class="va ji pi yi vl">4. December 2024</h3>
+                            <h3 class="va ji pi yi vl">ICO Phase Start</h3>
                             <p class="za ii qi xi ul">
-                                <b>Partnerships:</b>
-                                Expansion of our ecosystem by partnering with other companies.
+                                <b>Official ICO Launch:</b>
+                                On December 1, 2024, the initial coin offering of HRA Coin will officially launch,
+                                allowing global access to investors.
                             </p>
                             <p class="za ii qi xi ul">
-                                <b>Further Development:</b>
-                                New features in the HRA platforms with mobile apps ready and available for users.
-                            </p>
-                            <p class="za ii qi xi ul">
-                                <b>Community Growth and Marketing:</b>
-                                Expanding our community and taking more investors onboard. Listing of HRA Coin on some more exchanges.
+                                <b>Community Engagement:</b>
+                                Early investors will be able to purchase HRA Coin via the website, starting at 1 Euro
+                                per coin. Active promotion and community engagement continues.
                             </p>
                         </div>
                     </div>
@@ -1209,7 +1205,7 @@
                         <div class="e ca ra me nf hh sg gl rn sn ao oo">
                             <span class="d h/2 l sb ec tc qd/2 oe te df kf bl mn nn un io"></span>
                             <span class="d x h/2 sb bc qc qd/2 sd nf gl un"></span>
-                            <h3 class="va ji pi yi vl">Q4 2025</h3>
+                            <h3 class="va ji pi yi vl">5. 2025</h3>
                             <h3 class="va ji pi yi vl">Further Growth & Innovation</h3>
                             <p class="za ii qi xi ul">
                                 <b>Expand Partnerships:</b>
@@ -1247,7 +1243,7 @@
         <div class="a">
             <div class="epay-header">
                 <h2 style="color: #393185;">HRA Web3</h2>
-                <p style="color: #393185;">Your Trusted Blockchain Solution in UAE</p>
+                <p style="color: #393185;">Your Trusted Blockchain Solution in Dubai</p>
             </div>
 
             <div class="epay-grid">
@@ -1257,7 +1253,7 @@
                             <path d="M12 13.5C13.6569 13.5 15 12.1569 15 10.5C15 8.84315 13.6569 7.5 12 7.5C10.3431 7.5 9 8.84315 9 10.5C9 12.1569 10.3431 13.5 12 13.5Z" stroke="currentColor" stroke-width="2"/>
                             <path d="M12 22C14 18 20 15.4183 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 15.4183 10 18 12 22Z" stroke="currentColor" stroke-width="2"/>
                         </svg>
-                        <span>Abu Dhabi, UAE</span>
+                        <span>Dubai, UAE</span>
                     </div>
                     
                     <h3>Licensed Blockchain Institution</h3>
@@ -1451,7 +1447,7 @@
         </div>
     </section>
 
-    <!-- 4. Europ Invest Group -->
+    <!-- 4. Little Oummah -->
     <section class="hra-epay" style="
     background: white;
     border-radius: 25px;
@@ -1459,8 +1455,8 @@
 ">
         <div class="a">
             <div class="epay-header">
-                <h2 style="color: #393185;">Europe Invest Group</h2>
-                <p style="color: #393185;">Your reliable investment partner based in Belgium</p>
+                <h2 style="color: #393185;">Little Oummah</h2>
+                <p style="color: #393185;">Your Trusted Islamic Education Platform in Brussels</p>
             </div>
 
             <div class="epay-grid">
@@ -1473,8 +1469,8 @@
                         <span>Mechelen, Belgium</span>
                     </div>
                     
-                    <h3>Licensed</h3>
-                    <p>urope Invest Group is a Belgian investment company that actively supports innovative projects within the HRA Experience ecosystem</p>
+                    <h3>Licensed Islamic Education Institution</h3>
+                    <p>Little Oummah is a regulated educational platform providing Islamic education and resources for children worldwide.</p>
                     
                     <div class="epay-features">
                         <div class="feature">
@@ -1486,20 +1482,20 @@
                     </div>
 
                     <div class="epay-links" style="color: #393185;">
-                        <a href="https://www.hra-experience.com" target="_blank" rel="noopener noreferrer" class="primary-btn" style="margin: 1em 0; width: 200px; text-align: center;">
-                            Visit HRA Experience
+                        <a href="https://www.littleoummah.com" target="_blank" rel="noopener noreferrer" class="primary-btn" style="margin: 1em 0; width: 200px; text-align: center;">
+                            Visit Little Oummah
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                 <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </a>
                         <div class="social-links">
                          
-                            <a href="https://www.instagram.com/hra_experience/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <a href="https://www.instagram.com/littleoummah/" target="_blank" rel="noopener noreferrer" class="social-link">
                                 <i class="fab fa-instagram"></i>
                                 Instagram
                             </a>,
                             
-                            <a href="https://www.tiktok.com/@hraexperience" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <a href="https://www.tiktok.com/@littleoummah" target="_blank" rel="noopener noreferrer" class="social-link">
                                 <i class="fab fa-tiktok"></i>
                                 TikTok
                             </a>
@@ -1509,7 +1505,7 @@
 
                 <div class="epay-visual">
                     <div class="epay-card">
-                        <img src="{{ asset('images/europgroupinvest.png') }}" alt="Europ Group" class="epay-logo" />
+                        <img src="{{ asset('images/little-oummah.png') }}" alt="Little Oummah" class="epay-logo" />
                     </div>
                 </div>
             </div>
@@ -1578,24 +1574,6 @@
                 <div class="jc ng yo/2">
                     <div class="wow fadeInUp ib" data-wow-delay="0s">
                         <span class="va gi pi ri bj fn">Tokenomics</span>
-                        <p class="gi qi xi ul">
-                        Token Name: HRA Coin 
-                        </p>
-                        <p class="gi qi xi ul">
-                        Token Symbol: HRA
-                        </p><p class="gi qi xi ul">
-                        Blockchain: Binance Smart Chain (BEP-20)</p><br>
-                        <p class="gi qi xi ul">
-                        Contract Address: 0x5E64326cE6DF66CDfa62F8B154097BF536233451</p><br>
-                        <p class="gi qi xi ul">
-                        Total Supply: 1,000,000,000 HRA (1 Billion)</p>
-                        <p class="gi qi xi ul">
-                        Decimals: 18</p>
-                        <p class="gi qi xi ul">
-                        Token Standard: BEP-20</p>
-                        <p class="gi qi xi ul">
-                        Token Type: Utility Token
-                        </p>
                         <h2 class="va li pi ui yi vl bo">Revenue Distribution</h2>
                         <p class="gi qi xi ul">
                             The revenue distribution within the HRA ecosystem is structured as follows:
@@ -1842,7 +1820,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </button>
                     <div x-show="openFaq1" class="faq-content">
                         <p class="ar bi ii xi ul">
-                            HRA Coin is a digital currency developed by HRA Ecosystem, specifically designed for use
+                            HRA Coin is a digital currency developed by HRA Experience, specifically designed for use
                             within its ecosystem which includes services such as travel and hotel bookings.
                             Users can use HRA Coin to pay for various products and services, while partners, including
                             airlines, accept it as a payment method.
@@ -1904,7 +1882,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="ar bi ii xi ul">
                             The value of HRA Coin is subject to market demand and supply fluctuations.
                             During the Initial Coin Offering (ICO), you can buy HRA Coin for 1 euro per coin.
-                            Once the coin is available on cryptocurrency exchanges starting Q2 , 2025, the
+                            Once the coin is available on cryptocurrency exchanges starting February 1, 2025, the
                             initial trading price will be 3 euros.
                             Its value may rise or fall depending on market conditions.
                         </p>
@@ -2001,7 +1979,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="jc ng qm/2">
                         <div class="wow fadeInUp lb _c" data-wow-delay="0s">
                             <h3 class="pa gi oi aj vl">Phone Number</h3>
-                            <p class="ii qi wi xi ul">+971 26 322 569</p>
+                            <p class="ii qi wi xi ul">+971 585484314</p>
                         </div>
                     </div>
                 </div>
