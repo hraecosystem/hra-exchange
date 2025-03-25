@@ -252,21 +252,24 @@
                     @endif
                 </div>
             </div>
-            <div class="card mt-4">
-    <div class="card-body">
-        <h4 class="mb-3">Live HRA Coin Price Chart</h4>
-        <iframe
-            src="https://dexscreener.com/bsc/0x5e64326ce6df66cdfa62f8b154097bf536233451?embed=1"
-            frameborder="0"
-            width="100%"
-            height="300"
-            style="border:none;overflow:hidden;border-radius:12px;"
-            sandbox="allow-scripts allow-same-origin allow-popups">
-        </iframe>
+            
+        </div>
+        <div class="col-xl-12 mt-3">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="mb-3 text-center">Live HRA Coin Price Chart</h4>
+            <iframe 
+                src="https://dexscreener.com/bsc/0x5e64326ce6df66cdfa62f8b154097bf536233451?embed=1" 
+                frameborder="0" 
+                width="100%" 
+                height="400" 
+                style="border:none;overflow:hidden;border-radius:12px;"
+                sandbox="allow-scripts allow-same-origin allow-popups">
+            </iframe>
+        </div>
     </div>
 </div>
-        </div>
-        
+
     </div>
     @if($icoLists)
         <div class="row">
