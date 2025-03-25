@@ -239,26 +239,25 @@
                                 <h1 class="mb-0 text-primary">
                                     1 {{ env('APP_CURRENCY') }} = € {{ $liveICO->price  }}
                                 </h1>
-                                <div class="card">
-    <div class="card-body">
-        <h4 class="mb-3">Live HRA-Coin Price Chart</h4>
-        <iframe
-            src="https://dexscreener.com/bsc/0x5e64326ce6df66cdfa62f8b154097bf536233451?embed=1"
-            frameborder="0"
-            width="100%"
-            height="400px"
-            style="border-radius: 12px; border: none; overflow: hidden;"
-            allowfullscreen>
-        </iframe>
-    </div>
-</div>
-
+                                
                             </div>
                             <div class="mb-0">
                                 <h4 class="mb-1"> ICO Details</h4>
                                 <span
                                     class="">{{ Carbon\Carbon::parse($liveICO['start_date'])->format('jS M Y')  }} - {{ Carbon\Carbon::parse($liveICO['end_date'])->format('jS M Y')  }}</span>
                             </div>
+                            
+        <h4 class="mb-3">Live HRA Coin Price Chart</h4>
+        <iframe
+            src="https://dexscreener.com/bsc/0x5e64326ce6df66cdfa62f8b154097bf536233451?embed=1"
+            frameborder="0"
+            width="100%"
+            height="300"
+            style="border:none;overflow:hidden;border-radius:12px;"
+            sandbox="allow-scripts allow-same-origin allow-popups">
+        </iframe>
+ 
+
                         </div>
                     @endif
                 </div>
