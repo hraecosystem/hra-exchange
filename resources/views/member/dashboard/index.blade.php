@@ -252,8 +252,7 @@
                     @endif
                 </div>
             </div>
-        </div>
-        <div class="card mt-4">
+            <div class="card mt-4">
     <div class="card-body">
         <h4 class="mb-3">Live HRA Coin Price Chart</h4>
         <iframe
@@ -266,6 +265,8 @@
         </iframe>
     </div>
 </div>
+        </div>
+        
     </div>
     @if($icoLists)
         <div class="row">
