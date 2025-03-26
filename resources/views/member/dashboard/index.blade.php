@@ -92,80 +92,85 @@
 
 
 
-<!-- Cold Wallet Balance (Yellow) -->
+            {{-- Cold Wallet Balance (Yellow with Wallet Icon and Real Balance) --}}
 <div class="col-lg-12">
-    <div class="card currency-bx overflow-hidden relative bg-warning mb-3">
+    <div class="card currency-bx overflow-hidden relative bg-warning mb-3 shadow">
         <div class="card-body p-4">
             <div class="media align-items-center">
                 <div class="media-body">
                     <h5 class="text-white fs-20">Cold Wallet Balance</h5>
                     <h1 class="text-white mb-0">
-                        {{ $totalPurchaseCoin }}
+                        {{ $totalPurchaseCoin }} HRA
                     </h1>
                 </div>
                 <div class="currency-icon">
-                    <i class="fa-duotone fa-wallet text-white"></i>
+                    <i class="fa-duotone fa-wallet text-white fs-2"></i>
                 </div>
             </div>
         </div>
-        <img class="bg-img" src="{{ asset('images/icons/wallet.png') }}" alt=""/>
+        <img class="bg-img" src="{{ asset('images/icons/wallet.png') }}" alt="wallet icon" />
     </div>
 </div>
 
-<!-- Wallet Address Card (Green + crypto icon + partially hidden address) -->
+{{-- Wallet Address Card (Green with Blurred Wallet Address + Crypto Icon) --}}
 <div class="col-lg-12">
-    <div class="card currency-bx overflow-hidden relative bg-success mb-3">
+    <div class="card currency-bx overflow-hidden relative bg-success mb-3 shadow">
         <div class="card-body p-4">
-            <div class="media align-items-center justify-content-between">
+            <div class="media align-items-center">
                 <div class="media-body">
                     <h5 class="text-white fs-20">Connected Wallet</h5>
-                    <h1 class="text-white mb-1">0.00</h1>
-                    <div class="text-white" style="font-family: monospace;">
-                        0x3F4a...<span style="filter: blur(4px);">B8d72c90</span>
-                    </div>
+                    <h1 class="text-white mb-0">
+                        0 HRA
+                    </h1>
+                    <p class="text-white mt-2 mb-0">
+                        Wallet Address:
+                        <span class="bg-dark text-white px-2 py-1 rounded" style="letter-spacing: 1px;">
+                            0xAB3F...****12A9
+                        </span>
+                    </p>
                 </div>
                 <div class="currency-icon">
-                    <img src="{{ asset('images/crypto-wallet.png') }}" alt="Crypto Wallet" style="width: 45px;">
+                    <img src="{{ asset('images/crypto-wallet.png') }}" alt="wallet icon" width="48" />
                 </div>
             </div>
         </div>
-        <img class="bg-img" src="{{ asset('images/icons/wallet.png') }}" alt=""/>
+        <img class="bg-img" src="{{ asset('images/bg/blur-green-bg.png') }}" alt="blur" />
     </div>
 </div>
 
-
-<!-- HRA Card Balance (Stylish Visa/Mastercard card) -->
+{{-- HRA Card Balance (Visa/MasterCard Styled Card with Name, Card No, Expiry, CVV) --}}
 <div class="col-lg-12">
-    <div class="card overflow-hidden text-white p-4 mb-3" style="
-        border-radius: 16px;
-        background: linear-gradient(145deg, #1d1f33, #121323);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <h5 class="fs-20">HRA Card Balance</h5>
-            <img src="{{ asset('images/hra-card.avif') }}" alt="Visa" style="height: 32px;">
-        </div>
-        <h1 class="mb-2">0 EUR</h1>
-        <div class="mt-4">
-            <div class="d-flex justify-content-between">
+    <div class="card bg-gradient-primary text-white shadow" style="border-radius: 1rem; background-image: url('{{ asset('images/bg/card-bg.png') }}'); background-size: cover;">
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
                 <div>
-                    <div style="font-size: 13px; color: #ccc;">CARD HOLDER</div>
-                    <div style="font-weight: bold;">{{ $member->user->name }}</div>
+                    <h5 class="fs-18">HRA Card Balance</h5>
+                    <h1 class="text-white mb-0">€ 0.00</h1>
                 </div>
-                <div>
-                    <div style="font-size: 13px; color: #ccc;">EXPIRES</div>
-                    <div style="font-weight: bold;">12/28</div>
-                </div>
-                <div>
-                    <div style="font-size: 13px; color: #ccc;">CVV</div>
-                    <div style="font-weight: bold;">***</div>
-                </div>
+                <img src="{{ asset('images/hra-card.avif') }}" alt="HRA Card" width="60">
             </div>
-            <div class="mt-3" style="letter-spacing: 2px; font-size: 18px;">
-                •••• •••• •••• 4567
+            <div class="mt-4">
+                <p class="mb-1">Card Holder</p>
+                <h6 class="fw-bold">{{ $member->user->name }}</h6>
+
+                <p class="mb-1 mt-3">Card Number</p>
+                <h6 class="fw-bold">4029 **** **** 1290</h6>
+
+                <div class="d-flex justify-content-between mt-3">
+                    <div>
+                        <p class="mb-1">Valid Thru</p>
+                        <h6 class="fw-bold">12/29</h6>
+                    </div>
+                    <div>
+                        <p class="mb-1">CVV</p>
+                        <h6 class="fw-bold">***</h6>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 
 
 
@@ -353,13 +358,15 @@
                 </div>
 
                 {{-- Static HRA Coin Price Chart --}}
-<div class="chart-container" style="width: 100%; height: 70%; margin-top: 20px;">
+                {{-- Static HRA Coin Price Chart --}}
+<div class="chart-container" style="width: 100%; margin-top: 20px;">
     <img 
         src="{{ asset('images/hra-static-chart.png') }}" 
         alt="HRA Coin Price Chart" 
-        style="width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"
+        style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"
     >
 </div>
+
 
             @endif
         </div>
