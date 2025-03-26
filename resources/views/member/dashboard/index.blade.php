@@ -134,31 +134,32 @@
 </div>
 
 
-{{-- HRA Card Balance (Realistic Compact Visa Card with Logo) --}}
+{{-- HRA Card Balance (Compact Realistic Visa Card) --}}
 <div class="col-lg-12">
-    <div class="card text-white shadow position-relative" style="border-radius: 1rem; background: linear-gradient(145deg, #001f3f, #00509e); overflow: hidden; height: 220px;">
+    <div class="card text-white shadow position-relative mx-auto" style="max-width: 400px; border-radius: 1rem; background: linear-gradient(145deg, #001f3f, #00509e); overflow: hidden; height: 200px;">
         <div class="card-body p-3 d-flex flex-column justify-content-between h-100">
+            
             {{-- Top Row: Title + Balance + Icon --}}
             <div class="d-flex justify-content-between align-items-start">
                 <div>
                     <h6 class="text-light mb-1">HRA Card Balance</h6>
                     <h4 class="text-white mb-0">€ 0.00</h4>
                 </div>
-                <img src="{{ asset('images/hra-card.avif') }}" alt="Card Icon" width="40">
+                <img src="{{ asset('images/hra-card.avif') }}" alt="Card Icon" width="36">
             </div>
 
-            {{-- Middle Details --}}
+            {{-- Middle Info --}}
             <div>
-                <small class="text-light d-block">Card Holder</small>
+                <small class="text-light">Card Holder</small>
                 <strong class="text-white">{{ $member->user->name }}</strong>
-
+                
                 <div class="mt-2">
-                    <small class="text-light d-block">Card Number</small>
+                    <small class="text-light">Card Number</small>
                     <strong class="text-white">4029 **** **** 1290</strong>
                 </div>
             </div>
 
-            {{-- Bottom Row: Valid Thru + CVV + VISA Logo --}}
+            {{-- Bottom: Validity, CVV, VISA --}}
             <div class="d-flex justify-content-between align-items-end mt-2">
                 <div>
                     <small class="text-light">Valid Thru</small>
@@ -169,12 +170,16 @@
                     <div class="fw-bold text-white">***</div>
                 </div>
                 <div class="text-end">
-                    <img src="{{ asset('images/visa.png') }}" alt="VISA" style="height: 32px;">
+                    <div style="background: white; border-radius: 6px; padding: 2px 6px;">
+                        <img src="{{ asset('images/visa.png') }}" alt="VISA" style="height: 24px;">
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
+
 
 
 
