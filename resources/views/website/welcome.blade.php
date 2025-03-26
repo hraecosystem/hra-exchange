@@ -1486,7 +1486,7 @@
                     </div>
 
                     <div class="epay-links" style="color: #393185;">
-                    <div class="d-flex flex-wrap gap-3 justify-content-center my-4">
+                    
     <a href="https://www.hra-experience.com" target="_blank" rel="noopener noreferrer" class="primary-btn text-decoration-none d-inline-flex align-items-center justify-content-center" style="width: 200px;">
         Visit HRA Experience
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="ms-2">
@@ -1507,7 +1507,7 @@
             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
     </a>
-</div>
+
 
                         <div class="social-links">
                          
@@ -1701,7 +1701,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'HRA Epay',
             'HRA Web3 Services',
             'HRA Airlines',
-            'Little Umma BV',
+            'Europe Invest Group',
             'HRA Experience App'
         ],
         colors: ['#393185', '#2d2668', '#9590c3', '#8695ca', '#000000', '#637381'],
