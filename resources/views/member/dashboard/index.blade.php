@@ -112,27 +112,28 @@
     </div>
 </div>
 
-{{-- Wallet Address Card (Realistic Crypto Wallet Look with Blurred Wallet Address) --}}
+{{-- Wallet Address Card (Mobile Responsive + Clean Layout) --}}
 <div class="col-lg-12">
     <div class="card shadow-sm text-white mb-3" style="border-radius: 1rem; background: linear-gradient(135deg, #00695C, #26A69A);">
         <div class="card-body p-4">
-            <div class="d-flex justify-content-between align-items-start">
-                <div>
+            <div class="row align-items-center">
+                <div class="col-12 col-md-9">
                     <h5 class="fs-18 text-white">HRA Wallet Balance</h5>
                     <h1 class="text-white mb-2">0 HRA</h1>
 
-                    <p class="mb-0">Wallet Address:</p>
-                    <div class="bg-dark px-3 py-2 rounded d-inline-block" style="filter: blur(2px); user-select: none; font-size: 14px;">
+                    <p class="mb-1">Wallet Address:</p>
+                    <div class="bg-dark px-3 py-2 rounded" style="filter: blur(2px); user-select: none; font-size: 14px; word-break: break-all;">
                         0xAB3F29D842Af3902cF8dC2E9bA3Df7A612Ab12A9
                     </div>
                 </div>
-                <div class="ps-3 pt-1">
-                    <img src="{{ asset('images/crypto-wallet.png') }}" alt="wallet icon" width="48" />
+                <div class="col-12 col-md-3 text-md-end text-center mt-3 mt-md-0">
+                    <img src="{{ asset('images/crypto-wallet.png') }}" alt="wallet icon" style="max-width: 48px;" class="img-fluid" />
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 
 {{-- HRA Card Balance (Visa/MasterCard Styled Card with Name, Card No, Expiry, CVV) --}}

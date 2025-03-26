@@ -1486,12 +1486,29 @@
                     </div>
 
                     <div class="epay-links" style="color: #393185;">
-                        <a href="https://www.hra-experience.com" target="_blank" rel="noopener noreferrer" class="primary-btn" style="margin: 1em 0; width: 200px; text-align: center;">
-                            Visit HRA Experience
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </a>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center my-4">
+    <a href="https://www.hra-experience.com" target="_blank" rel="noopener noreferrer" class="primary-btn text-decoration-none d-inline-flex align-items-center justify-content-center" style="width: 200px;">
+        Visit HRA Experience
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="ms-2">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </a>
+
+    <a href="https://www.hra-airlines.com" target="_blank" rel="noopener noreferrer" class="primary-btn text-decoration-none d-inline-flex align-items-center justify-content-center" style="width: 200px;">
+        Visit HRA Airlines
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="ms-2">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </a>
+
+    <a href="https://www.hra-epay.com" target="_blank" rel="noopener noreferrer" class="primary-btn text-decoration-none d-inline-flex align-items-center justify-content-center" style="width: 200px;">
+        Visit HRA Epay
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="ms-2">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </a>
+</div>
+
                         <div class="social-links">
                          
                             <a href="https://www.instagram.com/hra_experience/" target="_blank" rel="noopener noreferrer" class="social-link">
@@ -1621,7 +1638,7 @@
                     </div>
                             <div class="qb">
                                 <span class="oa dc rc oe vf"></span>
-                                <span class="gi qi xi ul">Little Umma BV : 10% </span>
+                                <span class="gi qi xi ul">Europe Invest Group : 10% </span>
                 </div>
                             <div class="qb">
                                 <span class="oa dc rc oe wf"></span>
