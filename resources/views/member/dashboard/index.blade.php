@@ -118,11 +118,11 @@
         <div class="card-body p-4">
             <div class="d-flex justify-content-between align-items-start">
                 <div>
-                    <h5 class="fs-18">HRA Wallet Balance</h5>
+                    <h5 class="fs-18 text-white">HRA Wallet Balance</h5>
                     <h1 class="text-white mb-2">0 HRA</h1>
 
                     <p class="mb-0">Wallet Address:</p>
-                    <div class="bg-dark px-3 py-2 rounded d-inline-block" style="filter: blur(1px); user-select: none; font-size: 14px;">
+                    <div class="bg-dark px-3 py-2 rounded d-inline-block" style="filter: blur(2px); user-select: none; font-size: 14px;">
                         0xAB3F29D842Af3902cF8dC2E9bA3Df7A612Ab12A9
                     </div>
                 </div>
@@ -144,7 +144,8 @@
                     <h5 class="fs-18 text-light">HRA Card Balance</h5>
                     <h1 class="text-white mb-0">€ 0.00</h1>
                 </div>
-                <i class="fa-solid fa-credit-card fa-2x text-white"></i>
+                <img src="{{ asset('images/hra-card.avif') }}" alt="Card Icon" width="48">
+
             </div>
 
             <div class="mt-4">
