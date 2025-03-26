@@ -357,12 +357,13 @@
                     </div>
                 </div>
 
+               
                 {{-- Static HRA Coin Price Chart --}}
-<div class="chart-container" style="width: 100%; margin-top: 20px;">
+<div class="chart-container" style="width: 100%; height: auto; margin-top: 20px;">
     <img 
         src="{{ asset('images/hra-static-chart.png') }}" 
         alt="HRA Coin Price Chart" 
-        style="width: 100%; height: 400px; object-fit: contain; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"
+        style="width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"
     >
 </div>
 
