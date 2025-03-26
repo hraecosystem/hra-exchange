@@ -89,7 +89,84 @@
     <div class="row">
         <div class="col-xl-6">
             <div class="row">
-                <div class="col-lg-12">
+
+
+
+<!-- Cold Wallet Balance (Yellow) -->
+<div class="col-lg-12">
+    <div class="card currency-bx overflow-hidden relative bg-warning mb-3">
+        <div class="card-body p-4">
+            <div class="media align-items-center">
+                <div class="media-body">
+                    <h5 class="text-white fs-20">Cold Wallet Balance</h5>
+                    <h1 class="text-white mb-0">
+                        {{ $totalPurchaseCoin }}
+                    </h1>
+                </div>
+                <div class="currency-icon">
+                    <i class="fa-duotone fa-wallet text-white"></i>
+                </div>
+            </div>
+        </div>
+        <img class="bg-img" src="{{ asset('images/icons/wallet.png') }}" alt=""/>
+    </div>
+</div>
+
+<!-- Wallet Address Card (Green + blurred address) -->
+<div class="col-lg-12">
+    <div class="card currency-bx overflow-hidden relative bg-success mb-3">
+        <div class="card-body p-4">
+            <div class="media align-items-center justify-content-between">
+                <div class="media-body">
+                    <h5 class="text-white fs-20">Wallet Address</h5>
+                    <h1 class="text-white mb-1">0.00</h1>
+                    <div class="text-white" style="filter: blur(4px); font-family: monospace;">
+                        0x3f4a1B...B8d72c90
+                    </div>
+                </div>
+                <div class="currency-icon">
+                    <i class="fa-duotone fa-wallet text-white"></i>
+                </div>
+            </div>
+        </div>
+        <img class="bg-img" src="{{ asset('images/icons/wallet.png') }}" alt=""/>
+    </div>
+</div>
+
+<!-- HRA Card Balance (Realistic Master/Visa Card) -->
+<div class="col-lg-12">
+    <div class="card overflow-hidden relative bg-dark mb-3 text-white p-4" style="border-radius: 15px; background: linear-gradient(135deg, #3a3a3a, #2d2d2d);">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fs-20">HRA Card Balance</h5>
+            <img src="{{ asset('images/hra-card.png') }}" alt="HRA Card" style="width: 60px;">
+        </div>
+        <h1 class="mb-2">0 EUR</h1>
+        <div class="mt-4">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <div style="font-size: 13px;">CARD HOLDER</div>
+                    <div style="font-weight: bold;">{{ $member->user->name }}</div>
+                </div>
+                <div>
+                    <div style="font-size: 13px;">EXPIRES</div>
+                    <div style="font-weight: bold;">12/28</div>
+                </div>
+                <div>
+                    <div style="font-size: 13px;">CVV</div>
+                    <div style="font-weight: bold;">***</div>
+                </div>
+            </div>
+            <div class="mt-3" style="letter-spacing: 2px; font-size: 18px;">
+                •••• •••• •••• 4567
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                <!-- <div class="col-lg-12">
                     <a href="{{ route('member.coin-wallet-transactions.index') }}">
                         <div class="card currency-bx overflow-hidden relative bg-success mb-3">
                             <div class="card-body p-4">
@@ -146,7 +223,7 @@
         </div>
         <img class="bg-img" src="{{ asset('images/hra-card.png') }}" alt=""/>
     </div>
-</div>
+</div> -->
 
             </div>
             @if(settings('social_link'))
@@ -271,16 +348,15 @@
                     </div>
                 </div>
 
-                {{-- PancakeSwap Chart --}}
-                <div class="chart-container" style="width: 100%; height: 400px; border-radius: 12px; overflow: hidden;">
-                    <iframe 
-                        src="https://pancakeswap.finance/info/token/0x5e64326ce6df66cdfa62f8b154097bf536233451" 
-                        width="100%" 
-                        height="100%" 
-                        style="border: none;"
-                        sandbox="allow-scripts allow-same-origin allow-popups">
-                    </iframe>
-                </div>
+                {{-- Static HRA Coin Price Chart --}}
+<div class="chart-container" style="width: 100%; height: auto; margin-top: 20px;">
+    <img 
+        src="{{ asset('images/hra-static-chart.png') }}" 
+        alt="HRA Coin Price Chart" 
+        style="width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"
+    >
+</div>
+
             @endif
         </div>
     </div>
