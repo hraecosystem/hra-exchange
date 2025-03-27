@@ -92,4 +92,4 @@ Route::get('city/{state_id?}', function (Illuminate\Http\Request $request) {
 //Webhook strip route
 use App\Http\Controllers\Webhook\StripeWebhookController;
 
-Route::post('/stripe/webhook', [StripeWebhookController::class, 'handleWebhook']);
+Route::post('/stripe/webhook', [StripeWebhookController::class, 'handle']);
