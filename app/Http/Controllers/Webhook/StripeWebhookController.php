@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Webhook;
 
 use App\Http\Controllers\Controller;
+use App\Jobs\ProcessStripeDeposit;
+use App\Models\Deposit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use App\Models\Deposit;
-use App\Jobs\ProcessStripeDeposit;
 use Stripe\Webhook;
 
 class StripeWebhookController extends Controller
@@ -20,7 +20,8 @@ class StripeWebhookController extends Controller
         try {
             $event = Webhook::constructEvent($payload, $sigHeader, $secret);
         } catch (\Exception $e) {
-            Log::error('Stripe Webhook Signature Verification Failed: ' . $e->getMessage());
+            Log::error('Stripe Webhook Signature Verification Failed: '.$e->getMessage());
+
             return response('Invalid signature', 400);
         }
 
@@ -31,7 +32,7 @@ class StripeWebhookController extends Controller
             $deposit = Deposit::where('pg_id', $session->id)->first();
 
             if ($deposit && $deposit->status === Deposit::STATUS_PENDING) {
-                Log::info('Stripe Webhook: Dispatching ProcessStripeDeposit for order: ' . $deposit->order_no);
+                Log::info('Stripe Webhook: Dispatching ProcessStripeDeposit for order: '.$deposit->order_no);
                 ProcessStripeDeposit::dispatch($deposit);
             }
         }
