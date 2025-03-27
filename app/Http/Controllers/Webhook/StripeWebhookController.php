@@ -7,7 +7,6 @@ use App\Jobs\ProcessStripeDeposit;
 use App\Models\Deposit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Stripe\Stripe;
 use Stripe\Webhook;
 
 class StripeWebhookController extends Controller
@@ -22,6 +21,7 @@ class StripeWebhookController extends Controller
             $event = Webhook::constructEvent($payload, $sigHeader, $secret);
         } catch (\Exception $e) {
             Log::error('⚠️ Stripe webhook signature mismatch', ['error' => $e->getMessage()]);
+
             return response()->json(['error' => 'Invalid signature'], 400);
         }
 
@@ -37,4 +37,3 @@ class StripeWebhookController extends Controller
         return response()->json(['status' => 'success']);
     }
 }
-
