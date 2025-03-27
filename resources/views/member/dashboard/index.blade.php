@@ -136,7 +136,7 @@
 
 {{-- HRA Card Balance (Compact Realistic Visa Card) --}}
 <div class="col-lg-12">
-    <div class="card text-white shadow position-relative mx-auto" style="max-width: 400px; border-radius: 1rem; background: linear-gradient(145deg, #001f3f, #00509e); overflow: hidden; height: 200px;">
+<div class="card text-white shadow position-relative w-100" style="border-radius: 1rem; background: linear-gradient(145deg, #001f3f, #00509e); overflow: hidden; height: 200px;">
         <div class="card-body p-3 d-flex flex-column justify-content-between h-100">
             
             {{-- Top Row: Title + Balance + Icon --}}
