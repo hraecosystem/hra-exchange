@@ -88,3 +88,8 @@ Route::get('city/{state_id?}', function (Illuminate\Http\Request $request) {
 
     return response()->json(['cities' => $city]);
 })->name('city');
+
+//Webhook strip route
+use App\Http\Controllers\Webhook\StripeWebhookController;
+
+Route::post('/stripe/webhook', [StripeWebhookController::class, 'handleWebhook']);
