@@ -95,7 +95,7 @@
                 const amount = ref(parseFloat({{ old('amount', 0) }}))
                 const price = ref(parseFloat({{ $activeIco->price }}))
                 const total = computed(() => {
-                    return parseFloat(amount.value ? amount.value.toString() : 0) * parseFloat(price.value)
+                    return parseFloat(amount.value ? amount.value.toString() : 0) / parseFloat(price.value)
                 })
 
                 return {
