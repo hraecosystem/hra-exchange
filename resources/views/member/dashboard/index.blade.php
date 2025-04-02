@@ -137,29 +137,33 @@
     </div>
 </div>
 
-{{-- HRA Card Balance (Compact Realistic Visa Card with VISA Logo) --}}
+
+{{-- HRA Card Balance (Compact Realistic Visa Card) --}}
 <div class="col-lg-12">
-    <div class="card text-white shadow position-relative w-100" style="max-width: 400px; margin: 0 auto; border-radius: 1rem; background: linear-gradient(145deg, #001f3f, #00509e); overflow: hidden; height: 200px;">
+<div class="card text-white shadow position-relative w-100" style="border-radius: 1rem; background: linear-gradient(145deg, #001f3f, #00509e); overflow: hidden; height: 200px;">
         <div class="card-body p-3 d-flex flex-column justify-content-between h-100">
-            {{-- Top Row: Title + Balance --}}
+            
+            {{-- Top Row: Title + Balance + Icon --}}
             <div class="d-flex justify-content-between align-items-start">
                 <div>
                     <h6 class="text-light mb-1">HRA Card Balance</h6>
                     <h4 class="text-white mb-0">€ 0.00</h4>
                 </div>
+                <img src="{{ asset('images/hra-card.avif') }}" alt="Card Icon" width="36">
             </div>
-            
-            {{-- Middle Info: Card Holder and Card Number --}}
+
+            {{-- Middle Info --}}
             <div>
                 <small class="text-light">Card Holder</small>
                 <strong class="text-white">{{ $member->user->name }}</strong>
+                
                 <div class="mt-2">
                     <small class="text-light">Card Number</small>
                     <strong class="text-white">4029 **** **** 1290</strong>
                 </div>
             </div>
 
-            {{-- Bottom Row: Valid Thru, CVV --}}
+            {{-- Bottom: Validity, CVV, VISA --}}
             <div class="d-flex justify-content-between align-items-end mt-2">
                 <div>
                     <small class="text-light">Valid Thru</small>
@@ -169,17 +173,16 @@
                     <small class="text-light">CVV</small>
                     <div class="fw-bold text-white">***</div>
                 </div>
+                <div class="text-end">
+                    <div style="background: white; border-radius: 6px; padding: 2px 6px;">
+                        <img src="{{ asset('images/visa.png') }}" alt="VISA" style="height: 24px;">
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- VISA Logo in Bottom Right -->
-        <div class="position-absolute" style="bottom: 10px; right: 10px;">
-            <div style="background: rgba(255,255,255,0.3); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-                <img src="{{ asset('images/visa.png') }}" alt="VISA" style="height: 24px;">
-            </div>
+
         </div>
     </div>
 </div>
-
 
 
 
