@@ -92,10 +92,9 @@
             <div class="row">
 
 
-
-            {{-- Cold Wallet Balance (Yellow with Wallet Icon and Real Balance) --}}
+            {{-- Cold Wallet Balance (Yellow with Wallet Icon and Real Balance + Euro Equivalent) --}}
 <div class="col-lg-12">
-    <div class="card currency-bx overflow-hidden relative bg-warning mb-3 shadow">
+    <div class="card currency-bx overflow-hidden relative bg-warning mb-3 shadow" style="position: relative;">
         <div class="card-body p-4">
             <div class="media align-items-center">
                 <div class="media-body">
@@ -103,63 +102,64 @@
                     <h1 class="text-white mb-0">
                         {{ $totalPurchaseCoin }} HRA
                     </h1>
-                </div>
-                <div class="currency-icon">
-                    <i class="fa-duotone fa-wallet text-white fs-2"></i>
+                    <small class="text-white">
+                        € {{ number_format($totalPurchaseCoin * 2, 2) }}
+                    </small>
                 </div>
             </div>
         </div>
-        <img class="bg-img" src="{{ asset('images/icons/wallet.png') }}" alt="wallet icon" />
+        <!-- Icon in Top Right -->
+        <div class="position-absolute" style="top: 10px; right: 10px;">
+            <div style="background: rgba(255,255,255,0.3); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                <i class="fa-duotone fa-wallet text-white fs-2"></i>
+            </div>
+        </div>
     </div>
 </div>
 
 {{-- Wallet Address Card (Responsive with Top-Right Icon) --}}
 <div class="col-lg-12">
     <div class="card shadow-sm text-white mb-3 position-relative" style="border-radius: 1rem; background: linear-gradient(135deg, #00695C, #26A69A);">
-        <div class="card-body p-4 position-relative">
-            {{-- Wallet Icon (Top Right) --}}
-            <img src="{{ asset('images/crypto-wallet.png') }}" alt="wallet icon"
-                 class="position-absolute end-0 top-0 m-3" style="width: 40px; height: auto;">
-
+        <div class="card-body p-4">
             <h5 class="fs-18 text-white">HRA Wallet Balance</h5>
             <h1 class="text-white mb-2">0 HRA</h1>
-
             <p class="mb-1">Wallet Address:</p>
-            <div class="bg-dark px-3 py-2 rounded"
-                 style="filter: blur(2px); user-select: none; font-size: 14px; word-break: break-all;">
+            <div class="bg-dark px-3 py-2 rounded" style="filter: blur(2px); user-select: none; font-size: 14px; word-break: break-all;">
                 0xAB3F29D842Af3902cF8dC2E9bA3Df7A612Ab12A9
+            </div>
+        </div>
+        <!-- Icon in Top Right -->
+        <div class="position-absolute" style="top: 10px; right: 10px;">
+            <div style="background: rgba(255,255,255,0.3); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                <img src="{{ asset('images/crypto-wallet.png') }}" alt="wallet icon" style="width: 24px; height: auto;">
             </div>
         </div>
     </div>
 </div>
 
-
-{{-- HRA Card Balance (Compact Realistic Visa Card) --}}
+{{-- HRA Card Balance (Compact Realistic Visa Card with VISA Logo) --}}
 <div class="col-lg-12">
-<div class="card text-white shadow position-relative w-100" style="border-radius: 1rem; background: linear-gradient(145deg, #001f3f, #00509e); overflow: hidden; height: 200px;">
+    <div class="card text-white shadow position-relative w-100" style="max-width: 400px; margin: 0 auto; border-radius: 1rem; background: linear-gradient(145deg, #001f3f, #00509e); overflow: hidden; height: 200px;">
         <div class="card-body p-3 d-flex flex-column justify-content-between h-100">
-            
-            {{-- Top Row: Title + Balance + Icon --}}
+            {{-- Top Row: Title + Balance --}}
             <div class="d-flex justify-content-between align-items-start">
                 <div>
                     <h6 class="text-light mb-1">HRA Card Balance</h6>
                     <h4 class="text-white mb-0">€ 0.00</h4>
                 </div>
-                <img src="{{ asset('images/hra-card.avif') }}" alt="Card Icon" width="36">
             </div>
-
-            {{-- Middle Info --}}
+            
+            {{-- Middle Info: Card Holder and Card Number --}}
             <div>
                 <small class="text-light">Card Holder</small>
                 <strong class="text-white">{{ $member->user->name }}</strong>
-                
                 <div class="mt-2">
                     <small class="text-light">Card Number</small>
                     <strong class="text-white">4029 **** **** 1290</strong>
                 </div>
             </div>
 
-            {{-- Bottom: Validity, CVV, VISA --}}
+            {{-- Bottom Row: Valid Thru, CVV --}}
             <div class="d-flex justify-content-between align-items-end mt-2">
                 <div>
                     <small class="text-light">Valid Thru</small>
@@ -169,16 +169,17 @@
                     <small class="text-light">CVV</small>
                     <div class="fw-bold text-white">***</div>
                 </div>
-                <div class="text-end">
-                    <div style="background: white; border-radius: 6px; padding: 2px 6px;">
-                        <img src="{{ asset('images/visa.png') }}" alt="VISA" style="height: 24px;">
-                    </div>
-                </div>
             </div>
-
+        </div>
+        <!-- VISA Logo in Bottom Right -->
+        <div class="position-absolute" style="bottom: 10px; right: 10px;">
+            <div style="background: rgba(255,255,255,0.3); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                <img src="{{ asset('images/visa.png') }}" alt="VISA" style="height: 24px;">
+            </div>
         </div>
     </div>
 </div>
+
 
 
 
