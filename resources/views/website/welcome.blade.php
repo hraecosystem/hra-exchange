@@ -1154,7 +1154,7 @@
                             <p class="za ii qi xi ul">
                                 <b>HRA Coin Private Sale on website:</b>
                                 The HRA Coin website is launched, featuring a purchase module where investors can buy
-                                HRA Coin at 1 euro per coin.
+                                HRA Coin at 2 euro per coin.
                             </p>
                             <p class="za ii qi xi ul">
                                 <b>Development:</b>
@@ -1415,7 +1415,7 @@
                     </div>
 
                     <div class="brokers-links" style="color: #393185;">
-                        <a href="https://www.hra-brokers.com" target="_blank" rel="noopener noreferrer" class="primary-btn" style="margin: 1em 0; width: 200px; text-align: center;">
+                        <a href="https://www.hra-exchange.com" target="_blank" rel="noopener noreferrer" class="primary-btn" style="margin: 1em 0; width: 200px; text-align: center;">
                             Visit HRA Exchange
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                 <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
