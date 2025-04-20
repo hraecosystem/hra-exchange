@@ -72,7 +72,8 @@
                             <h4 class="card-title mb-1 d-flex gap-2 flex-wrap">Buy Instantly 🚀</h4>
                             <p class="pb-0">HRA is a global, decentralized network with validators and community members
                                 from all around the world.</p>
-                            <a href="{{ route('member.deposit.create') }}"
+                            <!-- <a href="{{ route('member.deposit.create') }}" -->
+                            <a href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x5E64326cE6DF66CDfa62F8B154097BF536233451"
                                class="btn btn-sm btn-primary">Buy {{ env('APP_CURRENCY') }}</a>
                             <a href="{{ route('member.p2p-transfers.create') }}"
                                class="btn btn-sm btn-danger">Send {{ env('APP_CURRENCY') }}</a>

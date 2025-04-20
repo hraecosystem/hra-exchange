@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
+    <!-- <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>HRA Coin</title>
@@ -10,9 +10,9 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="icon" href="{{ asset('website/img/favicon.ico') }}"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.18/sweetalert2.min.css"/>
-    <link href="{{ asset('website/css/style.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('website/css/style.css') }}" rel="stylesheet"/> -->
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16806753499">
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16806753499">
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -20,8 +20,8 @@
         gtag('js', new Date());
 
         gtag('config', 'AW-16806753499');
-    </script>
-    <style>
+    </script> -->
+    <!-- <style>
         :root {
             --primary: #393185;
             --primary-hover: #2d2668;
@@ -770,10 +770,652 @@
         }
         
         /* Amélioration des animations */
-    </style>
+    </style> -->
+
+
+    <head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>HRA Coin - Revolutionizing Travel & Finance</title>
+  <meta name="description" content="Discover HRA Coin, the innovative digital currency powering a unified ecosystem for travel, payments, and blockchain solutions. Enjoy low fees, fast transactions, and global accessibility." />
+  <meta name="keywords" content="HRA Coin, cryptocurrency, blockchain, travel, fintech, digital payments, travel booking, low fees" />
+  <link rel="canonical" href="https://hra-coin.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="HRA Coin - Revolutionizing Travel & Finance" />
+  <meta property="og:description" content="Discover HRA Coin, the innovative digital currency powering a unified ecosystem for travel and digital payments through blockchain technology." />
+  <meta property="og:url" content="https://hra-coin.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="{{ asset('website/img/og-image.jpg') }}" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HRA Coin - Revolutionizing Travel & Finance" />
+  <meta name="twitter:description" content="Discover HRA Coin—secure, fast, and global. Powering travel, payments, and blockchain services for a modern digital experience." />
+  <meta name="twitter:image" content="{{ asset('website/img/og-image.jpg') }}" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="{{ asset('website/img/favicon.ico') }}" />
+
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.18/sweetalert2.min.css" />
+  <link rel="stylesheet" href="{{ asset('website/css/style.css') }}" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16806753499"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-16806753499');
+  </script>
+
+  <!-- Custom Inline CSS -->
+  <style>
+    :root {
+      --primary: #393185;
+      --primary-hover: #2d2668;
+      --text-light: rgba(255, 255, 255, 0.8);
+      --spacing-lg: 6rem;
+      --spacing-md: 4rem;
+      --spacing-sm: 2rem;
+      --border-radius: 20px;
+      --transition: all 0.3s ease;
+    }
+
+    /* Global Section Styles */
+    section {
+      padding: var(--spacing-lg) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-title {
+      margin-bottom: var(--spacing-md);
+    }
+
+    /* Card Styles */
+    .component-card,
+    .feature-card,
+    .benefit-card {
+      background: #fff;
+      border-radius: var(--border-radius);
+      padding: var(--spacing-sm);
+      transition: var(--transition);
+      height: 100%;
+      box-shadow: 0 10px 30px rgba(57, 49, 133, 0.1);
+      border: 1px solid rgba(57, 49, 133, 0.1);
+    }
+    .component-card:hover,
+    .feature-card:hover,
+    .benefit-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(57, 49, 133, 0.15);
+      border-color: var(--primary);
+    }
+
+    /* Icon Styling */
+    .component-icon,
+    .benefit-icon {
+      width: 70px;
+      height: 70px;
+      background: var(--primary);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+    }
+    .component-icon svg,
+    .benefit-icon svg {
+      width: 35px;
+      height: 35px;
+      color: #fff;
+    }
+
+    /* Typography */
+    h2.bo {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #666;
+    }
+
+    /* Badge Styles */
+    .fn {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background: rgba(57, 49, 133, 0.1);
+      border-radius: 30px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Link Styles */
+    .component-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      margin-top: 1.5rem;
+    }
+    .component-link:hover {
+      gap: 1.25rem;
+      color: var(--primary-hover);
+    }
+
+    /* Grid and Layout */
+    .grid {
+      gap: 2rem;
+    }
+    section[style*="background: linear-gradient"] {
+      position: relative;
+    }
+    section[style*="background: linear-gradient"]::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("{{ asset('website/img/pattern.svg') }}");
+      opacity: 0.05;
+      z-index: 1;
+    }
+    section[style*="background: linear-gradient"] > * {
+      z-index: 2;
+    }
+
+    /* Animation */
+    .wow {
+      animation-duration: 1s;
+    }
+    .fadeInUp {
+      animation-name: fadeInUp;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      h2.bo { font-size: 2.25rem; }
+      section { padding: var(--spacing-md) 0; }
+      .grid { gap: 1.5rem; }
+    }
+
+    /* Bounce Arrow Styling */
+    .bounce-arrow {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #393185;
+      font-size: 32px;
+      cursor: pointer;
+      z-index: 10;
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      animation: bounce 2s infinite;
+    }
+    .bounce-arrow:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateX(-50%) translateY(-5px);
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+      40% { transform: translateY(-20px) translateX(-50%); }
+      60% { transform: translateY(-10px) translateX(-50%); }
+    }
+
+    /* Additional Animation Classes */
+    .animated { animation-duration: 2s; animation-fill-mode: both; }
+    .infinite { animation-iteration-count: infinite; }
+
+    .distribution-list { margin-top: 2rem; }
+    .distribution-list .qb {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    /* Our Companies Section */
+    #companies {
+      padding: 4rem 0;
+      background: linear-gradient(180deg, #393185 0%, #2d2668 100%);
+      color: white;
+    }
+    .companies-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 0 1rem;
+    }
+    .companies-header h1 { font-size: 2.5rem; margin-bottom: 1rem; color: white; }
+    .companies-subtitle { font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem; }
+    .section-divider { width: 60px; height: 4px; background: rgba(255, 255, 255, 0.2); margin: 0 auto; }
+
+    /* HRA ePay Section */
+    .hra-epay {
+      margin: 2em;
+      padding: 2rem 0;
+    }
+    .epay-header { text-align: center; margin-bottom: 2rem; }
+    .epay-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 0 1rem;
+    }
+    .epay-content { display: flex; flex-direction: column; gap: 1.5rem; }
+    .location-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(57, 49, 133, 0.1);
+      border-radius: 20px;
+      color: var(--primary);
+    }
+    .epay-visual { display: flex; justify-content: center; align-items: center; }
+    .epay-card {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 16/9;
+      background: rgba(62, 125, 255, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .epay-logo {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: contain;
+    }
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(57, 49, 133, 0.1);
+      border-radius: 20px;
+      color: var(--primary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .social-link:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* Responsive Adjustments for ePay Section */
+    @media (max-width: 768px) {
+      .epay-grid { grid-template-columns: 1fr; text-align: center; }
+      .location-badge, .social-links { justify-content: center; }
+      .companies-header h1 { font-size: 2rem; }
+      .companies-subtitle { font-size: 1rem; }
+      .epay-card { max-width: 100%; }
+      .primary-btn { margin: 1rem auto !important; }
+    }
+
+    /* Why HRA Coin Section */
+    #features {
+      padding: 6rem 0;
+      background: linear-gradient(180deg, rgba(57, 49, 133, 0.05) 0%, rgba(57, 49, 133, 0) 100%);
+    }
+    #features .wow { animation-duration: 1s; }
+    #features .section-title { text-align: center; margin-bottom: 4rem; }
+    #features .fn {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: rgba(57, 49, 133, 0.1);
+      border-radius: 30px;
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    #features .bo {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(45deg, #2d2668, #393185);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    #features .feature-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      height: 100%;
+      border: 1px solid rgba(57, 49, 133, 0.1);
+    }
+    #features .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(57, 49, 133, 0.1);
+      border-color: var(--primary);
+    }
+    #features .feature-card h3 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #features .feature-card p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Our Solutions Section */
+    #components {
+      padding: 6rem 0;
+      background: linear-gradient(180deg, #393185 0%, #2d2668 100%);
+    }
+    #components .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    #components .fn {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 30px;
+      color: white;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    #components .bo {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+    #components .component-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      height: 100%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      margin: 0.5rem;
+    }
+    #components .component-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(62, 125, 255, 0.1);
+    }
+    #components .component-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--primary);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    #components .component-icon svg {
+      width: 30px;
+      height: 30px;
+      color: white;
+    }
+    #components .component-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    #components .component-content h3 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #components .component-content p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    #components .component-link {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    #components .component-link:hover {
+      gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      #features .bo,
+      #components .bo { font-size: 2rem; }
+      #features .feature-card,
+      #components .component-card { margin-bottom: 2rem; }
+      #features,
+      #components { padding: 4rem 0; }
+      .component-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    /* Why Choose HRA Section */
+    #why-choose {
+      padding: 6rem 0;
+      background: linear-gradient(180deg, rgba(62, 125, 255, 0.02) 0%, rgba(62, 125, 255, 0.08) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #why-choose::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("{{ asset('website/img/pattern.svg') }}");
+      background-repeat: repeat;
+      opacity: 0.05;
+      z-index: 0;
+    }
+    #why-choose .section-content { position: relative; z-index: 1; }
+    #why-choose .fn {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: rgba(62, 125, 255, 0.1);
+      border-radius: 30px;
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    #why-choose .bo {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(45deg, #2d2668, #393185);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    #why-choose .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    #why-choose .benefit-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(62, 125, 255, 0.1);
+    }
+    #why-choose .benefit-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), #2d2668);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: left;
+    }
+    #why-choose .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(62, 125, 255, 0.1);
+    }
+    #why-choose .benefit-card:hover::before {
+      transform: scaleX(1);
+    }
+    #why-choose .benefit-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--primary);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    #why-choose .benefit-card:hover .benefit-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+    #why-choose .benefit-icon svg {
+      width: 30px;
+      height: 30px;
+      color: #fff;
+    }
+    #why-choose .benefit-title {
+      font-size: 1.25rem;
+      color: #2d2668;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    #why-choose .benefit-description {
+      color: #666;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 1024px) {
+      #why-choose .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      #why-choose { padding: 4rem 0; }
+      #why-choose .bo { font-size: 2rem; }
+      #why-choose .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      #why-choose .benefit-card { padding: 1.5rem; }
+    }
+
+    /* Underline Button Style */
+    .text-decoration-underline {
+      background-color: #393185;
+      color: #fff !important;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none !important;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-left: 10px;
+    }
+    .text-decoration-underline:hover {
+      background-color: #2d2668;
+      transform: translateY(-2px);
+    }
+
+    /* Gradient Button Style */
+    .oe.of.zg.wg {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: linear-gradient(90deg, #376DF9, #393185);
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 3rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 1s ease-out 0.6s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    .pa.li.pi.ui.yi.vl.bo {
+      font-size: 3.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #376DF9, #393185);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    .bottom:after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(90deg, #376DF9 0%, #2d2668 100%);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+  </style>
 </head>
 
-<body x-data="
+</head>
+
+<!-- <body x-data="
       {
         scrolledFromTop: false,
         init() {
@@ -852,9 +1494,103 @@
             </div>
         </div>
     </div>
-</header>
+</header> -->
 
-<section id="home" class="e ca wh xh">
+<body x-data="{
+    scrolledFromTop: false,
+    init() {
+      window.addEventListener('scroll', () => {
+        this.scrolledFromTop = window.pageYOffset > 50;
+      });
+    }
+}" class="kf fl">
+
+  <!-- Header Section with Responsive Navbar -->
+  <header 
+    x-data="{
+      navbarOpen: false,
+      dropdownOpen: false
+    }" 
+    :class="scrolledFromTop ? 'kf gl zf rl ij oj' : 'lf hl'" 
+    class="f ba qb jc be c">
+    
+    <div class="a">
+      <div class="e ha qb be ee">
+        
+        <!-- Logo Section -->
+        <div class="kc zc ng">
+          <a href="/" :class="scrolledFromTop && 'og gp'" class="ob jc ah ip">
+            <img src="{{ asset('website/img/logo_main.png') }}" alt="HRA Coin Logo" class="jc xk header_logo" />
+            <img src="{{ asset('website/img/logo_main.png') }}" alt="HRA Coin Logo Alternative" class="sb jc wk header_logo" />
+          </a>
+        </div>
+
+        <!-- Navigation Section -->
+        <div class="qb jc be ce ng">
+          <div>
+            <!-- Toggle Button -->
+            <button 
+              @click="navbarOpen = !navbarOpen" 
+              :class="navbarOpen && 'navbarTogglerActive'" 
+              id="navbarToggler"
+              class="d g h/2 ob qd/2 me pg qg mj qk to">
+              <span :class="navbarOpen && 'sd i'" class="e ia ob tb lc mf il"></span>
+              <span :class="navbarOpen && 'fj'" class="e ia ob tb lc mf il"></span>
+              <span :class="navbarOpen && 'j td'" class="e ia ob tb lc mf il"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav 
+              :class="!navbarOpen && 'sb'" 
+              id="navbarCollapse"
+              class="d g k jc _c me kf rg sg jj fl fo qo uo cp dp hp xp bq">
+              <ul class="vq ro flex justify-center items-center w-full space-x-4">
+                <li>
+                  <a href="#features" class="scroll-menu qb tg gi oi xi kk ul em ko so ip">
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a href="#tokenomics" class="scroll-menu qb tg gi oi xi kk ul em ko so ip">
+                    Tokenomics
+                  </a>
+                </li>
+                <li>
+                  <a href="#roadmap" class="scroll-menu qb tg gi oi xi kk ul em ko so ip">
+                    Roadmap
+                  </a>
+                </li>
+                <li class="sk submenu-item e">
+                  <a href="https://hra-whitepaper.gitbook.io/hra-whitepaper" target="_blank" class="qb tg gi oi xi kk ul em ko so ip">
+                    WhitePaper
+                  </a>
+                </li>
+                <li>
+                  <a href="{{ route('member.login.create') }}" class="qb tg gi oi xi kk ul em ko so ip">
+                    Login
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Call-to-Action: Buy Now -->
+          <div class="qb ce lh pp oq 2xl:ud-pl-20">
+            <div class="sb pm">
+              <a href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x5E64326cE6DF66CDfa62F8B154097BF536233451" target="_blank" 
+                 class="qb be de oe re ze vg wg ii oi xi qj ek fk lk zk vl am fm lg:px-4 xl:px-8">
+                 Buy on PancakeSwap
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- End Navigation Section -->
+
+      </div>
+    </div>
+  </header>
+
+<!-- <section id="home" class="e ca wh xh">
     <div class="a">
         <div class="ha qb _d">
             <div class="jc ng">
@@ -887,9 +1623,54 @@
         "></div>
     <img src="{{ asset('website/img/hero-shape-1.svg') }}" alt class="d l f ea"/>
     <img src="{{ asset('website/img/hero-shape-2.svg') }}" alt class="d m f ea"/>
+</section> -->
+
+
+<section id="home" class="e ca wh xh">
+  <div class="a">
+    <div class="ha qb _d">
+      <div class="jc ng">
+        <div class="la fi">
+          <!-- Main Headline -->
+          <h1 class="pa li pi ui yi vl bo bottom">
+          Welcome to HRA Coin
+
+          </h1>
+          <!-- Subheadline Explaining the Token's Utility -->
+          <p class="la pa gd gi qi xi vl">
+            HRA Coin is a next-generation BEP20 utility token engineered to unify and drive efficiency across the HRA suite of digital platforms. Originally conceived to transform travel and hospitality payments, HRA Coin now powers seamless, borderless transactions throughout HRA Airlines, HRA Experience, HRA Exchange, HRA ePay, HRA Payway, and the HRA Crypto Wallet.
+          </p>
+          <!-- Call-to-Action Button
+
+          <a href="{{ route('member.register.create') }}"
+             class="oe of zg wg ii oi zi hk dark:hover:bg-opacity-90">
+            Invest Now
+          </a> -->
+
+          <a href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x5E64326cE6DF66CDfa62F8B154097BF536233451" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="oe of zg wg ii oi zi hk dark:hover:bg-opacity-90">
+          Buy Now
+          </a>
+
+          <!-- Scroll Down Indicator -->
+          <a href="#about" class="bounce-arrow animated infinite">
+            <i class="fas fa-chevron-down text-4xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Gradient Overlay for Depth -->
+  <div class="d f l ea yb jc gj" style="background-image: linear-gradient(180deg, #393185 0%, rgba(57, 49, 133, 0) 100%);"></div>
+  <!-- Decorative Images with Descriptive Alt Text -->
+  <img src="{{ asset('website/img/hero-shape-1.svg') }}" alt="Abstract design element enhancing the hero section" class="d l f ea"/>
+  <img src="{{ asset('website/img/hero-shape-2.svg') }}" alt="Complementary decorative graphic for the hero section" class="d m f ea"/>
 </section>
 
-<section id="about" class="th zh">
+
+<!-- <section id="about" class="th zh">
     <div class="a">
         <div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
             <span class="va gi pi ri bj fn">About Us</span>
@@ -906,9 +1687,30 @@
             rgba(57, 49, 133, 0) 100%
           );
         "></div>
+</section> -->
+
+
+<section id="about" class="th zh">
+  <div class="a">
+    <div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
+      <!-- Section Badge -->
+      <span class="va gi pi ri bj fn">About Us</span>
+      <!-- Main Heading -->
+      <h2 class="va li pi ui yi vl bo">
+        What is the HRA Ecosystem?
+      </h2>
+      <!-- Descriptive Text -->
+      <p class="gi qi xi ul">
+        The HRA Ecosystem is a groundbreaking suite of interconnected digital platforms that redefines travel, payments, and finance. Powered by the innovative HRA Coin utility token, our ecosystem seamlessly integrates HRA Airlines, HRA Experience, HRA Exchange, HRA ePay, HRA Payway, and the HRA Crypto Wallet. This unified platform leverages cutting‑edge blockchain technology to enable secure, fast, and cost‑effective transactions—empowering users to effortlessly manage travel bookings, digital payments, and financial services all in one place.
+      </p>
+    </div>
+  </div>
+  <!-- Background Gradient Overlay -->
+  <div class="d f l ea yb jc gj" style="background-image: linear-gradient(180deg, #393185 0%, rgba(57, 49, 133, 0) 100%);"></div>
 </section>
 
-<section id="why-choose" class="th zh">
+
+<!-- <section id="why-choose" class="th zh">
     <div class="section-content a">
         <div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
             <span class="fn" style="background: rgba(57, 49, 133, 0.1); color: var(--primary);">Benefits</span>
@@ -983,9 +1785,98 @@
             </div>
         </div>
     </div>
+</section> -->
+
+
+<section id="why-choose" class="th zh">
+  <div class="section-content a">
+    <div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
+      <!-- Section Badge -->
+      <span class="fn" style="background: rgba(57, 49, 133, 0.1); color: var(--primary);">
+        Benefits
+      </span>
+      <!-- Updated Section Title -->
+      <h2 class="bo">Why Choose HRA Coin</h2>
+      <!-- Updated Descriptive Paragraph -->
+      <p class="gi qi xi ul">
+        Discover how HRA Coin, our next-generation BEP20 utility token, revolutionizes transactions by delivering unparalleled speed, security, and global access—all while offering exclusive rewards and investor-friendly features.
+      </p>
+    </div>
+
+    <!-- Benefits Grid -->
+    <div class="benefits-grid">
+      <!-- Benefit Card 1: Unified Utility -->
+      <div class="wow fadeInUp" data-wow-delay="0s">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Unified Utility</h3>
+          <p class="benefit-description">
+            HRA Coin serves as the single digital asset that powers all your transactions across our platforms—eliminating the need to juggle multiple currencies.
+          </p>
+        </div>
+      </div>
+
+      <!-- Benefit Card 2: Speed & Security -->
+      <div class="wow fadeInUp" data-wow-delay="0.2s">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 6L12 12L16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Speed & Security</h3>
+          <p class="benefit-description">
+            Powered by blockchain and smart contracts, HRA Coin ensures near-instant, secure transactions with minimal fees—free from intermediaries.
+          </p>
+        </div>
+      </div>
+
+      <!-- Benefit Card 3: Exclusive Investor Rewards -->
+      <div class="wow fadeInUp" data-wow-delay="0.4s">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 14.6L3 21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M16 14.6L21 21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 8L14 10L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Exclusive Rewards</h3>
+          <p class="benefit-description">
+            Enjoy investor-centric benefits including discounted fees, flexible payment options, and exclusive access to future platform upgrades.
+          </p>
+        </div>
+      </div>
+
+      <!-- Benefit Card 4: Global Connectivity -->
+      <div class="wow fadeInUp" data-wow-delay="0.6s">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M2 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title">Global Connectivity</h3>
+          <p class="benefit-description">
+            HRA Coin enables seamless, borderless transactions worldwide—ideal for international users, travellers, and entrepreneurs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="components" class="th zh" style="background: linear-gradient(180deg, #393185 0%, #2d2668 100%);">
+
+<!-- <section id="components" class="th zh" style="background: linear-gradient(180deg, #393185 0%, #2d2668 100%);">
     <div class="a">
         <div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
             <span class="fn" style="background: rgba(255, 255, 255, 0.1); color: white;">Our Solutions</span>
@@ -1105,8 +1996,158 @@
     <div class="d l z ea">
         <img src="{{ asset('website/img/faq-shape-1.svg') }}" alt="shape"/>
     </div>
+</section> -->
+
+<section id="components" class="th zh" style="background: linear-gradient(180deg, #393185 0%, #2d2668 100%);">
+  <div class="a">
+    <div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
+      <!-- Section Badge -->
+      <span class="fn" style="background: rgba(255, 255, 255, 0.1); color: white;">Our Solutions</span>
+      <!-- Section Title -->
+      <h2 class="bo" style="color: white;">Discover Our HRA Ecosystem</h2>
+      <!-- Optional Introductory Text -->
+      <p class="gi qi xi ul" style="color: white;">
+        Experience a fully integrated suite of platforms powered by HRA Coin—designed to transform travel, digital payments, and financial transactions.
+      </p>
+    </div>
+
+    <!-- Grid Layout for the Component Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-6 component-grid">
+      <!-- Card 1: HRA Coin (Utility Token) -->
+      <div class="wow fadeInUp" data-wow-delay="0s">
+        <div class="component-card">
+          <div class="component-icon">
+            <!-- Icon for HRA Coin -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="white">
+              <path fill="white" d="M12 0C5.384 0 0 5.384 0 12c0 6.616 5.384 12 12 12 6.616 0 12-5.384 12-12 0-6.616-5.384-12-12-12zm0 2c5.534 0 10 4.466 10 10s-4.466 10-10 10S2 17.534 2 12 6.466 2 12 2zm-2 2v2H8v2h2v2h1V8h2V6h-2V4h-1zM10.41 8l1.59 0c.375 0 .714.085 1.064.335.35.25.525.637.525 1.163 0 .48-.172.927-.52 1.178-.348.25-.695.323-1.07.323H10.41V8zm0 5l2.404 0c.616 0 1.068.135 1.354.404.286.27.43.657.43 1.167 0 .47-.168.825-.505 1.065-.338.24-.825.36-1.464.36H10.41V13z"/>
+            </svg>
+          </div>
+          <div class="component-content">
+            <h3>HRA Coin</h3>
+            <p>
+              Our next-generation BEP20 utility token serving as the core of the ecosystem—enabling lightning-fast, secure, and cost‑effective transactions across all platforms.
+            </p>
+            <a href="https://www.hra-coin.com" target="_blank" class="component-link">
+              Visit Website
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 2: HRA Experience -->
+      <div class="wow fadeInUp" data-wow-delay="0.1s">
+        <div class="component-card">
+          <div class="component-icon">
+            <!-- Icon for HRA Experience -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M2 22H22" stroke="white" stroke-width="2"/>
+              <path d="M2 22V9L12 2L22 9V22" stroke="white" stroke-width="2"/>
+              <path d="M15 22V15H9V22" stroke="white" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="component-content">
+            <h3>HRA Experience</h3>
+            <p>
+              A revolutionary hotel and travel booking platform with transparent pricing and flexible payment options, designed for the modern traveler.
+            </p>
+            <a href="https://www.hra-experience.com" target="_blank" class="component-link">
+              Visit Website
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 3: HRA Epay -->
+      <div class="wow fadeInUp" data-wow-delay="0.2s">
+        <div class="component-card">
+          <div class="component-icon">
+            <!-- Icon for HRA Epay -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="4" width="20" height="16" rx="2" stroke="white" stroke-width="2"/>
+              <path d="M2 10H22" stroke="white" stroke-width="2"/>
+              <path d="M6 15H10" stroke="white" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="component-content">
+            <h3>HRA Epay</h3>
+            <p>
+              Our cutting-edge digital payment solution offering interest-free debit cards and rapid crypto-to-euro conversion for seamless transactions.
+            </p>
+            <a href="https://www.hra-epay.com" target="_blank" class="component-link">
+              Visit Website
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 4: HRA Airline -->
+      <div class="wow fadeInUp" data-wow-delay="0.3s">
+        <div class="component-card">
+          <div class="component-icon">
+            <!-- Icon for HRA Airline -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF">
+              <path d="m397-115-99-184-184-99 71-70 145 25 102-102-317-135 84-86 385 68 124-124q23-23 57-23t57 23q23 23 23 56.5T822-709L697-584l68 384-85 85-136-317-102 102 26 144-71 71Z"/>
+            </svg>
+          </div>
+          <div class="component-content">
+            <h3>HRA Airline</h3>
+            <p>
+              Enjoy exclusive travel perks with discounted rates on flights—offering up to 15% off and special benefits for frequent flyers.
+            </p>
+            <a href="https://www.hra-airlines.com" target="_blank" class="component-link">
+              Visit Website
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 5: HRA Exchange -->
+      <div class="wow fadeInUp" data-wow-delay="0.4s">
+        <div class="component-card">
+          <div class="component-icon">
+            <!-- Icon for HRA Exchange -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2v20h20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 16l4-4 4 4 8-8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="component-content">
+            <h3>HRA Exchange</h3>
+            <p>
+              Trade digital assets effortlessly on a secure and intuitive crypto exchange built for efficiency and innovation.
+            </p>
+            <a href="https://www.hra-exchange.com" target="_blank" class="component-link">
+              Visit Website
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Decorative Element -->
+  <div class="d l z ea">
+    <img src="{{ asset('website/img/faq-shape-1.svg') }}" alt="Decorative shape element" />
+  </div>
 </section>
-<section id="roadmap" class="e ca gh">
+
+
+<!-- <section id="roadmap" class="e ca gh">
     <div class="a">
         <div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
             <span class="va gi pi ri bj fn"> Roadmap </span>
@@ -1229,7 +2270,238 @@
     <div class="d l n ea">
         <img src="{{ asset('website/img/timeline.svg') }}" alt="shape"/>
     </div>
+</section> -->
+
+
+<!-- Roadmap Section -->
+<section id="roadmap" class="roadmap-section">
+  <div class="container">
+    <header class="roadmap-header">
+      <span class="badge">🗺️ RoadMap</span>
+      <h2>HRA Coin Roadmap</h2>
+      <p class="intro">
+        Phased Development Toward a Global Decentralized Ecosystem
+      </p>
+      <p class="description">
+        The HRA Coin roadmap outlines a strategic, milestone-driven rollout plan that guides the evolution of our next-generation BEP20 utility token. Each phase is designed to achieve functional maturity, global market reach, and technological innovation—positioning HRA Coin as the dominant utility token in travel, finance, and decentralized commerce.
+      </p>
+    </header>
+
+    <div class="timeline">
+      <!-- Timeline Item 1: Q4 2024 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Q4 2024: Foundation & Planning</h3>
+          <ul>
+            <li><strong>Preparation & Planning:</strong> Begin initial design, architecture, and integration strategy for HRA Coin.</li>
+            <li><strong>Team Formation:</strong> Assemble a dedicated, multidisciplinary team for development, legal compliance, and marketing.</li>
+            <li><strong>Private Sale Preparation:</strong> Develop ICO platforms to engage early investors and set the foundation for a secure private sale.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Timeline Item 2: Q1 2025 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Q1 2025: Private Sale & Ecosystem Development</h3>
+          <ul>
+            <li><strong>HRA Coin Private Sale:</strong> Launch the HRA Coin website featuring a secure module for a private sale at a fixed rate of €2 per coin.</li>
+            <li><strong>Platform Development start:</strong> Develop key ecosystem components including HRA Exchange, HRA ePay, HRA Airlines, HRA Experience, HRA Crypto Wallet, and a centralized user authentication system.</li>
+            <li><strong>MVP Completion:</strong> Prepare Minimum Viable Products for internal testing and review.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Timeline Item 3: Q2 2025 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Q2 2025: Ecosystem Launch & Public Marketing</h3>
+          <ul>
+            <li><strong>Platform Deployment:</strong> MVP ready for all HRA platforms, accessible on both web and mobile.</li>
+            <li><strong>Community Marketing:</strong> Initiate global marketing and community-building campaigns.</li>
+            <li><strong>HRA Coin Public Launch:</strong> Launch HRA Coin publicly with listings on HRA Exchange as well as external centralized and decentralized exchanges; secure inclusion on CoinMarketCap and CoinGecko.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Timeline Item 4: Q3 2025 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Q3 2025: Strategic Growth & Feature Expansion</h3>
+          <ul>
+            <li><strong>Partnership Development:</strong> Strategically onboard partner airlines, hotels, retailers, and fintech providers.</li>
+            <li><strong>Platform Enhancements:</strong> Introduce new features across mobile and web interfaces to enhance user experience and lunch with full features.</li>
+            <li><strong>Investor Relations:</strong> Expand exchange listings and attract new investors to boost token liquidity.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Timeline Item 5: Q4 2025 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Q4 2025: Ecosystem Maturity & Innovation</h3>
+          <ul>
+            <li><strong>Expand Partnerships:</strong> Grow the network of businesses accepting HRA Coin.</li>
+            <li><strong>Product Innovation:</strong> Roll out advanced wallet features and streamlined payment experiences.</li>
+            <li><strong>Operational Scalability:</strong> Enhance backend systems and UX to support increasing user activity.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Timeline Item 6: 2026 and Beyond -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>2026 & Beyond: Mass Adoption & Global Expansion</h3>
+          <ul>
+            <li><strong>Global Ecosystem Adoption:</strong> Scale HRA Coin’s presence in the international travel market, making it the default payment method.</li>
+            <li><strong>Loyalty & Rewards Expansion:</strong> Introduce tier-based rewards and exclusive benefits tailored to user engagement.</li>
+            <li><strong>DeFi Integration:</strong> Enable staking, lending, and liquidity provisioning through leading decentralized finance protocols.</li>
+            <li><strong>Sustainability & Eco-Innovation:</strong> Launch carbon offset initiatives and establish eco-partnerships for green travel.</li>
+            <li><strong>Continuous Expansion:</strong> Explore NFT integrations, metaverse applications, and eCommerce partnerships to maintain innovation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="roadmap-footer">
+      <h3>Roadmap to a Decentralized Future</h3>
+      <p>
+        From the technical foundation to global adoption, every phase of our roadmap builds on the last—ensuring HRA Coin's role as a pillar of the Web3 economy and transforming travel, finance, and commerce through a unified blockchain ecosystem.
+      </p>
+    </footer>
+  </div>
 </section>
+
+<!-- Embedded CSS for Roadmap Section -->
+<style>
+  .roadmap-section {
+    padding: 4rem 0;
+    background: #f8f8f8;
+    color: #333;
+  }
+  .roadmap-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .roadmap-header, .roadmap-footer {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .roadmap-header .badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #393185;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .roadmap-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #393185;
+  }
+  .roadmap-header .intro {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .roadmap-header .description {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  .timeline {
+    position: relative;
+    padding: 2rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #ddd;
+    transform: translateX(-50%);
+  }
+  .timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 1.5rem 2rem;
+    box-sizing: border-box;
+  }
+  /* Alternate timeline items */
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+  }
+  .timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #393185;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 2px #393185;
+  }
+  .timeline-item:nth-child(odd)::before {
+    right: -10px;
+  }
+  .timeline-item:nth-child(even)::before {
+    left: -10px;
+  }
+  .timeline-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #393185;
+  }
+  .timeline-content ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .timeline-content li {
+    margin-bottom: 0.5rem;
+  }
+  .roadmap-footer h3 {
+    font-size: 2rem;
+    color: #393185;
+    margin-bottom: 1rem;
+  }
+  .roadmap-footer p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  @media (max-width: 768px) {
+    .timeline {
+      padding: 1rem 0;
+    }
+    .timeline::before {
+      left: 8px;
+    }
+    .timeline-item {
+      width: 100%;
+      padding-left: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: left !important;
+      left: 0 !important;
+    }
+    .timeline-item::before {
+      left: 0;
+    }
+  }
+</style>
+
+
 
 <section id="companies" class="th zh" style="background: linear-gradient(180deg, #393185 0%, #2d2668 100%);">
     <div class="companies-header">
@@ -1534,55 +2806,74 @@
     </section>
 </section>
 
-<section id="features" class="th zh">
-    <div class="a">
-        <div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
-            <span class="fn">Why</span>
-            <h2 class="bo">Why HRA Coin?</h2>
-            <p class="gi qi xi ul">
-                The integration of HRA Coin into the HRA experience ecosystem sets it apart from other cryptocurrencies.
-                It provides users with a seamless travel and payment experience, distinguishing it as more than just a
-                digital currency. 
-            </p>
-        </div>
-        <div class="ha qb _d">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="wow fadeInUp" data-wow-delay="0s">
-                    <div class="feature-card">
-                        <h3>Low transaction fees</h3>
-                        <p>
-                            HRA Coin offers significantly lower transaction fees compared to traditional payment
-                            systems. This means that users can send and receive funds without incurring high costs,
-                            making it an attractive option for individuals and businesses alike.
-                        </p>
-                    </div>
-                </div>
-                <div class="wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="feature-card">
-                        <h3>Global acceptance</h3>
-                        <p>
-                            HRA Coin is designed as a global currency, enabling users to make transactions across
-                            borders without intermediaries or exchange rates. This allows for fast and seamless
-                            international transactions, bridging gaps between diverse economies and cultures.
-                        </p>
-                    </div>
-                </div>
-                <div class="wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="feature-card">
-                        <h3>Fast processing times</h3>
-                        <p>
-                            HRA Coin boasts quick processing times, with transactions settled in mere seconds. This
-                            speed is particularly valuable for businesses needing rapid payment processing, such as
-                            e-commerce sites or online marketplaces.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="features" class="th zh" style="padding: 4rem 0; background: linear-gradient(180deg, rgba(57,49,133,0.05) 0%, rgba(57,49,133,0) 100%);">
+  <div class="a">
+    <!-- Section Header -->
+    <div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s" style="text-align: center; margin-bottom: 2rem;">
+      <span class="fn" style="display: inline-block; padding: 0.5rem 1.5rem; background: rgba(57,49,133,0.1); border-radius: 30px; color: var(--primary); font-weight: 500;">Why</span>
+      <h2 class="bo" style="font-size: 2.5rem; font-weight: bold; margin-top: 1rem; color: var(--primary);">Why HRA Coin?</h2>
+      <p class="gi qi xi ul" style="font-size: 1.1rem; line-height: 1.8; color: #666; max-width: 700px; margin: 1rem auto;">
+        HRA Coin is not just another digital asset—it’s a robust utility token that redefines financial transactions in a global, decentralized ecosystem. Enjoy ultra‑low fees, lightning‑fast processing, and unparalleled security, while gaining access to exclusive rewards and innovative features that empower your digital lifestyle.
+      </p>
     </div>
+
+    <!-- Features Grid -->
+    <div class="ha qb _d">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Feature Card 1: Low Transaction Fees -->
+        <div class="wow fadeInUp" data-wow-delay="0s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);">
+          <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Low Transaction Fees</h3>
+          <p style="font-size: 1rem; color: #666; line-height: 1.6;">
+            Send and receive funds at a fraction of the cost compared to traditional systems. HRA Coin minimizes fees to maximize your value.
+          </p>
+        </div>
+
+        <!-- Feature Card 2: Global Acceptance -->
+        <div class="wow fadeInUp" data-wow-delay="0.2s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);">
+          <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Global Acceptance</h3>
+          <p style="font-size: 1rem; color: #666; line-height: 1.6;">
+            Make seamless cross-border transactions without intermediaries or currency exchange hassles. HRA Coin is designed for a truly global market.
+          </p>
+        </div>
+
+        <!-- Feature Card 3: Fast Processing Times -->
+        <div class="wow fadeInUp" data-wow-delay="0.4s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);">
+          <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Lightning-Fast Speed</h3>
+          <p style="font-size: 1rem; color: #666; line-height: 1.6;">
+            Powered by blockchain technology, HRA Coin processes transactions in mere seconds—ensuring efficiency for every payment.
+          </p>
+        </div>
+
+        <!-- Feature Card 4: Robust Security -->
+        <div class="wow fadeInUp" data-wow-delay="0.6s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);">
+          <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Unmatched Security</h3>
+          <p style="font-size: 1rem; color: #666; line-height: 1.6;">
+            Leveraging the power of the Binance Smart Chain and smart contracts, HRA Coin ensures your transactions remain secure and immutable.
+          </p>
+        </div>
+
+        <!-- Feature Card 5: Innovative & Scalable -->
+        <div class="wow fadeInUp" data-wow-delay="0.8s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);">
+          <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Innovative & Scalable</h3>
+          <p style="font-size: 1rem; color: #666; line-height: 1.6;">
+            With continuous upgrades and a design built for expansion, HRA Coin stays ahead of market demands, offering you a future-proof digital asset.
+          </p>
+        </div>
+
+        <!-- Feature Card 6: Community & Investor Rewards -->
+        <div class="wow fadeInUp" data-wow-delay="1s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);">
+          <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Exclusive Rewards</h3>
+          <p style="font-size: 1rem; color: #666; line-height: 1.6;">
+            Benefit from a range of investor and community rewards, including flexible payment options and access to exclusive future innovations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Tokenomics Section -->
+<!-- 
+Tokenomics Section
 <section id="tokenomics" class="th e ca">
     <div class="a">
         <div class="me nf fh wg ml ym zm lp nq">
@@ -1791,27 +3082,217 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('load', initChart);
     }
 });
+</script> -->
+
+<!-- Tokenomics Section -->
+<section id="tokenomics" class="th e ca" style="padding: 4rem 0; background: #f4f4f4;">
+  <div class="a" style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+    <!-- Section Header -->
+    <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+      <span class="badge" style="display: inline-block; padding: 0.5rem 1.5rem; background: #393185; color: white; border-radius: 30px; font-weight: 600;">
+        Tokenomics
+      </span>
+      <h2 style="font-size: 2.5rem; color: #393185; margin: 1rem 0;">HRA Coin Details</h2>
+      <p style="font-size: 1.125rem; color: #555; max-width: 800px; margin: 0 auto;">
+        HRA Coin is our next-generation BEP-20 utility token built on the Binance Smart Chain. It powers our ecosystem with cutting‑edge technology, ensuring secure and efficient transactions worldwide.
+      </p>
+    </div>
+
+    <!-- Tokenomics Content: Chart & Details -->
+    <div class="tokenomics-content" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+      <!-- Chart Column -->
+      <div class="chart-column" style="flex: 1 1 400px; min-width: 300px;">
+        <div class="wow fadeInUp" data-wow-delay="0s">
+          <div id="tokenomicsChart" style="width: 100%; min-height: 400px; background: transparent;"></div>
+        </div>
+      </div>
+      
+      <!-- Details Column -->
+      <div class="details-column" style="flex: 1 1 400px; min-width: 300px;">
+        <!-- Token Specifications -->
+        <div class="token-specs wow fadeInUp" data-wow-delay="0s" style="margin-bottom: 2rem;">
+          <p style="font-size: 1rem; color: #333; line-height: 1.8;">
+            <strong>Token Name:</strong> HRA Coin<br>
+            <strong>Token Symbol:</strong> HRA<br>
+            <strong>Blockchain:</strong> Binance Smart Chain (BEP‑20)<br>
+            <strong>Contract Address:</strong> 0x5E64326cE6DF66CDfa62F8B154097BF536233451<br>
+            <strong>Total Supply:</strong> 1,000,000,000 HRA (1 Billion)<br>
+            <strong>Decimals:</strong> 18<br>
+            <strong>Token Standard:</strong> BEP‑20<br>
+            <strong>Token Type:</strong> Utility Token
+          </p>
+        </div>
+        
+        <!-- Revenue Distribution -->
+        <div class="revenue-distribution wow fadeInUp" data-wow-delay="0s">
+          <h2 style="font-size: 2rem; color: #393185; margin-bottom: 1rem;">Revenue Distribution</h2>
+          <p style="font-size: 1rem; color: #555; margin-bottom: 1rem;">
+            The revenue generated within the HRA Ecosystem is reinvested strategically to fuel further innovation and growth:
+          </p>
+          <div class="distribution-list" style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div class="distribution-item" style="display: flex; align-items: center;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #393185; border-radius: 50%; margin-right: 0.5rem;"></span>
+              <span style="font-size: 1rem; color: #333;">HRA Financial Brokers: <strong>30%</strong></span>
+            </div>
+            <div class="distribution-item" style="display: flex; align-items: center;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #2d2668; border-radius: 50%; margin-right: 0.5rem;"></span>
+              <span style="font-size: 1rem; color: #333;">HRA Epay: <strong>20%</strong></span>
+            </div>
+            <div class="distribution-item" style="display: flex; align-items: center;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #9590c3; border-radius: 50%; margin-right: 0.5rem;"></span>
+              <span style="font-size: 1rem; color: #333;">HRA Web3 Services: <strong>15%</strong></span>
+            </div>
+            <div class="distribution-item" style="display: flex; align-items: center;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #8695ca; border-radius: 50%; margin-right: 0.5rem;"></span>
+              <span style="font-size: 1rem; color: #333;">HRA Airlines: <strong>15%</strong></span>
+            </div>
+            <div class="distribution-item" style="display: flex; align-items: center;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #000000; border-radius: 50%; margin-right: 0.5rem;"></span>
+              <span style="font-size: 1rem; color: #333;">Europe Invest Group: <strong>10%</strong></span>
+            </div>
+            <div class="distribution-item" style="display: flex; align-items: center;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #637381; border-radius: 50%; margin-right: 0.5rem;"></span>
+              <span style="font-size: 1rem; color: #333;">HRA Experience App: <strong>10%</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inline CSS for Hover Effects -->
+<style>
+  .distribution-list .distribution-item:hover {
+    background: rgba(62, 125, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.25rem;
+  }
+  #tokenomicsChart {
+    margin: 0 auto;
+  }
+</style>
+
+<!-- Tokenomics Chart Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const options = {
+      series: [30, 20, 15, 15, 10, 10],
+      chart: {
+        type: 'pie',
+        height: 400,
+        fontFamily: 'Inter, sans-serif',
+        background: 'transparent',
+        animations: {
+          enabled: true,
+          easing: 'easeinout',
+          speed: 800,
+          animateGradually: {
+            enabled: true,
+            delay: 150
+          }
+        }
+      },
+      labels: [
+        'HRA Financial Brokers',
+        'HRA Epay',
+        'HRA Web3 Services',
+        'HRA Airlines',
+        'Europe Invest Group',
+        'HRA Experience App'
+      ],
+      colors: ['#393185', '#2d2668', '#9590c3', '#8695ca', '#000000', '#637381'],
+      legend: {
+        position: 'bottom',
+        horizontalAlign: 'center',
+        fontSize: '14px',
+        labels: {
+          colors: '#000'
+        },
+        markers: {
+          width: 12,
+          height: 12,
+          radius: 6
+        }
+      },
+      stroke: {
+        width: 0
+      },
+      dataLabels: {
+        enabled: true,
+        formatter: function(val) { return val + '%'; },
+        style: {
+          fontSize: '14px',
+          fontFamily: 'Inter, sans-serif',
+          fontWeight: 'bold',
+          colors: ['#fff']
+        }
+      },
+      tooltip: {
+        enabled: true,
+        y: {
+          formatter: function(val) { return val + '%'; }
+        },
+        theme: 'dark',
+        style: {
+          fontSize: '14px',
+          fontFamily: 'Inter, sans-serif'
+        }
+      },
+      responsive: [{
+        breakpoint: 480,
+        options: {
+          chart: { height: 300 },
+          legend: { fontSize: '12px' }
+        }
+      }]
+    };
+
+    function initChart() {
+      try {
+        const chartElement = document.querySelector("#tokenomicsChart");
+        if (!chartElement) {
+          console.error("Tokenomics chart element not found.");
+          return;
+        }
+        if (typeof ApexCharts === 'undefined') {
+          console.error("ApexCharts library is not loaded.");
+          return;
+        }
+        const chart = new ApexCharts(chartElement, options);
+        chart.render().catch(error => {
+          console.error("Error rendering the tokenomics chart:", error);
+        });
+      } catch (error) {
+        console.error("Error initializing the tokenomics chart:", error);
+      }
+    }
+    if (document.readyState === 'complete') {
+      initChart();
+    } else {
+      window.addEventListener('load', initChart);
+    }
+  });
 </script>
+
 
 <section id="team" class="we bf th oh al">
     <div class="a">
         <div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
             <span class="va gi pi ri bj fn"> Technology </span>
             <h2 class="va li pi ui yi vl bo">
-                Discuss what makes HRA Coin different from other cryptocurrencies.
+                What Sets HRA Coin Apart from Traditional Cryptocurrencies?
             </h2>
             <p class="gi qi xi ul">
-                HRA Coin is based on the Binance smart chain, which is an IMA blockchain network.
-                It is characterized by efficiency and low transaction fees.
-                Through this network, customers meet convenience.
-                It also ensures that users can make payments, withdrawals or bookings without any delay due to its high
-                speed.
-                The low transaction fees make it cost-effective for users.
+                HRA Coin is built on the Binance Smart Chain (BEP‑20), a high-performance blockchain known for its scalability, low gas fees, and lightning-fast transaction speeds. What makes HRA Coin unique is its deep integration into a real-world ecosystem, enabling instant payments, seamless bookings, and real-time withdrawals within our interconnected platforms—such as travel, payments, and crypto finance.
+                <br><br>
+                Unlike traditional cryptocurrencies that operate in isolation, HRA Coin acts as a unified utility token across a growing suite of platforms, offering users tangible benefits such as reduced costs, borderless usage, and decentralized efficiency. Its foundation on BSC not only ensures reliability and security, but also makes it ideal for micro and macro transactions across global markets.
             </p>
         </div>
         <div class="ha qb _d"></div>
     </div>
 </section>
+
 
 
 
@@ -2354,7 +3835,7 @@ let currentIndexTestimonial = 1;
             'HRA Epay',
             'HRA Web3 Services',
             'HRA Airlines',
-            'Little Umma BV',
+            'Europe Investment Group',
             'HRA Experience App'
         ],
         colors: ['#393185', '#2d2668', '#9590c3', '#8695ca', '#000000', '#637381'],
