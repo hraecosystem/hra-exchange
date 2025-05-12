@@ -20,7 +20,6 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
  * @property-read int|null $coin_wallet_transactions_count
  * @property-read \App\Models\Member $fromMember
  * @property-read \App\Models\Member $toMember
- *
  * @method static \Database\Factories\P2PTransferFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|P2PTransfer newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|P2PTransfer newQuery()
@@ -31,7 +30,6 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
  * @method static \Illuminate\Database\Eloquent\Builder|P2PTransfer whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|P2PTransfer whereToMemberId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|P2PTransfer whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class P2PTransfer extends Model

@@ -77,6 +77,11 @@
                                class="btn btn-sm btn-primary">Buy {{ env('APP_CURRENCY') }}</a>
                             <a href="{{ route('member.p2p-transfers.create') }}"
                                class="btn btn-sm btn-danger">Send {{ env('APP_CURRENCY') }}</a>
+                               [
+                            <a href=\"{{ route('member.bank-transfer.create') }}\" 
+                                class=\"btn btn-primary btn-lg btn-block\">Bank Transfer</a>
+                           
+
                         </div>
                         <div class="col-lg-4 col-4 text-center">
                             <img class="img-fluid" src="{{ asset('images/coin.png') }}"
@@ -88,6 +93,7 @@
             </div>
         </div>
     </div>
+    
     <div class="row">
         <div class="col-xl-6">
             <div class="row">

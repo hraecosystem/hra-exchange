@@ -29,7 +29,6 @@ use Laracasts\Presenter\PresentableTrait;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Member $member
  * @property-read Model|\Eloquent $responsible
- *
  * @method static Builder|CoinWalletTransaction credit()
  * @method static Builder|CoinWalletTransaction newModelQuery()
  * @method static Builder|CoinWalletTransaction newQuery()
@@ -48,7 +47,6 @@ use Laracasts\Presenter\PresentableTrait;
  * @method static Builder|CoinWalletTransaction whereTotal($value)
  * @method static Builder|CoinWalletTransaction whereType($value)
  * @method static Builder|CoinWalletTransaction whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class CoinWalletTransaction extends Model

@@ -17,7 +17,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Member $member
- *
  * @method static \Illuminate\Database\Eloquent\Builder|UserWallet newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|UserWallet newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|UserWallet query()
@@ -28,7 +27,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|UserWallet wherePublicKey($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserWallet whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserWallet whereUsdtBalance($value)
- *
  * @mixin \Eloquent
  */
 class UserWallet extends Model

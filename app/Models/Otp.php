@@ -17,7 +17,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $status 1: used, 2: unused
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- *
  * @method static Builder|Otp newModelQuery()
  * @method static Builder|Otp newQuery()
  * @method static Builder|Otp query()
@@ -28,7 +27,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static Builder|Otp whereStatus($value)
  * @method static Builder|Otp whereType($value)
  * @method static Builder|Otp whereUpdatedAt($value)
- *
  * @mixin Eloquent
  */
 class Otp extends Model

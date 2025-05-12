@@ -25,7 +25,6 @@ use Laracasts\Presenter\PresentableTrait;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Member $member
  * @property-read Model|\Eloquent $responsible
- *
  * @method static Builder|EuroWalletTransaction credit()
  * @method static Builder|EuroWalletTransaction eligibleForPayout()
  * @method static Builder|EuroWalletTransaction fromDate(string $date)
@@ -54,7 +53,6 @@ use Laracasts\Presenter\PresentableTrait;
  * @method static Builder|EuroWalletTransaction whereTotal($value)
  * @method static Builder|EuroWalletTransaction whereType($value)
  * @method static Builder|EuroWalletTransaction whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class EuroWalletTransaction extends Model

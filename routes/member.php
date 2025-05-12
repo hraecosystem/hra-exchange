@@ -1,3 +1,4 @@
+// File: routes/member.php
 <?php
 
 Route::group([
@@ -96,5 +97,17 @@ Route::group([
         ], function () {
             Route::get('', 'UnlockLTHController@index')->name('index');
         });
+
+        // Add the bank transfer routes here, inside the 'memberAuth' middleware group
+        Route::group([
+            'prefix' => 'bank-transfer',
+            'as' => 'bank-transfer.',
+        ], function () {
+            Route::get('/', [App\Http\Controllers\Member\BankTransferController::class, 'create'])->name('create');
+            Route::post('/', [App\Http\Controllers\Member\BankTransferController::class, 'store'])->name('store');
+        });
+
     });
 });
+
+

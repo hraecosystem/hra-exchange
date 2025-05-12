@@ -23,7 +23,6 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property-read int|null $media_count
  * @property-read \App\Models\Member|null $member
  * @property-read \App\Models\SupportTicket $supportTicket
- *
  * @method static \Illuminate\Database\Eloquent\Builder|SupportTicketMessage newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|SupportTicketMessage newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|SupportTicketMessage query()
@@ -35,7 +34,6 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static \Illuminate\Database\Eloquent\Builder|SupportTicketMessage whereMessageableType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SupportTicketMessage whereSupportTicketId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SupportTicketMessage whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class SupportTicketMessage extends Model implements HasMedia

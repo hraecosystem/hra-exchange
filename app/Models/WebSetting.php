@@ -17,11 +17,9 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  *
  * @property-read MediaCollection<int, Media> $media
  * @property-read int|null $media_count
- *
  * @method static Builder|WebSetting newModelQuery()
  * @method static Builder|WebSetting newQuery()
  * @method static Builder|WebSetting query()
- *
  * @mixin Eloquent
  */
 class WebSetting extends Model implements HasMedia

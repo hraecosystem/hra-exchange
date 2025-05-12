@@ -13,7 +13,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $ip
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- *
  * @method static \Illuminate\Database\Eloquent\Builder|NewsLetter newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|NewsLetter newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|NewsLetter query()
@@ -22,7 +21,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|NewsLetter whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NewsLetter whereIp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|NewsLetter whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class NewsLetter extends Model

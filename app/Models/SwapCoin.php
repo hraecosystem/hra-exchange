@@ -20,7 +20,6 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  * @property-read \App\Models\CoinWalletTransaction|null $coinWalletTransactions
  * @property-read \App\Models\Member $member
  * @property-read \App\Models\EuroWalletTransaction|null $walletTransactions
- *
  * @method static \Illuminate\Database\Eloquent\Builder|SwapCoin newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|SwapCoin newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|SwapCoin query()
@@ -31,7 +30,6 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  * @method static \Illuminate\Database\Eloquent\Builder|SwapCoin whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SwapCoin whereMemberId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SwapCoin whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class SwapCoin extends Model

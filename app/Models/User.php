@@ -52,7 +52,6 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
  * @property-read Collection<int, Role> $roles
  * @property-read int|null $roles_count
  * @property-read \App\Models\State|null $state
- *
  * @method static \Database\Factories\UserFactory factory($count = null, $state = [])
  * @method static Builder|User newModelQuery()
  * @method static Builder|User newQuery()
@@ -77,7 +76,6 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
  * @method static Builder|User whereStateId($value)
  * @method static Builder|User whereStatus($value)
  * @method static Builder|User whereUpdatedAt($value)
- *
  * @mixin Eloquent
  */
 class User extends Authenticatable implements JWTSubject
