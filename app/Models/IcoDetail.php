@@ -20,6 +20,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $status
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|IcoDetail newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|IcoDetail newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|IcoDetail query()
@@ -35,6 +36,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|IcoDetail whereSupply($value)
  * @method static \Illuminate\Database\Eloquent\Builder|IcoDetail whereTotalPurchase($value)
  * @method static \Illuminate\Database\Eloquent\Builder|IcoDetail whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class IcoDetail extends Model

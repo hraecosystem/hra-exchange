@@ -5,10 +5,9 @@ namespace App\Http\Controllers\Member;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Member\StoreBankTransferRequest; // Import the new Request class
 use App\Models\BankTransferRequest;
-use App\Models\User;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use App\Models\Setting; // Assuming you have a Setting model or similar
+use Illuminate\Support\Facades\DB; // Assuming you have a Setting model or similar
 
 class BankTransferController extends Controller
 {
@@ -29,7 +28,7 @@ class BankTransferController extends Controller
     /**
      * Store a new bank transfer request.
      *
-     * @param  \App\Http\Requests\Member\StoreBankTransferRequest  $request // Use the new Request class
+     * @param  \App\Http\Requests\Member\StoreBankTransferRequest  $request  // Use the new Request class
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(StoreBankTransferRequest $request) // Type-hint the new Request class
@@ -67,6 +66,7 @@ class BankTransferController extends Controller
 
         } catch (\Exception $e) {
             DB::rollBack();
+
             // Log the error: \Log::error('Bank transfer request failed: ' . $e->getMessage());
             return redirect()->back()->with('error', 'Failed to submit bank transfer request. Please try again.');
         }

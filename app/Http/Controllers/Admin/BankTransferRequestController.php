@@ -5,12 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\BankTransferRequest;
 use App\Models\User;
-use App\Models\Member;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
-use App\Notifications\BankTransferRequestApproved; // Import the approved notification
-use App\Notifications\BankTransferRequestRejected; // Import the rejected notification
+use App\Notifications\BankTransferRequestApproved;
+use App\Notifications\BankTransferRequestRejected;
+use Illuminate\Http\Request; // Import the approved notification
+use Illuminate\Support\Facades\DB; // Import the rejected notification
 
 class BankTransferRequestController extends Controller
 {
@@ -31,7 +29,6 @@ class BankTransferRequestController extends Controller
     /**
      * Display the specified bank transfer request.
      *
-     * @param  \App\Models\BankTransferRequest  $bankTransferRequest
      * @return \Illuminate\View\View
      */
     public function show(BankTransferRequest $bankTransferRequest)
@@ -44,8 +41,6 @@ class BankTransferRequestController extends Controller
     /**
      * Approve the specified bank transfer request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\BankTransferRequest  $bankTransferRequest
      * @return \Illuminate\Http\RedirectResponse
      */
     public function approve(Request $request, BankTransferRequest $bankTransferRequest)
@@ -62,12 +57,12 @@ class BankTransferRequestController extends Controller
 
             $member = $bankTransferRequest->user->member;
 
-            if (!$member) {
-                 throw new \Exception("Member record not found for user ID: " . $bankTransferRequest->user_id);
+            if (! $member) {
+                throw new \Exception('Member record not found for user ID: '.$bankTransferRequest->user_id);
             }
 
             if ($member->coin_wallet_balance < $bankTransferRequest->amount_hra) {
-                 throw new \Exception("Insufficient HRA balance for user ID: " . $bankTransferRequest->user_id);
+                throw new \Exception('Insufficient HRA balance for user ID: '.$bankTransferRequest->user_id);
             }
 
             $member->coin_wallet_balance = bcsub($member->coin_wallet_balance, $bankTransferRequest->amount_hra, 8);
@@ -77,7 +72,7 @@ class BankTransferRequestController extends Controller
             if ($request->hasFile('payment_proof')) {
                 $paymentProofPath = $request->file('payment_proof')->store('payment_proofs');
             } else {
-                 $paymentProofPath = $request->input('transaction_id');
+                $paymentProofPath = $request->input('transaction_id');
             }
 
             $bankTransferRequest->status = 'approved';
@@ -94,21 +89,20 @@ class BankTransferRequestController extends Controller
 
         } catch (\Exception $e) {
             DB::rollBack();
+
             // Log the error: \Log::error('Bank transfer request approval failed: ' . $e->getMessage());
-            return redirect()->back()->with('error', 'Failed to approve bank transfer request: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Failed to approve bank transfer request: '.$e->getMessage());
         }
     }
 
     /**
      * Reject the specified bank transfer request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\BankTransferRequest  $bankTransferRequest
      * @return \Illuminate\Http\RedirectResponse
      */
     public function reject(Request $request, BankTransferRequest $bankTransferRequest)
     {
-         if ($bankTransferRequest->status !== 'pending') {
+        if ($bankTransferRequest->status !== 'pending') {
             return redirect()->back()->with('error', 'This request has already been processed.');
         }
 
@@ -131,8 +125,9 @@ class BankTransferRequestController extends Controller
 
         } catch (\Exception $e) {
             DB::rollBack();
+
             // Log the error: \Log::error('Bank transfer request rejection failed: ' . $e->getMessage());
-            return redirect()->back()->with('error', 'Failed to reject bank transfer request: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Failed to reject bank transfer request: '.$e->getMessage());
         }
     }
 }

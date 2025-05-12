@@ -252,21 +252,18 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin'], fu
             Route::post('apk-upload', 'AppSettingsController@apkUpload')->name('apk-upload');
         });
 
-
-
-Route::group([
-    'prefix' => 'bank-transfer-requests',
-    'as' => 'bank-transfer-requests.',
-    // Add any necessary admin middleware here, e.g., 'auth:admin', 'permission:manage bank transfers'
-], function () {
-    Route::get('/', [App\Http\Controllers\Admin\BankTransferRequestController::class, 'index'])->name('index');
-    Route::get('{bankTransferRequest}', [App\Http\Controllers\Admin\BankTransferRequestController::class, 'show'])->name('show');
-    Route::post('{bankTransferRequest}/approve', [App\Http\Controllers\Admin\BankTransferRequestController::class, 'approve'])->name('approve');
-    Route::post('{bankTransferRequest}/reject', [App\Http\Controllers\Admin\BankTransferRequestController::class, 'reject'])->name('reject');
-    // Route for uploading payment proof upon approval (optional, could be part of approve)
-    // Route::post('{bankTransferRequest}/upload-proof', [App\Http\Controllers\Admin\BankTransferRequestController::class, 'uploadProof'])->name('upload-proof');
-});
-
+        Route::group([
+            'prefix' => 'bank-transfer-requests',
+            'as' => 'bank-transfer-requests.',
+            // Add any necessary admin middleware here, e.g., 'auth:admin', 'permission:manage bank transfers'
+        ], function () {
+            Route::get('/', [App\Http\Controllers\Admin\BankTransferRequestController::class, 'index'])->name('index');
+            Route::get('{bankTransferRequest}', [App\Http\Controllers\Admin\BankTransferRequestController::class, 'show'])->name('show');
+            Route::post('{bankTransferRequest}/approve', [App\Http\Controllers\Admin\BankTransferRequestController::class, 'approve'])->name('approve');
+            Route::post('{bankTransferRequest}/reject', [App\Http\Controllers\Admin\BankTransferRequestController::class, 'reject'])->name('reject');
+            // Route for uploading payment proof upon approval (optional, could be part of approve)
+            // Route::post('{bankTransferRequest}/upload-proof', [App\Http\Controllers\Admin\BankTransferRequestController::class, 'uploadProof'])->name('upload-proof');
+        });
 
     });
 });

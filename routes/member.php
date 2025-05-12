@@ -1,4 +1,3 @@
-// File: routes/member.php
 <?php
 
 Route::group([
@@ -109,5 +108,3 @@ Route::group([
 
     });
 });
-
-

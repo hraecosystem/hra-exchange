@@ -26,6 +26,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  * @property-read \App\Models\CoinWalletTransaction|null $coinWalletTransaction
  * @property-read \App\Models\EuroWalletTransaction|null $euroWalletTransaction
  * @property-read \App\Models\StakeBonus|null $stakeBonus
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Stake newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Stake newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Stake query()
@@ -42,6 +43,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  * @method static \Illuminate\Database\Eloquent\Builder|Stake whereStakeByAdmin($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Stake whereTotal($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Stake whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class Stake extends Model

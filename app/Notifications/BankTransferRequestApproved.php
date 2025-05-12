@@ -39,15 +39,15 @@ class BankTransferRequestApproved extends Notification implements ShouldQueue
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->subject('Your Bank Transfer Request Has Been Approved')
-                    ->greeting('Hello ' . $notifiable->name . ',')
-                    ->line('Your bank transfer request (ID: ' . $this->bankTransferRequest->id . ') for ' . number_format($this->bankTransferRequest->amount_hra, 8) . ' HRA has been approved.')
-                    ->line('The equivalent amount of ' . number_format($this->bankTransferRequest->amount_fiat, 2) . ' EUR has been transferred to your bank account.') // Adjust currency
-                    ->line('Payment Proof/Transaction ID: ' . ($this->bankTransferRequest->payment_proof ?? 'N/A'))
-                    ->line('Admin Notes: ' . ($this->bankTransferRequest->admin_notes ?? 'N/A'))
-                    ->line('Thank you for using our service!');
-                    // You might want to add a link back to their profile or transaction history page
-                    // ->action('View Request Details', url('/user/bank-transfer-requests/' . $this->bankTransferRequest->id));
+            ->subject('Your Bank Transfer Request Has Been Approved')
+            ->greeting('Hello '.$notifiable->name.',')
+            ->line('Your bank transfer request (ID: '.$this->bankTransferRequest->id.') for '.number_format($this->bankTransferRequest->amount_hra, 8).' HRA has been approved.')
+            ->line('The equivalent amount of '.number_format($this->bankTransferRequest->amount_fiat, 2).' EUR has been transferred to your bank account.') // Adjust currency
+            ->line('Payment Proof/Transaction ID: '.($this->bankTransferRequest->payment_proof ?? 'N/A'))
+            ->line('Admin Notes: '.($this->bankTransferRequest->admin_notes ?? 'N/A'))
+            ->line('Thank you for using our service!');
+        // You might want to add a link back to their profile or transaction history page
+        // ->action('View Request Details', url('/user/bank-transfer-requests/' . $this->bankTransferRequest->id));
     }
 
     /**

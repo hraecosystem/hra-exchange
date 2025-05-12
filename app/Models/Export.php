@@ -23,6 +23,7 @@ use Laracasts\Presenter\PresentableTrait;
  * @property string|null $completed_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static Builder|Export expired()
  * @method static \Database\Factories\ExportFactory factory($count = null, $state = [])
  * @method static Builder|Export fromDate(string $date)
@@ -42,6 +43,7 @@ use Laracasts\Presenter\PresentableTrait;
  * @method static Builder|Export whereStatus($value)
  * @method static Builder|Export whereUpdatedAt($value)
  * @method static Builder|Export whereUserId($value)
+ *
  * @mixin \Eloquent
  */
 class Export extends Model

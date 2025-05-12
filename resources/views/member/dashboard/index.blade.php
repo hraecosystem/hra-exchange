@@ -78,8 +78,9 @@
                             <a href="{{ route('member.p2p-transfers.create') }}"
                                class="btn btn-sm btn-danger">Send {{ env('APP_CURRENCY') }}</a>
                                [
-                            <a href=\"{{ route('member.bank-transfer.create') }}\" 
-                                class=\"btn btn-primary btn-lg btn-block\">Bank Transfer</a>
+                            <a href="{{ route('member.bank-transfer.create') }}"
+                                class="btn btn-primary btn-lg btn-block">Bank Transfer</a>
+
                            
 
                         </div>

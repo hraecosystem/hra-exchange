@@ -39,14 +39,14 @@ class BankTransferRequestRejected extends Notification implements ShouldQueue
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->subject('Your Bank Transfer Request Has Been Rejected')
-                    ->greeting('Hello ' . $notifiable->name . ',')
-                    ->line('Your bank transfer request (ID: ' . $this->bankTransferRequest->id . ') for ' . number_format($this->bankTransferRequest->amount_hra, 8) . ' HRA has been rejected.')
-                    ->line('Reason for rejection:')
-                    ->line($this->bankTransferRequest->admin_notes ?? 'No reason provided.')
-                    ->line('If you have any questions, please contact support.');
-                    // You might want to add a link back to their profile or support page
-                    // ->action('View Request Details', url('/user/bank-transfer-requests/' . $this->bankTransferRequest->id));
+            ->subject('Your Bank Transfer Request Has Been Rejected')
+            ->greeting('Hello '.$notifiable->name.',')
+            ->line('Your bank transfer request (ID: '.$this->bankTransferRequest->id.') for '.number_format($this->bankTransferRequest->amount_hra, 8).' HRA has been rejected.')
+            ->line('Reason for rejection:')
+            ->line($this->bankTransferRequest->admin_notes ?? 'No reason provided.')
+            ->line('If you have any questions, please contact support.');
+        // You might want to add a link back to their profile or support page
+        // ->action('View Request Details', url('/user/bank-transfer-requests/' . $this->bankTransferRequest->id));
     }
 
     /**

@@ -32,7 +32,7 @@ class StoreBankTransferRequest extends FormRequest
             'account_name' => ['required', 'string', 'max:255'],
             'iban' => ['required', 'string', 'max:34'], // IBAN max length is 34 characters
             'swift_code' => ['nullable', 'string', 'max:11'], // SWIFT/BIC max length is 11 characters
-            'amount_hra' => ['required', 'numeric', 'gt:0', 'decimal:0,8', 'max:' . $maxHraAmount], // Must be greater than 0, up to 8 decimal places, and not exceed balance
+            'amount_hra' => ['required', 'numeric', 'gt:0', 'decimal:0,8', 'max:'.$maxHraAmount], // Must be greater than 0, up to 8 decimal places, and not exceed balance
         ];
     }
 

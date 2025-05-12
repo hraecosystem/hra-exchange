@@ -20,6 +20,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Member $member
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|IcoBonus newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|IcoBonus newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|IcoBonus query()
@@ -33,6 +34,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|IcoBonus whereMemberId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|IcoBonus wherePercentage($value)
  * @method static \Illuminate\Database\Eloquent\Builder|IcoBonus whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class IcoBonus extends Model
