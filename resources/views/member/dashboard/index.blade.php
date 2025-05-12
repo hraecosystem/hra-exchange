@@ -79,7 +79,7 @@
                                class="btn btn-sm btn-danger">Send {{ env('APP_CURRENCY') }}</a>
                                [
                             <a href="{{ route('member.bank-transfer.create') }}"
-                                class="btn btn-primary btn-lg btn-block">Bank Transfer</a>
+                                class="btn btn-sm btn-primary">Bank Transfer</a>
 
                            
 
