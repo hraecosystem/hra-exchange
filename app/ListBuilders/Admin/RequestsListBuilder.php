@@ -4,8 +4,6 @@ namespace App\ListBuilders\Admin;
 
 use App\ListBuilders\ListBuilder;
 use App\ListBuilders\ListBuilderColumn;
-use App\Models\IcoBonus;
-use App\Models\IcoPurchase;
 use App\Models\BankTransferRequest;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
@@ -27,8 +25,8 @@ class RequestsListBuilder extends ListBuilder
     public static function columns(): array
     {
         return [
-               new ListBuilderColumn(
-                name:'name',
+            new ListBuilderColumn(
+                name: 'name',
                 property: 'user.name',
                 filterType: ListBuilderColumn::TYPE_TEXT,
             ),
@@ -38,9 +36,9 @@ class RequestsListBuilder extends ListBuilder
             //     filterType: ListBuilderColumn::TYPE_TEXT,
             //     canCopy: true,
             // ),
-         
+
             new ListBuilderColumn(
-                name:'Bank Account Name',
+                name: 'Bank Account Name',
                 property: 'bank_name',
                 filterType: ListBuilderColumn::TYPE_TEXT,
             ),

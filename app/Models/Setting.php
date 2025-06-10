@@ -21,6 +21,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read MediaCollection<int, Media> $media
  * @property-read int|null $media_count
+ *
  * @method static Builder|Setting newModelQuery()
  * @method static Builder|Setting newQuery()
  * @method static Builder|Setting query()
@@ -29,6 +30,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @method static Builder|Setting whereKey($value)
  * @method static Builder|Setting whereUpdatedAt($value)
  * @method static Builder|Setting whereValue($value)
+ *
  * @mixin Eloquent
  */
 class Setting extends Model implements HasMedia

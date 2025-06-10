@@ -12,7 +12,6 @@ class ExportBankTransferRequestBuilder extends ListBuilder
 {
     public static string $name = 'Bank Transfer Requests';
 
-
     public static function query(array $extras = [], ?Request $request = null): Builder
     {
         $query = BankTransferRequest::where('user_id', $extras['user_id']);
@@ -26,7 +25,7 @@ class ExportBankTransferRequestBuilder extends ListBuilder
     public static function columns(): array
     {
         return [
-         
+
             new ListBuilderColumn(
                 name: 'Bank Name',
                 property: 'bank_name',
@@ -52,7 +51,7 @@ class ExportBankTransferRequestBuilder extends ListBuilder
                 property: 'status',
                 filterType: ListBuilderColumn::TYPE_TEXT,
             ),
-               new ListBuilderColumn(
+            new ListBuilderColumn(
                 name: 'Date Requested',
                 property: 'created_at',
                 filterType: ListBuilderColumn::TYPE_DATE_RANGE

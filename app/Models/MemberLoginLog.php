@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Member $member
+ *
  * @method static \Database\Factories\MemberLoginLogFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|MemberLoginLog newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|MemberLoginLog newQuery()
@@ -24,6 +25,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|MemberLoginLog whereIp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|MemberLoginLog whereMemberId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|MemberLoginLog whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class MemberLoginLog extends Model

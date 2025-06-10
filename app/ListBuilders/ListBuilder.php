@@ -3,7 +3,6 @@
 namespace App\ListBuilders;
 
 use App\Library\Exporter;
-use Yajra\DataTables\Facades\DataTables;
 use Exception;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Builder;
@@ -11,6 +10,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Spatie\QueryBuilder\QueryBuilder;
+use Yajra\DataTables\Facades\DataTables;
 
 abstract class ListBuilder
 {

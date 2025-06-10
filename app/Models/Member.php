@@ -49,6 +49,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @property-read \App\Models\UserWallet|null $userWallet
  * @property-read Collection<int, \App\Models\EuroWalletTransaction> $walletTransactions
  * @property-read int|null $wallet_transactions_count
+ *
  * @method static Builder|Member activatedFromDate(string $date)
  * @method static Builder|Member activatedToDate(string $date)
  * @method static Builder|Member active()
@@ -80,6 +81,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
  * @method static Builder|Member whereStatus($value)
  * @method static Builder|Member whereUpdatedAt($value)
  * @method static Builder|Member whereUserId($value)
+ *
  * @mixin Eloquent
  */
 class Member extends Model implements HasMedia

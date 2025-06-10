@@ -6,8 +6,8 @@ use App\Models\City;
 use App\Models\Deposit;
 use App\Models\Member;
 use App\Models\State;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Route;
 
 Route::any('mollie/{orderNo}/webhook', function ($orderNo) {
     $deposit = Deposit::whereOrderNo($orderNo)->firstOrFail();

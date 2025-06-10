@@ -33,6 +33,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media> $media
  * @property-read int|null $media_count
  * @property-read \App\Models\Member $member
+ *
  * @method static Builder|KYC appliedFromDate(string $date)
  * @method static Builder|KYC appliedToDate(string $date)
  * @method static Builder|KYC approved()
@@ -64,6 +65,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static Builder|KYC whereRejectedAt($value)
  * @method static Builder|KYC whereStatus($value)
  * @method static Builder|KYC whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class KYC extends Model implements HasMedia

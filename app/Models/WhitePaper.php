@@ -16,6 +16,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media> $media
  * @property-read int|null $media_count
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|WhitePaper newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|WhitePaper newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|WhitePaper query()
@@ -23,6 +24,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static \Illuminate\Database\Eloquent\Builder|WhitePaper whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|WhitePaper whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|WhitePaper whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class WhitePaper extends Model implements HasMedia

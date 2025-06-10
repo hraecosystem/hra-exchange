@@ -42,7 +42,7 @@ class DashboardController extends Controller
                 ->sum('total');
 
         $last7DaysInvestment =
-            Deposit::whereBetween('created_at', [today()->subDays(6), now()])->where('status', Deposit::STATUS_COMPLETED)->sum('amount')+
+            Deposit::whereBetween('created_at', [today()->subDays(6), now()])->where('status', Deposit::STATUS_COMPLETED)->sum('amount') +
             CoinWalletTransaction::whereType(CoinWalletTransaction::TYPE_CREDIT)
                 ->whereResponsibleType(Admin::class)
                 ->whereBetween('created_at', [today()->subDays(6), now()])

@@ -27,6 +27,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  * @property-read \App\Models\EuroWalletTransaction|null $euroWalletTransaction
  * @property-read \App\Models\IcoPurchase|null $icoPurchase
  * @property-read \App\Models\Member $member
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Deposit newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Deposit newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Deposit query()
@@ -42,6 +43,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  * @method static \Illuminate\Database\Eloquent\Builder|Deposit wherePgType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Deposit whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Deposit whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class Deposit extends Model

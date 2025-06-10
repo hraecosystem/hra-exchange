@@ -26,7 +26,6 @@ class DashboardController extends Controller
         $last5EUROWalletTransactions = $this->member->walletTransactions()->orderBy('id', 'desc')->limit(5)->get();
         $last5CoinWalletTransactions = $this->member->coinWalletTransactions()->orderBy('id', 'desc')->limit(5)->get();
 
-
         $totalBalance = toHumanReadable($this->member->coin_wallet_balance);
         $totalBalanceDollar = toHumanReadable($this->calculateCoinsDollar($totalBalance));
         // echo '<pre>';
@@ -43,7 +42,7 @@ class DashboardController extends Controller
                     'rate' => $icoDetails->rate,
                     'ico_bonus' => 0,
                     'supply' => toHumanReadable($icoDetails->supply),
-                    'status' => $icoDetails->status == IcoDetail::STATUS_ACTIVE ? 'Currently Live' : ($icoDetails->status == IcoDetail::STATUS_PENDING ? 'Live In ' . Carbon::parse($icoDetails->start_date)->diffInDays(now()) . ' Days' : 'Ended'),
+                    'status' => $icoDetails->status == IcoDetail::STATUS_ACTIVE ? 'Currently Live' : ($icoDetails->status == IcoDetail::STATUS_PENDING ? 'Live In '.Carbon::parse($icoDetails->start_date)->diffInDays(now()).' Days' : 'Ended'),
                     'statusNumber' => $icoDetails->status == IcoDetail::STATUS_ACTIVE ? 1 : 2,
                     'progressBar' => round($icoDetails->total_purchase * 100 / $icoDetails->supply, 2),
                     'actualStatus' => $icoDetails->status,

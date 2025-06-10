@@ -8,12 +8,12 @@ use App\Models\Admin;
 use App\Models\Member;
 use App\Models\SupportTicket;
 use App\Models\SupportTicketMessage;
-use Illuminate\Support\Facades\DB;
 use Exception;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 use Throwable;
 

@@ -22,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\User $user
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|BankTransferRequest newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BankTransferRequest newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BankTransferRequest query()
@@ -38,6 +39,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|BankTransferRequest whereSwiftCode($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BankTransferRequest whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BankTransferRequest whereUserId($value)
+ *
  * @mixin \Eloquent
  */
 class BankTransferRequest extends Model

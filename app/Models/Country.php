@@ -18,6 +18,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media> $media
  * @property-read int|null $media_count
+ *
  * @method static Builder|Country newModelQuery()
  * @method static Builder|Country newQuery()
  * @method static Builder|Country query()
@@ -27,6 +28,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static Builder|Country whereName($value)
  * @method static Builder|Country whereRegex($value)
  * @method static Builder|Country whereUpdatedAt($value)
+ *
  * @mixin Eloquent
  */
 class Country extends Model

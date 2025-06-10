@@ -25,6 +25,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  * @property-read \App\Models\EuroWalletTransaction|null $euroWalletTransaction
  * @property-read \App\Models\IcoBonus|null $icoBonus
  * @property-read \App\Models\Member $member
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|IcoPurchase newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|IcoPurchase newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|IcoPurchase query()
@@ -37,6 +38,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  * @method static \Illuminate\Database\Eloquent\Builder|IcoPurchase whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|IcoPurchase whereMemberId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|IcoPurchase whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class IcoPurchase extends Model

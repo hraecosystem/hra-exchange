@@ -59,9 +59,9 @@
         @endcan
         {{-- @can('Requests-read') --}}
             <li class="menu-item">
-                <a href="{{ route('admin.requests.requests_list') }}" class="menu-link">
+                <a href="{{ route('admin.bank-transfer-requests.index') }}" class="menu-link">
                     <i class="fa-solid fa-code-pull-request"></i>
-                    <div> With draw request HRA</div>
+                    <div>&nbsp; With draw request HRA</div>
                 </a>
             </li>
         {{-- @endcan --}}

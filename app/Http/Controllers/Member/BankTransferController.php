@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers\Member;
 
-use App\ListBuilders\Member\ExportBankTransferRequestBuilder;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Member\StoreBankTransferRequest;
+use App\ListBuilders\Member\ExportBankTransferRequestBuilder;
 use App\Models\BankTransferRequest;
 // use App\ListBuilders\ExportLBankTransferRequest;
-use App\Models\User;
 use App\Models\Member;
+use App\Models\Setting;
+use App\Models\User;
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use App\Models\Setting;
-use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\JsonResponse;
 
 class BankTransferController extends Controller
 {
@@ -29,7 +29,7 @@ class BankTransferController extends Controller
         $user = Auth::user();
 
         // Check if the user has a related Member record
-        if (!$user->member) {
+        if (! $user->member) {
             // Redirect or show an error if no member record exists
             return redirect()->route('member.dashboard.index')->with('error', 'Your do not have any HRA Coin Balance. Please contact support if other issue occurs.');
         }
@@ -39,6 +39,7 @@ class BankTransferController extends Controller
 
         return view('member.bank-transfer.create', compact('hraBalance'));
     }
+
     // public function list_requests()
     // {
     //     $user = Auth::user();
@@ -56,7 +57,7 @@ class BankTransferController extends Controller
     //     // Access coin_wallet_balance from the related Member model
     //     $hraBalance = $user->member->coin_wallet_balance ?? 0;
     //     // Return the view with the bank transfer requests and HRA balance
-       public function list_requests(): Renderable|RedirectResponse|JsonResponse
+    public function list_requests(): Renderable|RedirectResponse|JsonResponse
     {
         return ExportBankTransferRequestBuilder::render([
             'user_id' => Auth::user()->id,
@@ -66,7 +67,6 @@ class BankTransferController extends Controller
     /**
      * Store a new bank transfer request.
      *
-     * @param  \App\Http\Requests\Member\StoreBankTransferRequest  $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(StoreBankTransferRequest $request)
@@ -84,9 +84,6 @@ class BankTransferController extends Controller
         $exchangeRate = Setting::where('key', 'hra_to_euro_rate')->value('value') ?? 0;
 
         $calculatedFiatAmount = $requestedAmountHra * $exchangeRate;
-
-
-
 
         try {
             DB::beginTransaction();
@@ -111,11 +108,10 @@ class BankTransferController extends Controller
             // exit;
             DB::commit();
 
-
-
             return redirect()->route('member.dashboard.index')->with('success', 'Bank transfer request submitted successfully. It is now pending admin review.');
         } catch (\Exception $e) {
             DB::rollBack();
+
             // Log the error: \Log::error('Bank transfer request failed: ' . $e->getMessage());
             return redirect()->back()->with('error', 'Failed to submit bank transfer request. Please try again.');
         }

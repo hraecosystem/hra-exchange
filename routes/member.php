@@ -114,7 +114,7 @@ Route::group([
             'as' => 'list-requests.',
         ], function () {
             Route::get('', 'BankTransferController@list_requests')->name('list_requests');
-            
+
             // Route::get('/', [App\Http\Controllers\Member\BankTransferController::class, 'list_requests'])->name('list_requests');
             // Route::get('/', [App\Http\Controllers\Member\BankTransferController::class, 'create'])->name('create');
             // Route::post('/', [App\Http\Controllers\Member\BankTransferController::class, 'store'])->name('store');

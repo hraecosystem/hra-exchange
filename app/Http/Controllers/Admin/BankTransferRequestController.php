@@ -58,11 +58,11 @@ class BankTransferRequestController extends Controller
             $member = $bankTransferRequest->user->member;
 
             if (! $member) {
-                throw new \Exception('Member record not found for user ID: ' . $bankTransferRequest->user_id);
+                throw new \Exception('Member record not found for user ID: '.$bankTransferRequest->user_id);
             }
 
             if ($member->coin_wallet_balance < $bankTransferRequest->amount_hra) {
-                throw new \Exception('Insufficient HRA balance for user ID: ' . $bankTransferRequest->user_id);
+                throw new \Exception('Insufficient HRA balance for user ID: '.$bankTransferRequest->user_id);
             }
 
             $member->coin_wallet_balance = bcsub($member->coin_wallet_balance, $bankTransferRequest->amount_hra, 8);
@@ -90,7 +90,7 @@ class BankTransferRequestController extends Controller
             DB::rollBack();
 
             // Log the error: \Log::error('Bank transfer request approval failed: ' . $e->getMessage());
-            return redirect()->back()->with('error', 'Failed to approve bank transfer request: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Failed to approve bank transfer request: '.$e->getMessage());
         }
     }
 
@@ -103,9 +103,9 @@ class BankTransferRequestController extends Controller
     {
         // echo "<pre>";
         // print_r($bankTransferRequest->amount_hra);
-  
-        // print_r($bankTransferRequest->user->member->coin_wallet_balance); 
-      
+
+        // print_r($bankTransferRequest->user->member->coin_wallet_balance);
+
         // // $hraBalance = $user->member->coin_wallet_balance ?? 0;
         // // print_r($bankTransferRequest->toArray());
         // // echo "Request ID: " . $bankTransferRequest->id . "<br>";
@@ -115,9 +115,6 @@ class BankTransferRequestController extends Controller
         // // echo "Status: " . $bankTransferRequest->status . "<br>";
         // echo "</pre>";
         // exit;
-
-
-
 
         if ($bankTransferRequest->status !== 'pending') {
             return redirect()->back()->with('error', 'This request has already been processed.');
@@ -137,7 +134,7 @@ class BankTransferRequestController extends Controller
             $hraBalance = $bankTransferRequest->user->member->coin_wallet_balance ?? 0;
             $calculatedNewBalance = $hraBalance + $bankTransferRequest->amount_hra;
             $bankTransferRequest->user->member->update(['coin_wallet_balance' => $calculatedNewBalance]);
-            
+
             // Send rejection notification to the user
             $bankTransferRequest->user->notify(new BankTransferRequestRejected($bankTransferRequest));
 
@@ -148,7 +145,7 @@ class BankTransferRequestController extends Controller
             DB::rollBack();
 
             // Log the error: \Log::error('Bank transfer request rejection failed: ' . $e->getMessage());
-            return redirect()->back()->with('error', 'Failed to reject bank transfer request: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Failed to reject bank transfer request: '.$e->getMessage());
         }
     }
 }

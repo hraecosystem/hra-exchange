@@ -19,6 +19,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $comment
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|StakeBonus newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|StakeBonus newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|StakeBonus query()
@@ -33,6 +34,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|StakeBonus wherePercentage($value)
  * @method static \Illuminate\Database\Eloquent\Builder|StakeBonus whereStakeId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|StakeBonus whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class StakeBonus extends Model

@@ -33,18 +33,18 @@ class MemberListBuilder extends ListBuilder
             //                filterType: ListBuilderColumn::TYPE_DATE_RANGE
             //            ),
             new ListBuilderColumn(
-                name: settings('member_name') . ' ID',
+                name: settings('member_name').' ID',
                 property: 'code',
                 filterType: ListBuilderColumn::TYPE_TEXT,
                 canCopy: true,
             ),
             new ListBuilderColumn(
-                name: settings('member_name') . 'name',
+                name: settings('member_name').'name',
                 property: 'user.name',
                 filterType: ListBuilderColumn::TYPE_TEXT,
             ),
             new ListBuilderColumn(
-                name: settings('member_name') . ' Email ID',
+                name: settings('member_name').' Email ID',
                 property: 'user.email',
                 filterType: ListBuilderColumn::TYPE_TEXT,
             ),

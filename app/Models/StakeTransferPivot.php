@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|StakeTransferPivot newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|StakeTransferPivot newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|StakeTransferPivot query()
+ *
  * @mixin \Eloquent
  */
 class StakeTransferPivot extends Model

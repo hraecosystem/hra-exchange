@@ -8,8 +8,8 @@ use Carbon\Carbon;
 use Closure;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Builder;
-use Spatie\QueryBuilder\AllowedFilter;
 use Illuminate\Support\Str;
+use Spatie\QueryBuilder\AllowedFilter;
 use Yajra\DataTables\EloquentDataTable;
 
 class ListBuilderColumn

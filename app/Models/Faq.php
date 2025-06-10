@@ -18,6 +18,7 @@ use Laracasts\Presenter\PresentableTrait;
  * @property int $status 1:active,2:inactive
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Database\Factories\FaqFactory factory($count = null, $state = [])
  * @method static Builder|Faq fromDate(string $date)
  * @method static Builder|Faq newModelQuery()
@@ -30,6 +31,7 @@ use Laracasts\Presenter\PresentableTrait;
  * @method static Builder|Faq whereQuestion($value)
  * @method static Builder|Faq whereStatus($value)
  * @method static Builder|Faq whereUpdatedAt($value)
+ *
  * @mixin Eloquent
  */
 class Faq extends Model
