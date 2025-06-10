@@ -3,7 +3,7 @@
 namespace App\ListBuilders;
 
 use App\Library\Exporter;
-use DataTables;
+use Yajra\DataTables\Facades\DataTables;
 use Exception;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Builder;

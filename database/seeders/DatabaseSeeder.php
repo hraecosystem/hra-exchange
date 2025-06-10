@@ -5,9 +5,9 @@ namespace Database\Seeders;
 use App\Models\Admin;
 use App\Models\Member;
 use App\Models\User;
-use Auth;
-use DB;
-use Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
 use SWeb3\Accounts;
 use Throwable;
@@ -29,10 +29,10 @@ class DatabaseSeeder extends Seeder
                 $this->call(IcoDetailTableSeeder::class);
 
                 $user = Admin::create([
-                    'name' => 'HRA',
-                    'email' => 'hra@mail.com',
-                    'mobile' => '9999999999',
-                    'password' => Hash::make('company@123'),
+                    'name' => 'Rachad nait mbarek',
+                    'email' => 'Rachad@mail.com',
+                    'mobile' => '051234567',
+                    'password' => Hash::make('Rachad@123'),
                     'is_super' => true,
                 ]);
 
@@ -40,12 +40,12 @@ class DatabaseSeeder extends Seeder
                 $user->assignRole('admin');
 
                 $user = User::create([
-                    'name' => 'HRA',
-                    'email' => 'user-hra@mail.com',
-                    'mobile' => '9999999999',
-                    'address' => 'address',
+                    'name' => 'Rachad member',
+                    'email' => 'member-hra@mail.com',
+                    'mobile' => '123456789',
+                    'address' => 'test address',
                     'pincode' => '111111',
-                    'password' => Hash::make('company@123'),
+                    'password' => Hash::make('rachad@123'),
                 ]);
 
                 Auth::shouldUse('member');

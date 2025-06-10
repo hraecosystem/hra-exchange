@@ -1,8 +1,12 @@
-@extends('layouts.member') {{-- Assuming you have a member layout --}}
+@extends('member.layouts.master')
+
+@section('title')
+    Bank transation 
+@endsection
 
 @section('content')
 <div class="container">
-    <h2>Bank Transfer Request</h2>
+    <h2>Bank Transfer Request </h2>
 
     @if (session('success'))
         <div class="alert alert-success">

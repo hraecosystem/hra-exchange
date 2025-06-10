@@ -57,6 +57,14 @@
                 </a>
             </li>
         @endcan
+        {{-- @can('Requests-read') --}}
+            <li class="menu-item">
+                <a href="{{ route('admin.requests.requests_list') }}" class="menu-link">
+                    <i class="fa-solid fa-code-pull-request"></i>
+                    <div> With draw request HRA</div>
+                </a>
+            </li>
+        {{-- @endcan --}}
         @can('P2P Transfers-read')
             <li class="menu-item">
                 <a href="{{ route('admin.p2p-transfers.index') }}" class="menu-link">

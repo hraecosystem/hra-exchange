@@ -27,35 +27,24 @@ class MemberListBuilder extends ListBuilder
     public static function columns(): array
     {
         return [
-            new ListBuilderColumn(
-                name: 'Action',
-                property: 'action',
-                view: 'admin.members.datatable.action',
-                shouldExport: false,
-            ),
-            new ListBuilderColumn(
-                name: 'Joining Date',
-                property: 'created_at',
-                filterType: ListBuilderColumn::TYPE_DATE_RANGE
-            ),
             //            new ListBuilderColumn(
             //                name: 'Activation Date',
             //                property: 'activated_at',
             //                filterType: ListBuilderColumn::TYPE_DATE_RANGE
             //            ),
             new ListBuilderColumn(
-                name: settings('member_name').' ID',
+                name: settings('member_name') . ' ID',
                 property: 'code',
                 filterType: ListBuilderColumn::TYPE_TEXT,
                 canCopy: true,
             ),
             new ListBuilderColumn(
-                name: settings('member_name').'name',
+                name: settings('member_name') . 'name',
                 property: 'user.name',
                 filterType: ListBuilderColumn::TYPE_TEXT,
             ),
             new ListBuilderColumn(
-                name: settings('member_name').' Email ID',
+                name: settings('member_name') . ' Email ID',
                 property: 'user.email',
                 filterType: ListBuilderColumn::TYPE_TEXT,
             ),
@@ -69,6 +58,17 @@ class MemberListBuilder extends ListBuilder
                 //                exportCallback: function ($model) {
                 //                    return toHumanReadable(IcoPurchase::where('member_id', $model->id)->sum('amount'));
                 //                },
+            ),
+            new ListBuilderColumn(
+                name: 'Joining Date',
+                property: 'created_at',
+                filterType: ListBuilderColumn::TYPE_DATE_RANGE
+            ),
+            new ListBuilderColumn(
+                name: 'Action',
+                property: 'action',
+                view: 'admin.members.datatable.action',
+                shouldExport: false,
             ),
             //            new ListBuilderColumn(
             //                name: 'HRA HOLD BONUS',

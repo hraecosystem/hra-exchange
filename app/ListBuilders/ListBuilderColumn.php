@@ -9,7 +9,7 @@ use Closure;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Builder;
 use Spatie\QueryBuilder\AllowedFilter;
-use Str;
+use Illuminate\Support\Str;
 use Yajra\DataTables\EloquentDataTable;
 
 class ListBuilderColumn

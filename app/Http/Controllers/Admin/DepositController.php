@@ -12,7 +12,7 @@ use App\Models\Member;
 use App\Traits\CoinTrait;
 use Brick\Math\BigDecimal;
 use Brick\Math\RoundingMode;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Exception;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\JsonResponse;

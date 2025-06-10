@@ -14,6 +14,12 @@
                 </a>
             </li>
             <li>
+                <a href="{{ route('member.list-requests.list_requests') }}" aria-expanded="false">
+                    <i class="fa-duotone fa-circle-bolt"></i>
+                    <span class="nav-text">With draw request {{ env('APP_CURRENCY') }}</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{ route('member.deposit.index') }}" aria-expanded="false">
                     <i class="fa-duotone fa-circle-bolt"></i>
                     <span class="nav-text">Orders</span>

@@ -20,7 +20,6 @@ use Laracasts\Presenter\PresentableTrait;
  * @property-read \App\Models\Member $member
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\SupportTicketMessage> $message
  * @property-read int|null $message_count
- *
  * @method static Builder|SupportTicket fromDate(string $date)
  * @method static Builder|SupportTicket newModelQuery()
  * @method static Builder|SupportTicket newQuery()
@@ -34,7 +33,6 @@ use Laracasts\Presenter\PresentableTrait;
  * @method static Builder|SupportTicket whereTicketId($value)
  * @method static Builder|SupportTicket whereTitle($value)
  * @method static Builder|SupportTicket whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class SupportTicket extends Model

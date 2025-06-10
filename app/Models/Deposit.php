@@ -27,7 +27,6 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  * @property-read \App\Models\EuroWalletTransaction|null $euroWalletTransaction
  * @property-read \App\Models\IcoPurchase|null $icoPurchase
  * @property-read \App\Models\Member $member
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Deposit newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Deposit newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Deposit query()
@@ -43,7 +42,6 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  * @method static \Illuminate\Database\Eloquent\Builder|Deposit wherePgType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Deposit whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Deposit whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class Deposit extends Model
@@ -54,21 +52,21 @@ class Deposit extends Model
 
     protected $casts = ['receipt' => 'json'];
 
-    const int PG_TYPE_MOLLIE = 1;
+    const PG_TYPE_MOLLIE = 1;
 
-    const int PG_TYPE_STRIPE = 2;
+    const PG_TYPE_STRIPE = 2;
 
-    const int STATUS_PENDING = 1;
+    const STATUS_PENDING = 1;
 
-    const int STATUS_COMPLETED = 2;
+    const STATUS_COMPLETED = 2;
 
-    const int STATUS_FAILED = 3;
+    const STATUS_FAILED = 3;
 
-    const int STATUS_CANCELLED = 4;
+    const STATUS_CANCELLED = 4;
 
-    const int STATUS_EXPIRED = 5;
+    const STATUS_EXPIRED = 5;
 
-    const array STATUSES = [
+    const STATUSES = [
         self::STATUS_PENDING => 'Pending',
         self::STATUS_COMPLETED => 'Completed',
         self::STATUS_FAILED => 'Failed',

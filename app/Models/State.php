@@ -20,7 +20,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property-read Collection<int, \App\Models\City> $cities
  * @property-read int|null $cities_count
  * @property-read \App\Models\Country|null $country
- *
  * @method static Builder|State newModelQuery()
  * @method static Builder|State newQuery()
  * @method static Builder|State query()
@@ -29,7 +28,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static Builder|State whereId($value)
  * @method static Builder|State whereName($value)
  * @method static Builder|State whereUpdatedAt($value)
- *
  * @mixin Eloquent
  */
 class State extends Model

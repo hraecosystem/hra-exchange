@@ -21,7 +21,6 @@ use Laracasts\Presenter\PresentableTrait;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Member $member
  * @property-read \App\Models\User|null $user
- *
  * @method static Builder|MemberStatusLog joiningFromDate(string $date)
  * @method static Builder|MemberStatusLog joiningToDate(string $date)
  * @method static Builder|MemberStatusLog newModelQuery()
@@ -34,7 +33,6 @@ use Laracasts\Presenter\PresentableTrait;
  * @method static Builder|MemberStatusLog whereMemberId($value)
  * @method static Builder|MemberStatusLog whereNewStatus($value)
  * @method static Builder|MemberStatusLog whereUpdatedAt($value)
- *
  * @mixin Eloquent
  */
 class MemberStatusLog extends Model

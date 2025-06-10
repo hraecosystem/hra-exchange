@@ -20,7 +20,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Country|null $country
- *
  * @method static Builder|Inquiry fromDate(string $date)
  * @method static Builder|Inquiry newModelQuery()
  * @method static Builder|Inquiry newQuery()
@@ -35,7 +34,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static Builder|Inquiry whereMobile($value)
  * @method static Builder|Inquiry whereName($value)
  * @method static Builder|Inquiry whereUpdatedAt($value)
- *
  * @mixin Eloquent
  */
 class Inquiry extends Model

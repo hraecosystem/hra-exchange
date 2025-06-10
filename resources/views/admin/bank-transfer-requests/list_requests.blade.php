@@ -1,4 +1,4 @@
-@extends('layouts.admin') {{-- Assuming you have an admin layout --}}
+@extends('admin.layouts.master')
 
 @section('content')
 <div class="container-fluid">
@@ -55,7 +55,7 @@
                                 </td>
                                 <td>{{ $request->created_at->format('Y-m-d H:i') }}</td>
                                 <td>
-                                    <a href="{{ route('admin.bank-transfer-requests.show', $request) }}" class="btn btn-sm btn-info">View</a>
+                                    <a href="{{ route('admin.bank-transfer-requests.show', $request) }}" class="btn btn-sm btn-info"><i class="fa-solid fa-eye"></i></a>
                                 </td>
                             </tr>
                         @empty

@@ -10,7 +10,7 @@ use App\Models\P2PTransfer;
 use App\Models\User;
 use Brick\Math\Exception\MathException;
 use Brick\Math\Exception\RoundingNecessaryException;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Exception;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\JsonResponse;

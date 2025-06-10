@@ -8,7 +8,7 @@ use App\Models\Admin;
 use App\Models\Member;
 use App\Models\SupportTicket;
 use App\Models\SupportTicketMessage;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Exception;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\JsonResponse;

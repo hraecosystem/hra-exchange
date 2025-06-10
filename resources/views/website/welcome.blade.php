@@ -942,7 +942,14 @@
     section[style*="background: linear-gradient"] > * {
       z-index: 2;
     }
-
+    .w-100{
+      width: 100%;
+    }
+    .bnt-hv:hover{
+          background: #393185;
+        color: #fff;
+        transition: 0.9s
+    }
     /* Animation */
     .wow {
       animation-duration: 1s;
@@ -1330,6 +1337,11 @@
       height: 30px;
       color: #fff;
     }
+    .link-adress{
+      color: -webkit-link !important;
+      text-decoration: underline !important;
+      font-weight: 500 !important;
+    }
     #why-choose .benefit-title {
       font-size: 1.25rem;
       color: #2d2668;
@@ -1577,9 +1589,9 @@
           <!-- Call-to-Action: Buy Now -->
           <div class="qb ce lh pp oq 2xl:ud-pl-20">
             <div class="sb pm">
-              <a href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x5E64326cE6DF66CDfa62F8B154097BF536233451" target="_blank" 
+              <a href="{{ route('member.deposit.create') }}" target="_blank" 
                  class="qb be de oe re ze vg wg ii oi xi qj ek fk lk zk vl am fm lg:px-4 xl:px-8">
-                 Buy on PancakeSwap
+                 Buy Now
               </a>
             </div>
           </div>
@@ -1647,7 +1659,7 @@
             Invest Now
           </a> -->
 
-          <a href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x5E64326cE6DF66CDfa62F8B154097BF536233451" 
+          <a href="{{ route('member.deposit.create') }}"
           target="_blank" 
           rel="noopener noreferrer"
           class="oe of zg wg ii oi zi hk dark:hover:bg-opacity-90">
@@ -2545,7 +2557,7 @@
                     </div>
 
                     <div class="web3-links"style="color: #393185;" >
-                        <a href="https://www.hra-web3.com" target="_blank" rel="noopener noreferrer" class="primary-btn" style="margin: 1em 0; width: 200px; text-align: center;">
+                        <a href="https://www.hra-web3.com" target="_blank" rel="noopener noreferrer" class="primary-btn" style="margin: 1em 0; width: 100%; text-align: center;">
                             Visit HRA Web3
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                 <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -2687,7 +2699,7 @@
                     </div>
 
                     <div class="brokers-links" style="color: #393185;">
-                        <a href="https://www.hra-exchange.com" target="_blank" rel="noopener noreferrer" class="primary-btn" style="margin: 1em 0; width: 200px; text-align: center;">
+                        <a href="https://www.hra-exchange.com" target="_blank" rel="noopener noreferrer" class="primary-btn" style="margin: 1em 0; width: 100%; text-align: center;">
                             Visit HRA Exchange
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                 <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -2748,32 +2760,38 @@
                     <h3>Licensed</h3>
                     <p>urope Invest Group is a Belgian investment company that actively supports innovative projects within the HRA Experience ecosystem</p>
                     
-                    <div class="epay-features">
+                    {{-- <div class="epay-features">
                         <div class="feature">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
                             <a href="{{ asset('assets/pdfs/little-oummah-license.pdf') }}" target="_blank" rel="noopener noreferrer" class="text-decoration-underline">
                                 Licence
                             </a>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="epay-links" style="color: #393185;">
                     
-    <a href="https://www.hra-experience.com" target="_blank" rel="noopener noreferrer" class="primary-btn text-decoration-none d-inline-flex align-items-center justify-content-center" style="width: 200px;">
+    <a href="{{ asset('assets/pdfs/little-oummah-license.pdf') }}" target="_blank" rel="noopener noreferrer" class="primary-btn text-decoration-none d-inline-flex align-items-center justify-content-center">
+        Licence
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="ms-2">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </a>
+    <a href="https://www.hra-experience.com" target="_blank" rel="noopener noreferrer" class="primary-btn text-decoration-none d-inline-flex align-items-center justify-content-center">
         Visit HRA Experience
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="ms-2">
             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
     </a>
 
-    <a href="https://www.hra-airlines.com" target="_blank" rel="noopener noreferrer" class="primary-btn text-decoration-none d-inline-flex align-items-center justify-content-center" style="width: 200px;">
+    <a href="https://www.hra-airlines.com" target="_blank" rel="noopener noreferrer" class="primary-btn text-decoration-none d-inline-flex align-items-center justify-content-center">
         Visit HRA Airlines
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="ms-2">
             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
     </a>
 
-    <a href="https://www.hra-epay.com" target="_blank" rel="noopener noreferrer" class="primary-btn text-decoration-none d-inline-flex align-items-center justify-content-center" style="width: 200px;">
+    <a href="https://www.hra-epay.com" target="_blank" rel="noopener noreferrer" class="primary-btn text-decoration-none d-inline-flex align-items-center justify-content-center">
         Visit HRA Epay
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="ms-2">
             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -2786,7 +2804,7 @@
                             <a href="https://www.instagram.com/hra_experience/" target="_blank" rel="noopener noreferrer" class="social-link">
                                 <i class="fab fa-instagram"></i>
                                 Instagram
-                            </a>,
+                            </a>
                             
                             <a href="https://www.tiktok.com/@hraexperience" target="_blank" rel="noopener noreferrer" class="social-link">
                                 <i class="fab fa-tiktok"></i>
@@ -2819,9 +2837,9 @@
 
     <!-- Features Grid -->
     <div class="ha qb _d">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6" style="width: 100%">
         <!-- Feature Card 1: Low Transaction Fees -->
-        <div class="wow fadeInUp" data-wow-delay="0s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);">
+        <div class="wow fadeInUp" data-wow-delay="0s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);margin: 16px 0 16px 0px;">
           <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Low Transaction Fees</h3>
           <p style="font-size: 1rem; color: #666; line-height: 1.6;">
             Send and receive funds at a fraction of the cost compared to traditional systems. HRA Coin minimizes fees to maximize your value.
@@ -2829,7 +2847,7 @@
         </div>
 
         <!-- Feature Card 2: Global Acceptance -->
-        <div class="wow fadeInUp" data-wow-delay="0.2s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);">
+        <div class="wow fadeInUp" data-wow-delay="0.2s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);margin: 16px 0 16px 0px;">
           <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Global Acceptance</h3>
           <p style="font-size: 1rem; color: #666; line-height: 1.6;">
             Make seamless cross-border transactions without intermediaries or currency exchange hassles. HRA Coin is designed for a truly global market.
@@ -2837,7 +2855,7 @@
         </div>
 
         <!-- Feature Card 3: Fast Processing Times -->
-        <div class="wow fadeInUp" data-wow-delay="0.4s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);">
+        <div class="wow fadeInUp" data-wow-delay="0.4s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);margin: 16px 0 16px 0px;">
           <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Lightning-Fast Speed</h3>
           <p style="font-size: 1rem; color: #666; line-height: 1.6;">
             Powered by blockchain technology, HRA Coin processes transactions in mere seconds—ensuring efficiency for every payment.
@@ -2845,7 +2863,7 @@
         </div>
 
         <!-- Feature Card 4: Robust Security -->
-        <div class="wow fadeInUp" data-wow-delay="0.6s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);">
+        <div class="wow fadeInUp" data-wow-delay="0.6s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);margin: 16px 0 16px 0px;">
           <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Unmatched Security</h3>
           <p style="font-size: 1rem; color: #666; line-height: 1.6;">
             Leveraging the power of the Binance Smart Chain and smart contracts, HRA Coin ensures your transactions remain secure and immutable.
@@ -2853,7 +2871,7 @@
         </div>
 
         <!-- Feature Card 5: Innovative & Scalable -->
-        <div class="wow fadeInUp" data-wow-delay="0.8s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);">
+        <div class="wow fadeInUp" data-wow-delay="0.8s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);margin: 16px 0 16px 0px;">
           <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Innovative & Scalable</h3>
           <p style="font-size: 1rem; color: #666; line-height: 1.6;">
             With continuous upgrades and a design built for expansion, HRA Coin stays ahead of market demands, offering you a future-proof digital asset.
@@ -2861,7 +2879,7 @@
         </div>
 
         <!-- Feature Card 6: Community & Investor Rewards -->
-        <div class="wow fadeInUp" data-wow-delay="1s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);">
+        <div class="wow fadeInUp" data-wow-delay="1s" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 20px rgba(57,49,133,0.1);margin: 16px 0 16px 0px;">
           <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem;">Exclusive Rewards</h3>
           <p style="font-size: 1rem; color: #666; line-height: 1.6;">
             Benefit from a range of investor and community rewards, including flexible payment options and access to exclusive future innovations.
@@ -3114,8 +3132,9 @@ document.addEventListener('DOMContentLoaded', function() {
           <p style="font-size: 1rem; color: #333; line-height: 1.8;">
             <strong>Token Name:</strong> HRA Coin<br>
             <strong>Token Symbol:</strong> HRA<br>
-            <strong>Blockchain:</strong> Binance Smart Chain (BEP‑20)<br>
-            <strong>Contract Address:</strong> 0x5E64326cE6DF66CDfa62F8B154097BF536233451<br>
+            <strong>Blockchain:</strong> Binance Smart Chain (BEP-20)<br>
+            <strong>Contract Address:</strong><a class="link-adress" href="https://bscscan.com/token/0xa704b3a873371b6ca66da2444ea94d5e763f85a7"> 0xa704B3a873371b6Ca66dA2444eA94D5E763f85A7</a><br>
+            {{-- <strong>Contract Address:</strong> 0x5E64326cE6DF66CDfa62F8B154097BF536233451<br> --}}
             <strong>Total Supply:</strong> 1,000,000,000 HRA (1 Billion)<br>
             <strong>Decimals:</strong> 18<br>
             <strong>Token Standard:</strong> BEP‑20<br>
@@ -3540,7 +3559,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             @enderror
                         </div>
                         <div>
-                            <button class="jc oe of lg fi ii oi zi hk il yl dm" type="submit">
+                            <button class="va gi pi ri bj fn bnt-hv w-100" type="submit">
                                 Send Message
                             </button>
                         </div>

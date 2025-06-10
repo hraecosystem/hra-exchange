@@ -16,7 +16,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\State $state
- *
  * @method static Builder|City newModelQuery()
  * @method static Builder|City newQuery()
  * @method static Builder|City query()
@@ -25,7 +24,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static Builder|City whereName($value)
  * @method static Builder|City whereStateId($value)
  * @method static Builder|City whereUpdatedAt($value)
- *
  * @mixin Eloquent
  */
 class City extends Model

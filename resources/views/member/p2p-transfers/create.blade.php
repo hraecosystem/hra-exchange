@@ -13,7 +13,7 @@
     <form method="post" action="{{ route('member.p2p-transfers.store') }}">
         @csrf
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">

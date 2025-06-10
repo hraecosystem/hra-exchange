@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 Route::group([
     'namespace' => 'Member',
     'as' => 'member.',
@@ -102,8 +104,20 @@ Route::group([
             'prefix' => 'bank-transfer',
             'as' => 'bank-transfer.',
         ], function () {
+            // Route::get('/', [App\Http\Controllers\Member\BankTransferController::class, 'list_requests'])->name('list_requests');
             Route::get('/', [App\Http\Controllers\Member\BankTransferController::class, 'create'])->name('create');
             Route::post('/', [App\Http\Controllers\Member\BankTransferController::class, 'store'])->name('store');
+        });
+        // Add the bank transfer routes here, inside the 'memberAuth' middleware group
+        Route::group([
+            'prefix' => 'list-requests',
+            'as' => 'list-requests.',
+        ], function () {
+            Route::get('', 'BankTransferController@list_requests')->name('list_requests');
+            
+            // Route::get('/', [App\Http\Controllers\Member\BankTransferController::class, 'list_requests'])->name('list_requests');
+            // Route::get('/', [App\Http\Controllers\Member\BankTransferController::class, 'create'])->name('create');
+            // Route::post('/', [App\Http\Controllers\Member\BankTransferController::class, 'store'])->name('store');
         });
 
     });

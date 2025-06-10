@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\ListBuilders\Admin\AdminListBuilder;
+use App\ListBuilders\Admin\RequestsListBuilder;
 use App\Models\Admin;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Exception;
-use Hash;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Contracts\View\Factory;
@@ -18,7 +19,7 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use Spatie\Permission\Models\Permission;
 use Throwable;
-use Validator;
+use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
@@ -28,6 +29,14 @@ class AdminController extends Controller
     public function index(): Renderable|JsonResponse|RedirectResponse
     {
         return AdminListBuilder::render();
+    }
+    public function requests_list(): Renderable|JsonResponse|RedirectResponse
+    {
+        return RequestsListBuilder::render();
+    }
+        public function edit_request(RequestsListBuilder $member): Renderable
+    {
+        return view('admin.members.edit', ['member' => $member]);
     }
 
     /**

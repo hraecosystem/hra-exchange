@@ -919,3 +919,8 @@ label.group-label small {
 .bg-custom{
     background: #171923 !important;
 }
+ .btn-green {
+    color: #fff;
+    background-color: #28c76f !important;
+    border-color: #28c76f !important;
+}

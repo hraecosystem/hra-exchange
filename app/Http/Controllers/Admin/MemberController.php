@@ -17,6 +17,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Str;
 
 class MemberController extends Controller
 {
@@ -25,7 +26,7 @@ class MemberController extends Controller
      */
     public function index(): Renderable|JsonResponse|RedirectResponse
     {
-        MemberListBuilder::$name = \Str::plural(settings('member_name'));
+        MemberListBuilder::$name = Str::plural(settings('member_name'));
 
         return MemberListBuilder::render();
     }

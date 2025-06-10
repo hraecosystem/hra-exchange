@@ -1,4 +1,7 @@
 <?php
+use Illuminate\Support\Facades\Route;
+
+use App\Jobs\CalculateDailyMiningReward;
 
 Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin'], function () {
     Route::get('', 'LoginController@create')->name('login.create');
@@ -84,6 +87,13 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.', 'prefix' => 'admin'], fu
             Route::get('', 'DepositController@index')->name('index')->middleware('permission:Deposits-view');
             Route::get('create', 'DepositController@create')->name('create')->middleware('permission:Deposits-update');
             Route::post('store', 'DepositController@store')->name('store')->middleware('permission:Deposits-update');
+        });
+        Route::group([
+            'prefix' => 'requests',
+            'as' => 'requests.',
+        ], function () {
+            Route::get('requests-list', 'AdminController@requests_list')->name('requests_list')->middleware('permission:Requests-view');
+            Route::get('{admin}/edit', 'AdminController@edit_request')->name('edit_request');
         });
 
         Route::group([

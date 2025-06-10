@@ -25,9 +25,16 @@ class DashboardController extends Controller
         $profileImageUrl = $this->member->getFirstMediaUrl(Member::MC_PROFILE_IMAGE);
         $last5EUROWalletTransactions = $this->member->walletTransactions()->orderBy('id', 'desc')->limit(5)->get();
         $last5CoinWalletTransactions = $this->member->coinWalletTransactions()->orderBy('id', 'desc')->limit(5)->get();
-        $totalBalance = toHumanReadable($this->member->coin_wallet_balance);
 
+
+        $totalBalance = toHumanReadable($this->member->coin_wallet_balance);
+        $totalBalanceDollar = toHumanReadable($this->calculateCoinsDollar($totalBalance));
+        // echo '<pre>';
+        // print_r($totalBalanceDollar);
+        // echo '</pre>';
+        // exit;
         $icoLists = IcoDetail::get()->map(function ($icoDetails) {
+
             return
                 [
                     'ico_name' => $icoDetails->name,
@@ -36,8 +43,7 @@ class DashboardController extends Controller
                     'rate' => $icoDetails->rate,
                     'ico_bonus' => 0,
                     'supply' => toHumanReadable($icoDetails->supply),
-                    'status' => $icoDetails->status == IcoDetail::STATUS_ACTIVE ? 'Currently Live' :
-                        ($icoDetails->status == IcoDetail::STATUS_PENDING ? 'Live In '.Carbon::parse($icoDetails->start_date)->diffInDays(now()).' Days' : 'Ended'),
+                    'status' => $icoDetails->status == IcoDetail::STATUS_ACTIVE ? 'Currently Live' : ($icoDetails->status == IcoDetail::STATUS_PENDING ? 'Live In ' . Carbon::parse($icoDetails->start_date)->diffInDays(now()) . ' Days' : 'Ended'),
                     'statusNumber' => $icoDetails->status == IcoDetail::STATUS_ACTIVE ? 1 : 2,
                     'progressBar' => round($icoDetails->total_purchase * 100 / $icoDetails->supply, 2),
                     'actualStatus' => $icoDetails->status,
@@ -55,7 +61,8 @@ class DashboardController extends Controller
             'profileImageUrl' => $profileImageUrl,
             'coinPrice' => toHumanReadable($this->calculateCoinsPrice()),
             //            'totalDeposit' => $totalDeposit,
-            'totalPurchaseCoin' => $totalBalance,
+            'totalBalanceDollar' => $totalBalanceDollar,
+            'totalBalance' => $totalBalance,
             //            'totalIcoBonus' => $totalIcoBonus,
             'totalSwapDollar' => toHumanReadable(SwapCoin::whereMemberId($this->member->id)->sum('euro_amount')),
             'icoLists' => $icoLists,
