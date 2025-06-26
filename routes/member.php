@@ -10,9 +10,15 @@ Route::group([
     Route::get('', 'LoginController@create')->name('login.create');
     Route::post('login', 'LoginController@store')->name('login.store');
 
+    Route::post('verification', 'RegisterController@register')->name('verification.register');
+    Route::post('verification_otp', 'RegisterController@verificationOtp')->name('verification_otp.verificationOtp');
+
+    // api for save user data to mongo db
+    Route::get('save-user-data', 'RegisterController@saveUserData')->name('save-user-data');
+
     Route::get('register', 'RegisterController@create')->name('register.create');
-    Route::post('register', 'RegisterController@store')->name('register.store');
-    Route::post('send-email-otp', 'RegisterController@sendEmailOTP')->name('send-email-otp');
+    // Route::post('register', 'RegisterController@store')->name('register.store');
+    // Route::post('send-email-otp', 'RegisterController@sendEmailOTP')->name('send-email-otp');
 
     Route::get('forgot-password', 'ForgotPasswordController@create')->name('forgot-password.create');
     Route::post('forgot-password', 'ForgotPasswordController@store')->name('forgot-password.store');

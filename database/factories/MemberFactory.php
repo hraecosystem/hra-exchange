@@ -5,6 +5,8 @@ namespace Database\Factories;
 use App\Jobs\AddMemberOnNetwork;
 use App\Jobs\UpgradeMemberOnNetwork;
 use App\Models\Member;
+use App\Models\Package;
+use App\Models\PinRequest;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

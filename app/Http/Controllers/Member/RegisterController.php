@@ -10,14 +10,16 @@ use App\Models\Country;
 use App\Models\Member;
 use App\Models\Otp;
 use App\Models\User;
-use Auth;
-use DB;
-use Hash;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Mail;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Throwable;
 
 class RegisterController extends Controller
@@ -26,7 +28,130 @@ class RegisterController extends Controller
     {
         return view('member.auth.register', [
             'countries' => Country::get(),
+            'hra_errors' => [],
         ]);
+    }
+
+    public function register(Request $request)
+    {
+        /* 1. Validation locale ------------------------------------------- */
+        $validated = $request->validate([
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:6',
+            'name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'phonenumber' => 'required|string|max:20',
+        ]);
+
+        /* 2. Construction de la charge utile pour l’API externe ---------- */
+        $payload = [
+            'email' => $validated['email'],
+            'password' => $validated['password'],
+            'firstname' => $validated['name'],
+            'lastname' => $validated['last_name'],
+            'phonenumber' => $validated['phonenumber'],
+        ];
+
+        try {
+            /* 3. Appel de l’API externe en premier ------------------------ */
+            $response = Http::post('https://auth.hra-web3.com/api/auth/register', $payload);
+
+            if (! $response->successful()) {
+                $data = $response->json();
+                $errors = [];
+                $error_path = '';
+                if (isset($data['path'])) {
+                    switch ($data['path'][0]) {
+                        case 'firstname':
+                            $error_path = 'name';
+                            break;
+                        case 'lastname':
+                            $error_path = 'last_name';
+                            break;
+
+                        default:
+                            $error_path = $data['path'][0];
+                            break;
+                    }
+
+                    $errors[$error_path] = $data['message'];
+
+                    return redirect()->back()
+                        ->withInput()
+                        ->withErrors($errors);
+                }
+            }
+
+            /* 4. Création du compte local dans une transaction ------------ */
+            DB::transaction(function () use ($validated) {
+                $user = User::create([
+                    'name' => $validated['name'],
+                    'lastname' => $validated['last_name'],
+                    'email' => $validated['email'],
+                    'mobile' => $validated['phonenumber'],
+                    'password' => Hash::make($validated['password']),
+                ]);
+
+                $user->assignRole('member');
+
+                Member::create([
+                    'user_id' => $user->id,
+                    'status' => Member::STATUS_FREE_MEMBER,
+                ]);
+            });
+
+            /* 5. Redirection pour la saisie de l’OTP ---------------------- */
+            return view('member.auth.otp', [
+                'email' => $validated['email'],
+                'name' => $validated['name'],
+                'last_name' => $validated['last_name'],
+            ]);
+        } catch (\Throwable $e) {
+            // time‑out réseau, exception DB, etc. – la transaction est annulée
+            return response()->json([
+                'error' => 'internal_server_error',
+                'message' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function verificationOtp(Request $request)
+    {
+
+        $data = [
+            'otp' => implode('', [
+                $request->input('otp_1'),
+                $request->input('otp_2'),
+                $request->input('otp_3'),
+                $request->input('otp_4'),
+                $request->input('otp_5'),
+                $request->input('otp_6'),
+            ]),
+        ];
+
+        try {
+            $response = Http::post('https://auth.hra-web3.com/api/auth/verify-otp', [
+                'email' => $request->input('email'),
+                'otp' => $data['otp'],
+            ]);
+
+            if ($response->successful()) {
+                return redirect()->route('member.login.create')->with([
+                    'success' => 'OTP verified successfully. Please continue registration.',
+                    'email' => $request->input('email'),
+                ]);
+            } else {
+                return redirect()->back()->withErrors([
+                    'faile' => 'Invalid OTP or expired. Please try again',
+                    'otp' => 'Invalid OTP or expired. Please try again.',
+                ]);
+            }
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => 'Erreur de communication avec l’API',
+                'message' => $e->getMessage(),
+            ], 500);
+        }
     }
 
     public function store(RegisterRequest $request): RedirectResponse
@@ -94,6 +219,55 @@ class RegisterController extends Controller
             });
         } catch (Throwable $e) {
             return $this->logExceptionAndRespond($e);
+        }
+    }
+
+    public function saveUserData()
+    {
+        try {
+            $users = User::all();
+            $chunks = $users->chunk(50); // Send 50 users at a time
+
+            foreach ($chunks as $chunk) {
+                $data = $chunk->map(function ($user) {
+                    $names = explode(' ', $user->name, 2);
+                    $firstName = $names[0];
+                    $lastName = $names[1] ?? ($user->lastname ?? '');
+
+                    return [
+                        'firstname' => $firstName,
+                        'lastname' => $lastName,
+                        'email' => $user->email,
+                        'phonenumber' => $user->mobile ?: '09'.rand(100000000, 999999999),
+                        'password' => $user->password,
+                        'ID_from_app' => $user->id,
+                    ];
+                })->toArray();
+
+                $response = Http::timeout(120)
+                    ->withHeaders(['Content-Type' => 'application/json'])
+                    ->post('https://auth.hra-web3.com/api/auth/saveData', [
+                        'users' => $data,
+                    ]);
+
+                if (! $response->successful()) {
+                    Log::error('User sync failed on batch: '.$response->body());
+                    throw new \Exception('Failed to save user data: '.$response->body());
+                }
+            }
+
+            return response()->json(['status' => true, 'message' => 'User data saved successfully']);
+        } catch (\Throwable $e) {
+            return response()->json(['status' => false, 'message' => 'Error saving user data: '.$e->getMessage()]);
+        }
+    }
+
+    public function saveUsers($data)
+    {
+        $req = Http::timeout(120)->post('https://auth.hra-web3.com/api/auth/saveData', $data);
+
+        if (! $req->successful()) {
+            throw new \Exception('Failed to save user data: '.$req->body());
         }
     }
 

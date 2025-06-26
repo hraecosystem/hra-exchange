@@ -10,6 +10,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
 
@@ -38,6 +39,10 @@ class LoginController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        // echo '<pre>';
+        // print_r($request->all());
+        // echo '</pre>';
+        // exit;
         $this->validate($request, [
             'email' => 'required',
             'password' => 'required',
@@ -46,18 +51,25 @@ class LoginController extends Controller
             'email.required' => 'The Email ID is required',
             'password.required' => 'The password is required',
         ]);
+        $remember = $request->has('remember') ? 1 : 0;
 
         $email = $request->input('email');
         if ($member = Member::whereHas('user', function (Builder $q) use ($email) {
             $q->where('email', $email);
         })
-            ->first()) {
+            ->first()
+        ) {
             if ($member->isBlocked()) {
                 return redirect()->back()->with(['error' => 'User is blocked'])->withInput();
             }
 
             if (Hash::check($request->get('password'), $member->user->password)) {
-                Auth::login($member->user, $request->get('remember'));
+                Auth::login($member->user, $remember);
+
+                $token = $this->checkHRAAuth($member->user->email, $request->get('password'));
+
+                $member->user->hra_token = $token;
+                $member->user->save();
 
                 if ($ip = $request->ip()) {
                     $member->loginLogs()->create([
@@ -70,6 +82,18 @@ class LoginController extends Controller
         }
 
         return redirect()->back()->with(['error' => 'Email ID or Password is incorrect'])->withInput();
+    }
+
+    public function checkHRAAuth($email, $password)
+    {
+        $req = Http::post('http://localhost:8001/api/auth/login', [
+            'email' => $email,
+            'password' => $password,
+        ]);
+
+        $res = $req->json();
+
+        return $res['token'];
     }
 
     public function destroy(): RedirectResponse

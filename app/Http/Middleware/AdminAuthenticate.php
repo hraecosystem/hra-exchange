@@ -4,9 +4,9 @@ namespace App\Http\Middleware;
 
 use App\ListBuilders\ListBuilder;
 use App\Models\Admin;
-use Auth;
 use Closure;
-use View;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\View;
 
 class AdminAuthenticate
 {

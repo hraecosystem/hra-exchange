@@ -3,10 +3,8 @@
 namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
-use App\Models\Faq;
 use App\Models\Inquiry;
 use App\Models\NewsLetter;
-use App\Models\WhitePaper;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
@@ -18,30 +16,8 @@ class HomeController extends Controller
 {
     public function index(Request $request): Renderable|RedirectResponse
     {
-        return view('website.welcome');
+        return view('member.login.create');
 
-        $launchTime = '2024-02-26 17:00:00+05:30';
-
-        $whitePaper = WhitePaper::with('media')->where(['status' => true])->first();
-
-        $whitePaperUrl = optional($whitePaper)->getFirstMediaUrl(WhitePaper::MC_WHITE_PAPER);
-
-        $newsLetter = NewsLetter::where('ip', $request->ip())->first();
-
-        if (settings('landing_page')) {
-            $viewName = 'website.landing';
-        } else {
-            $viewName = 'website.index';
-        }
-
-        return view($viewName, [
-            'faqs' => Faq::where('status', 1)
-                ->orderBy('id', 'desc')
-                ->get(),
-            'whitePaperUrl' => $whitePaperUrl,
-            'launchTime' => $launchTime,
-            'newsLetter' => $newsLetter,
-        ]);
     }
 
     /**

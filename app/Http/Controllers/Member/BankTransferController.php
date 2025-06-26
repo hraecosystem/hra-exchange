@@ -10,15 +10,19 @@ use App\Models\BankTransferRequest;
 use App\Models\Member;
 use App\Models\Setting;
 use App\Models\User;
+use App\Traits\CoinTrait;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class BankTransferController extends Controller
 {
+    use CoinTrait;
+
     /**
      * Display the bank transfer request form.
      *
@@ -36,8 +40,14 @@ class BankTransferController extends Controller
 
         // Access coin_wallet_balance from the related Member model
         $hraBalance = $user->member->coin_wallet_balance ?? 0;
+        $totalBalanceDollar = toHumanReadable($this->calculateCoinsDollar($hraBalance));
 
-        return view('member.bank-transfer.create', compact('hraBalance'));
+        return view('member.bank-transfer.create', [
+            'hraBalance' => $hraBalance,
+            'totalBalanceDollar' => $totalBalanceDollar,
+        ]);
+        // return view('member.bank-transfer.create', compact('hraBalance'));
+
     }
 
     // public function list_requests()
@@ -102,11 +112,21 @@ class BankTransferController extends Controller
             $hraBalance = $user->member->coin_wallet_balance ?? 0;
             $calculatedNewBalance = $hraBalance - $requestedAmountHra;
             $user->member->update(['coin_wallet_balance' => $calculatedNewBalance]);
+
             // echo "<pre>";
-            // print_r($calculatedNewBalance);
+            // print_r($user);
             // echo "</pre>";
             // exit;
+
             DB::commit();
+
+            // send email to user holding the bank transfer request by mail
+
+            // Prepare email details for the bank transfer request
+            // $title = 'Bank Transfer Request Submitted';
+            // $body = "Dear {$user->name},<br><br>Your bank transfer request for {$requestedAmountHra} HRA coins (approx. €{$calculatedFiatAmount}) has been submitted and is pending admin review.<br><br>Thank you for using HRA.";
+
+            Mail::to($user->email)->queue(new \App\Mail\BankTransferRequestSubmitted($user, $requestedAmountHra, $calculatedFiatAmount));
 
             return redirect()->route('member.dashboard.index')->with('success', 'Bank transfer request submitted successfully. It is now pending admin review.');
         } catch (\Exception $e) {

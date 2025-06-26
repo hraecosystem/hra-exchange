@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
 
                 $user = Admin::create([
                     'name' => 'Rachad nait mbarek',
-                    'email' => 'Rachad@mail.com',
+                    'email' => 'Rachad--@mail.com',
                     'mobile' => '051234567',
                     'password' => Hash::make('Rachad@123'),
                     'is_super' => true,
@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
 
                 $user = User::create([
                     'name' => 'Rachad member',
-                    'email' => 'member-hra@mail.com',
+                    'email' => 'rachad969nait9694mbarek@gmail.com',
                     'mobile' => '123456789',
                     'address' => 'test address',
                     'pincode' => '111111',

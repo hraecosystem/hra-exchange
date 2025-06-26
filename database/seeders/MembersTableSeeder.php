@@ -5,9 +5,9 @@ namespace Database\Seeders;
 use App\Models\Country;
 use App\Models\Member;
 use App\Models\User;
-use Auth;
-use Hash;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use SWeb3\Accounts;
 
 class MembersTableSeeder extends Seeder
@@ -20,7 +20,7 @@ class MembersTableSeeder extends Seeder
                 'email' => "hra$i@gmail.com",
                 'password' => Hash::make('chainclave@123'),
                 'mobile' => "999999999$i",
-                'country_id' => Country::first()->id,
+                // 'country_id' => Country::first()->id,
             ]);
 
             $member = Member::create([
