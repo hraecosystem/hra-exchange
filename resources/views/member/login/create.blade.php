@@ -55,18 +55,19 @@
 .auth-image {
     width: 50%;
     min-height: 100%;
-    background:
-        linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+    background: 
+        linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), /* Reduced overlay */
         url('{{ asset('images/background.png') }}');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; /* <- use cover for full display */
-    background-color: #f5f5f5;
+    background-position: center center;
+    background-blend-mode: overlay; /* subtle blend */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
+
 
         
         .auth-logo {
@@ -126,10 +127,10 @@
                 width: 100%;
             }
             
-    .auth-image {
-        background-size: contain;
-        min-height: 200px;
-    }
+            .auth-image {
+                min-height: 200px;
+                order: -1;
+            }
         }
         
         .scroll-to-top {
