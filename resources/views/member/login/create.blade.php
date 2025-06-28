@@ -55,19 +55,18 @@
 .auth-image {
     width: 50%;
     min-height: 100%;
-    background: 
-        linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+    background:
+        linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
         url('{{ asset('images/background.png') }}');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain; /* 👈 shows full image without cropping */
+    background-size: cover; /* <- use cover for full display */
     background-color: #f5f5f5;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
-
 
         
         .auth-logo {
@@ -128,7 +127,7 @@
             }
             
     .auth-image {
-        background-size: cover; /* ⬅ restore original behavior on small screens */
+        background-size: contain;
         min-height: 200px;
     }
         }
@@ -270,8 +269,8 @@
     <i class="fas fa-arrow-up"></i>
 </button>
 
-<footer style="text-align: center; padding: 1rem 0; background: rgba(0,0,0,0.05); margin-top: 2rem;">
-    <div style="max-width: 100%; padding: 0 1rem; color: #333; font-size: 14px;">
+<footer style="text-align: center; padding: 1.5rem 0; background: #0f1934; color: #fff; font-size: 14px;">
+    <div style="max-width: 100%; padding: 0 1rem;">
         <strong>HRA Web3</strong><br>
         Khalifa Street, Abu Dhabi, UAE<br>
         <a href="mailto:info@hra-web3.com" style="color: var(--primary); text-decoration: underline;">
@@ -280,6 +279,7 @@
         <span>+971 26 322 569</span>
     </div>
 </footer>
+
 
 
 
