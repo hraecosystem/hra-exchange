@@ -11,6 +11,7 @@ Route::group([
     Route::post('login', 'LoginController@store')->name('login.store');
 
     Route::post('verification', 'RegisterController@register')->name('verification.register');
+    Route::get('otp', 'RegisterController@otpView')->name('verification_otp.otp');
     Route::post('verification_otp', 'RegisterController@verificationOtp')->name('verification_otp.verificationOtp');
 
     // api for save user data to mongo db

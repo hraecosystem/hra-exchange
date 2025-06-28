@@ -86,7 +86,7 @@ class LoginController extends Controller
 
     public function checkHRAAuth($email, $password)
     {
-        $req = Http::post('https://auth.hra-web3.com/api/auth/login', [
+        $req = Http::post('http://localhost:8001/api/auth/login', [
             'email' => $email,
             'password' => $password,
         ]);

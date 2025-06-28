@@ -197,7 +197,7 @@
         color: initial;
         text-align: initial;
         font-weight: bold;
-        text-align: center; 
+        text-align: center;
     }
 
     .otp-input-fields {
@@ -279,9 +279,11 @@
                     </a>
                     <div class="title">
                         <h3>OTP VERIFICATION</h3>
-                        <p class="info">An otp has been sent to {{$email}} </p>
-                        <p class="msg">Please enter OTP to verify</p>
+                        <p class="info">An otp has been sent to {{ $email }} </p>
+
+                        <p class="msg ">Please enter OTP to verify</p>
                     </div>
+
                 </div>
 
                 <form action="{{ route('member.verification_otp.verificationOtp') }}" class="otp-form" name="otp-form"
@@ -295,11 +297,13 @@
                         <input type="number" name="otp_4" value="otp_4" class="otp__digit otp__field__4">
                         <input type="number" name="otp_5" value="otp_5" class="otp__digit otp__field__5">
                         <input type="number" name="otp_6" value="otp_6" class="otp__digit otp__field__6">
-                        <input type="email" name="email" value="" hidden>
+                        <input type="email" name="email" value="{{ $email }}" hidden>
                     </div>
-                    
+                    @if ($errors->has('faile'))
+                        <p class="danger" style="color: red;">{{ $errors->first('faile') }}</p>
+                    @endif
                     <div class="result">
-                        
+
                         <p id="_otp" class="_notok"></p>
                     </div>
                     <button class="btn btn-primary w-100 mb-3" type="submit">Send</button>

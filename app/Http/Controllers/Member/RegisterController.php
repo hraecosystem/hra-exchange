@@ -54,7 +54,7 @@ class RegisterController extends Controller
 
         try {
             /* 3. Appel de l’API externe en premier ------------------------ */
-            $response = Http::post('https://auth.hra-web3.com/api/auth/register', $payload);
+            $response = Http::post('http://localhost:8001/api/auth/register', $payload);
 
             if (! $response->successful()) {
                 $data = $response->json();
@@ -101,7 +101,13 @@ class RegisterController extends Controller
             });
 
             /* 5. Redirection pour la saisie de l’OTP ---------------------- */
-            return view('member.auth.otp', [
+            // return view('member.auth.otp', [
+            //     'email' => $validated['email'],
+            //     'name' => $validated['name'],
+            //     'last_name' => $validated['last_name'],
+            // ]);
+
+            return redirect()->route("member.verification_otp.otp")->with([
                 'email' => $validated['email'],
                 'name' => $validated['name'],
                 'last_name' => $validated['last_name'],
@@ -113,6 +119,14 @@ class RegisterController extends Controller
                 'message' => $e->getMessage(),
             ], 500);
         }
+    }
+
+    public function otpView(Request $request) {
+        return  view('member.auth.otp', [
+            'email' => $request->email,
+            'name' => $request->name,
+            'last_name' => $request->last_name,
+        ]);;
     }
 
     public function verificationOtp(Request $request)
@@ -130,27 +144,28 @@ class RegisterController extends Controller
         ];
 
         try {
-            $response = Http::post('https://auth.hra-web3.com/api/auth/verify-otp', [
+            $response = Http::post('http://localhost:8001/api/auth/verify-otp', [
                 'email' => $request->input('email'),
                 'otp' => $data['otp'],
             ]);
 
+            // return $request->input('email');
             if ($response->successful()) {
                 return redirect()->route('member.login.create')->with([
                     'success' => 'OTP verified successfully. Please continue registration.',
                     'email' => $request->input('email'),
-                ]);
+                ]); 
             } else {
                 return redirect()->back()->withErrors([
-                    'faile' => 'Invalid OTP or expired. Please try again',
-                    'otp' => 'Invalid OTP or expired. Please try again.',
+                    'faile' => 'OTP is not correct',
+                    'otp' => 'OTP is not correct.',
                 ]);
             }
         } catch (\Exception $e) {
-            return response()->json([
-                'error' => 'Erreur de communication avec l’API',
-                'message' => $e->getMessage(),
-            ], 500);
+            return  redirect()->back()->withErrors([
+                'faile' => 'Invalid OTP or expired. Please try again',
+                'otp' => 'Invalid OTP or expired. Please try again.',
+            ]);
         }
     }
 
@@ -246,7 +261,7 @@ class RegisterController extends Controller
 
                 $response = Http::timeout(120)
                     ->withHeaders(['Content-Type' => 'application/json'])
-                    ->post('https://auth.hra-web3.com/api/auth/saveData', [
+                    ->post('http://localhost:8001/api/auth/saveData', [
                         'users' => $data,
                     ]);
 
@@ -264,7 +279,7 @@ class RegisterController extends Controller
 
     public function saveUsers($data)
     {
-        $req = Http::timeout(120)->post('https://auth.hra-web3.com/api/auth/saveData', $data);
+        $req = Http::timeout(120)->post('http://localhost:8001/api/auth/saveData', $data);
 
         if (! $req->successful()) {
             throw new \Exception('Failed to save user data: '.$req->body());
