@@ -255,12 +255,8 @@
                 </form>
             </div>
             
-            <!-- <div class="auth-image">
-                <img src="{{ settings()->getFileUrl('logo', asset('images/logo.png')) }}"
-                    alt="Brand"
-                     style="width: 180px; filter: brightness(0) invert(1);">
-
-            </div> -->
+            <div class="auth-image">
+            </div>
         </div>
     </div>
 </div>
