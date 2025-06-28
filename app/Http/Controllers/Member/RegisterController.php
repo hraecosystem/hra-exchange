@@ -107,7 +107,7 @@ class RegisterController extends Controller
             //     'last_name' => $validated['last_name'],
             // ]);
 
-            return redirect()->route('member.verification_otp.otp')->with([
+            return redirect()->route('member.verification_otp.otp', [
                 'email' => $validated['email'],
                 'name' => $validated['name'],
                 'last_name' => $validated['last_name'],
@@ -123,6 +123,7 @@ class RegisterController extends Controller
 
     public function otpView(Request $request)
     {
+        // dd($request->all());
         return view('member.auth.otp', [
             'email' => $request->email,
             'name' => $request->name,
@@ -150,7 +151,7 @@ class RegisterController extends Controller
                 'otp' => $data['otp'],
             ]);
 
-            // return $request->input('email');
+            // return $response->json();
             if ($response->successful()) {
                 return redirect()->route('member.login.create')->with([
                     'success' => 'OTP verified successfully. Please continue registration.',
@@ -254,7 +255,7 @@ class RegisterController extends Controller
                         'firstname' => $firstName,
                         'lastname' => $lastName,
                         'email' => $user->email,
-                        'phonenumber' => $user->mobile ?: '09'.rand(100000000, 999999999),
+                        'phonenumber' => $user->mobile ?: '09' . rand(100000000, 999999999),
                         'password' => $user->password,
                         'ID_from_app' => $user->id,
                     ];
@@ -267,14 +268,14 @@ class RegisterController extends Controller
                     ]);
 
                 if (! $response->successful()) {
-                    Log::error('User sync failed on batch: '.$response->body());
-                    throw new \Exception('Failed to save user data: '.$response->body());
+                    Log::error('User sync failed on batch: ' . $response->body());
+                    throw new \Exception('Failed to save user data: ' . $response->body());
                 }
             }
 
             return response()->json(['status' => true, 'message' => 'User data saved successfully']);
         } catch (\Throwable $e) {
-            return response()->json(['status' => false, 'message' => 'Error saving user data: '.$e->getMessage()]);
+            return response()->json(['status' => false, 'message' => 'Error saving user data: ' . $e->getMessage()]);
         }
     }
 
@@ -283,7 +284,7 @@ class RegisterController extends Controller
         $req = Http::timeout(120)->post('https://auth.hra-web3.com/api/auth/saveData', $data);
 
         if (! $req->successful()) {
-            throw new \Exception('Failed to save user data: '.$req->body());
+            throw new \Exception('Failed to save user data: ' . $req->body());
         }
     }
 

@@ -12,11 +12,10 @@ use Egulias\EmailValidator\Validation\DNSCheckValidation;
 use Egulias\EmailValidator\Validation\MultipleValidationWithAnd;
 use Egulias\EmailValidator\Validation\RFCValidation;
 use Hash;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
 use Mail;
@@ -73,11 +72,11 @@ class ForgotPasswordController extends Controller
             $password = Str::password(8);
 
             $response = Http::post('https://auth.hra-web3.com/api/password/reset-password', [
-                "email" => $request->get('email'),
-                "password" => $password,
+                'email' => $request->get('email'),
+                'password' => $password,
             ]);
 
-            if(!$response->successful()) {
+            if (! $response->successful()) {
                 return redirect()->back()->with('error', 'The Email tesfsaoihx;');
             }
 

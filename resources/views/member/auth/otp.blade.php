@@ -291,13 +291,13 @@
                     @csrf
 
                     <div class="otp-input-fields">
-                        <input type="number" name="otp_1" value="otp_1" class="otp__digit otp__field__1">
-                        <input type="number" name="otp_2" value="otp_2" class="otp__digit otp__field__2">
-                        <input type="number" name="otp_3" value="otp_3" class="otp__digit otp__field__3">
-                        <input type="number" name="otp_4" value="otp_4" class="otp__digit otp__field__4">
-                        <input type="number" name="otp_5" value="otp_5" class="otp__digit otp__field__5">
-                        <input type="number" name="otp_6" value="otp_6" class="otp__digit otp__field__6">
-                        <input type="email" name="email" value="{{ $email }}" hidden>
+                        <input type="number" name="otp_1" value="otp_1" class="otp__digit otp__field__1" />
+                        <input type="number" name="otp_2" value="otp_2" class="otp__digit otp__field__2" />
+                        <input type="number" name="otp_3" value="otp_3" class="otp__digit otp__field__3" />
+                        <input type="number" name="otp_4" value="otp_4" class="otp__digit otp__field__4" />
+                        <input type="number" name="otp_5" value="otp_5" class="otp__digit otp__field__5" />
+                        <input type="number" name="otp_6" value="otp_6" class="otp__digit otp__field__6" />
+                        <input type="text" name="email" value="{{ $email }}" hidden />
                     </div>
                     @if ($errors->has('faile'))
                         <p class="danger" style="color: red;">{{ $errors->first('faile') }}</p>

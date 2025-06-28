@@ -64,10 +64,10 @@ class LoginController extends Controller
             }
 
             if (Hash::check($request->get('password'), $member->user->password)) {
-                
+
                 $token = $this->checkHRAAuth($member->user->email, $request->get('password'));
                 Auth::login($member->user, $remember);
-                
+
                 $member->user->hra_token = $token;
                 $member->user->save();
 
@@ -92,6 +92,7 @@ class LoginController extends Controller
         ]);
 
         $res = $req->json();
+
         return $res['token'];
     }
 
