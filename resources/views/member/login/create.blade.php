@@ -54,7 +54,8 @@
         
         .auth-image {
             width: 50%;
-            background: linear-gradient(45deg, rgba(45,41,71,0.8), rgba(45,41,71,0.9)), url('{{ settings()->getFileUrl('member_background', asset('images/coin.png')) }}');
+            background: linear-gradient(45deg, rgba(45,41,71,0.8), rgba(45,41,71,0.9)), url('{{ settings()->getFileUrl('member_background', asset('images/coin.png')) ?? asset('images/coin.png') }}');
+
             background-size: cover;
             background-position: center;
             display: flex;
@@ -166,7 +167,9 @@
             <div class="auth-form">
                 <div class="text-center">
                     <a href="{{ route('website.home') }}">
-                        <img src="{{ settings()->getFileUrl('logo', asset(env('LOGO'))) }}" class="auth-logo" alt="Logo">
+                        <!-- <img src="{{ settings()->getFileUrl('logo', asset(env('LOGO'))) }}" class="auth-logo" alt="Logo"> -->
+                        <img src="{{ settings()->getFileUrl('logo', asset('images/logo.png')) }}" class="auth-logo" alt="Logo">
+
                     </a>
                     <h3 class="mb-4">Log In</h3>
                 </div>
@@ -263,6 +266,19 @@
 <button class="scroll-to-top">
     <i class="fas fa-arrow-up"></i>
 </button>
+
+<footer style="text-align: center; padding: 1rem 0; background: rgba(0,0,0,0.05); margin-top: 2rem;">
+    <div style="max-width: 100%; padding: 0 1rem; color: #333; font-size: 14px;">
+        <strong>HRA Web3</strong><br>
+        Khalifa Street, Abu Dhabi, UAE<br>
+        <a href="mailto:info@hra-web3.com" style="color: var(--primary); text-decoration: underline;">
+            info@hra-web3.com
+        </a><br>
+        <span>+971 26 322 569</span>
+    </div>
+</footer>
+
+
 
 <script src="{{ asset('member-assets/js/global.min.js') }}"></script>
 <script src="{{ asset('member-assets/js/deznav-init.js') }}"></script>
