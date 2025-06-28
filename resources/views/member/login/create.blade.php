@@ -56,12 +56,12 @@
     width: 50%;
     min-height: 100%;
     background: 
-        linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), /* Reduced overlay */
+        linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
         url('{{ asset('images/background.png') }}');
-    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
-    background-blend-mode: overlay; /* subtle blend */
+    background-position: center;
+    background-size: contain; /* 👈 shows full image without cropping */
+    background-color: #f5f5f5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,10 +127,10 @@
                 width: 100%;
             }
             
-            .auth-image {
-                min-height: 200px;
-                order: -1;
-            }
+    .auth-image {
+        background-size: cover; /* ⬅ restore original behavior on small screens */
+        min-height: 200px;
+    }
         }
         
         .scroll-to-top {
