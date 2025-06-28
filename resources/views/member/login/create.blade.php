@@ -168,7 +168,7 @@
                 <div class="text-center">
                     <a href="{{ route('website.home') }}">
                         <!-- <img src="{{ settings()->getFileUrl('logo', asset(env('LOGO'))) }}" class="auth-logo" alt="Logo"> -->
-                        <img src="{{ settings()->getFileUrl('logo', asset('images/logo.png')) }}" class="auth-logo" alt="Logo">
+<img src="{{ asset('images/logo-hra.png') }}" class="auth-logo" alt="Logo">
 
                     </a>
                     <h3 class="mb-4">Log In</h3>
