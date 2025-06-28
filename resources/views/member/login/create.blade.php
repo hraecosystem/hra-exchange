@@ -52,17 +52,18 @@
             width: 50%;
         }
         
-        .auth-image {
-            width: 50%;
-background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url('{{ asset('images/background.png') }}');
+.auth-image {
+    width: 50%;
+    min-height: 400px; /* 👈 Add this line */
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url('{{ asset('images/background.png') }}');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
         
         .auth-logo {
             width: 120px;
