@@ -54,7 +54,7 @@
         
         .auth-image {
             width: 50%;
-            background: linear-gradient(45deg, rgba(45,41,71,0.8), rgba(45,41,71,0.9)), url('{{ settings()->getFileUrl('member_background', asset('images/coin.png')) ?? asset('images/coin.png') }}');
+background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url('{{ asset('images/background.png') }}');
 
             background-size: cover;
             background-position: center;
@@ -254,12 +254,12 @@
                 </form>
             </div>
             
-            <div class="auth-image">
-<img src="{{ settings()->getFileUrl('logo', asset('images/logo.png')) }}"
-     alt="Brand"
-     style="width: 180px; filter: brightness(0) invert(1);">
+            <!-- <div class="auth-image">
+                <img src="{{ settings()->getFileUrl('logo', asset('images/logo.png')) }}"
+                    alt="Brand"
+                     style="width: 180px; filter: brightness(0) invert(1);">
 
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
