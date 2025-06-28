@@ -16,6 +16,7 @@ use Hash;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
 use Mail;
@@ -34,6 +35,7 @@ class ForgotPasswordController extends Controller
      */
     public function Store(Request $request): RedirectResponse
     {
+    
         $this->validate($request, [
             'email' => [
                 'required',
@@ -58,6 +60,7 @@ class ForgotPasswordController extends Controller
             'email.required' => 'The Email ID is required',
         ]);
 
+
         try {
             if ($admin = Admin::where('email', $request->get('email'))
                 ->first()
@@ -81,6 +84,8 @@ class ForgotPasswordController extends Controller
                             'name' => $admin->name,
                             'email' => $admin->email,
                         ];
+
+                        
 
                         Mail::to($admin->email)->send(new SendGeneralMail($AdminUserMail, $title, $body));
                     }

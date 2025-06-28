@@ -37,7 +37,7 @@ class LoginController extends Controller
     /**
      * @throws ValidationException
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
         // echo '<pre>';
         // print_r($request->all());
@@ -64,10 +64,10 @@ class LoginController extends Controller
             }
 
             if (Hash::check($request->get('password'), $member->user->password)) {
-                Auth::login($member->user, $remember);
-
+                
                 $token = $this->checkHRAAuth($member->user->email, $request->get('password'));
-
+                Auth::login($member->user, $remember);
+                
                 $member->user->hra_token = $token;
                 $member->user->save();
 
@@ -92,7 +92,6 @@ class LoginController extends Controller
         ]);
 
         $res = $req->json();
-
         return $res['token'];
     }
 

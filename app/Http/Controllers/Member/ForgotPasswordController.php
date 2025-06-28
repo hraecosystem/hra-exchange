@@ -12,6 +12,7 @@ use Egulias\EmailValidator\Validation\DNSCheckValidation;
 use Egulias\EmailValidator\Validation\MultipleValidationWithAnd;
 use Egulias\EmailValidator\Validation\RFCValidation;
 use Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\RedirectResponse;
@@ -31,7 +32,7 @@ class ForgotPasswordController extends Controller
     /**
      * @throws ValidationException
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
         $this->validate($request, [
             'email' => [
@@ -69,7 +70,16 @@ class ForgotPasswordController extends Controller
                 return redirect()->back()->with('error', 'Member is blocked')->withInput();
             }
 
-            $password = Str::password(6);
+            $password = Str::password(8);
+
+            $response = Http::post('https://auth.hra-web3.com/api/password/reset-password', [
+                "email" => $request->get('email'),
+                "password" => $password,
+            ]);
+
+            if(!$response->successful()) {
+                return redirect()->back()->with('error', 'The Email tesfsaoihx;');
+            }
 
             $member->user->update(['password' => Hash::make($password)]);
 
