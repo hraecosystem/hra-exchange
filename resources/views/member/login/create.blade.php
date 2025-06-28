@@ -54,19 +54,19 @@
         
 .auth-image {
     width: 50%;
-    min-height: 100%;
-    background: 
-        linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), /* Reduced overlay */
-        url('{{ asset('images/background.png') }}');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-blend-mode: overlay; /* subtle blend */
+    background: #f5f5f5;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    padding: 2rem;
 }
+
+.ecosystem-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
 
 
         
@@ -260,8 +260,10 @@
                 </form>
             </div>
             
-            <div class="auth-image">
-            </div>
+<div class="auth-image">
+  <img src="{{ asset('images/background.png') }}" alt="HRA Ecosystem" class="ecosystem-img" />
+</div>
+
         </div>
     </div>
 </div>
