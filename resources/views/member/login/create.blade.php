@@ -54,15 +54,20 @@
         
 .auth-image {
     width: 50%;
-    min-height: 400px; /* 👈 Add this line */
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url('{{ asset('images/background.png') }}');
+    min-height: 100%;
+    background: 
+        linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), /* Reduced overlay */
+        url('{{ asset('images/background.png') }}');
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: overlay; /* subtle blend */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
+
 
         
         .auth-logo {
