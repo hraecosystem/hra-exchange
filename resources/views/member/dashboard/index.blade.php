@@ -72,38 +72,29 @@
                             <p class="pb-0">HRA is a global, decentralized network with validators and community members
                                 from all around the world.</p>
                             <!-- <a href="{{ route('member.deposit.create') }}" -->
-<div class="row row-cols-2 row-cols-lg-4 g-3">
-  <div class="col">
+<div class="d-flex flex-wrap flex-lg-nowrap gap-2 justify-content-around">
     <a href="{{ route('member.deposit.create') }}"
-       class="btn btn-primary w-100">
-      Buy {{ env('APP_CURRENCY') }}
+       class="btn btn-sm btn-primary">
+       Buy {{ env('APP_CURRENCY') }}
     </a>
-  </div>
 
-  <div class="col">
     <a href="{{ route('member.p2p-transfers.create') }}"
-       class="btn btn-danger w-100">
-      Send {{ env('APP_CURRENCY') }}
+       class="btn btn-sm btn-danger">
+       Send {{ env('APP_CURRENCY') }}
     </a>
-  </div>
 
-  <div class="col">
     <a href="{{ route('member.bank-transfer.create') }}"
-       class="btn btn-success w-100">
-      Bank Transfer
+       class="btn btn-sm btn-green">
+       Bank Transfer
     </a>
-  </div>
 
-  <div class="col">
+    {{-- New KYC button --}}
     <a href="https://in.sumsub.com/websdk/p/uni_5S1a9f2fkX4oqzCU"
        target="_blank" rel="noopener"
-       class="btn btn-secondary w-100">
-      KYC
+       class="btn btn-sm btn-secondary">
+       KYC
     </a>
-  </div>
 </div>
-
-
 
                         </div>
                         <div class="col-lg-4 col-4 text-center">
