@@ -72,17 +72,30 @@
                             <p class="pb-0">HRA is a global, decentralized network with validators and community members
                                 from all around the world.</p>
                             <!-- <a href="{{ route('member.deposit.create') }}" -->
-                            <div class="d-flex gap-2 flex-wrap" style="justify-content: space-around;">
-                                <a href="{{ route('member.deposit.create') }}"
-                                    class="btn btn-sm btn-primary">Buy {{ env('APP_CURRENCY') }}</a>
-                                {{-- <a href="{{ route('member.deposit.create') }}"
-                                    class="btn btn-sm btn-primary">Buy {{ env('APP_CURRENCY') }}</a> --}}
-                                <a href="{{ route('member.p2p-transfers.create') }}" class="btn btn-sm btn-danger">Send
-                                    {{ env('APP_CURRENCY') }}</a>
+<div class="d-flex flex-wrap flex-lg-nowrap gap-2 justify-content-around">
+    <a href="{{ route('member.deposit.create') }}"
+       class="btn btn-sm btn-primary">
+       Buy {{ env('APP_CURRENCY') }}
+    </a>
 
-                                <a href="{{ route('member.bank-transfer.create') }}" class="btn btn-sm btn-green">Bank
-                                    Transfer</a>
-                            </div>
+    <a href="{{ route('member.p2p-transfers.create') }}"
+       class="btn btn-sm btn-danger">
+       Send {{ env('APP_CURRENCY') }}
+    </a>
+
+    <a href="{{ route('member.bank-transfer.create') }}"
+       class="btn btn-sm btn-green">
+       Bank Transfer
+    </a>
+
+    {{-- New KYC button --}}
+    <a href="https://in.sumsub.com/websdk/p/uni_5S1a9f2fkX4oqzCU"
+       target="_blank" rel="noopener"
+       class="btn btn-sm btn-secondary">
+       KYC
+    </a>
+</div>
+
                         </div>
                         <div class="col-lg-4 col-4 text-center">
                             <img class="img-fluid" src="{{ asset('images/coin.png') }}" alt="view sales">
@@ -108,10 +121,10 @@
                                 <div class="media-body">
                                     <h5 class="text-white fs-20">Cold Wallet Balance</h5>
                                     <h1 class="text-white mb-0">
-                                        {{ $totalBalance }} HRA
+                                        € {{ number_format($totalBalanceDollar) }}
                                     </h1>
                                     <small class="text-white">
-                                        € {{ number_format($totalBalanceDollar) }}
+                                        {{ $totalBalance }} HRA
                                     </small>
                                 </div>
                             </div>
@@ -391,7 +404,7 @@
 
                         {{-- Static HRA Coin Price Chart --}}
                         <div class="chart-container" style="width: 100%; height: auto; margin-top: 20px;">
-                            <img src="{{ asset('images/hra-static-chart.png') }}" alt="HRA Coin Price Chart"
+                            <img src="{{ asset('images/hra-static-chart.jpeg') }}" alt="HRA Coin Price Chart"
                                 style="width: 100%; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
                         </div>
                     @endif
