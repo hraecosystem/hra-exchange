@@ -97,9 +97,15 @@
 </div>
 
                         </div>
-                        <div class="col-lg-4 col-4 text-center">
-                            <img class="img-fluid" src="{{ asset('images/coin.png') }}" alt="view sales">
-                        </div>
+ <div class="col-lg-4 col-4 text-center">
+  <img 
+    src="{{ asset('images/coin.png') }}" 
+    alt="view sales"
+    class="img-fluid" 
+    style="max-width: 80px; height: auto;"
+  >
+</div>
+
                     </div>
                 </div>
 
