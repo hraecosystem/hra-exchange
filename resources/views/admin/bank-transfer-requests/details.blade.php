@@ -1,11 +1,5 @@
 @extends('admin.layouts.master')
 @section('content')
-    <?php
-    
-    use App\Traits\CoinTrait;
-
-    $totalBalanceEuro = toHumanReadable($this->calculateEuroCoins($bankTransferRequest->amount_hra));
-    ?>
     <div class="container-fluid">
         <h2>Bank Transfer Request Details (ID: {{ $bankTransferRequest->id }})</h2>
 
@@ -29,7 +23,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <p><strong>Requested HRA:</strong> {{ number_format($bankTransferRequest->amount_hra, 8) }}</p>
-                        <p><strong>Equivalent Fiat:</strong> {{ $totalBalanceEuro }} EUR
+                        <p><strong>Equivalent Fiat:</strong> {{ number_format($bankTransferRequest->amount_fiat, 2) }} EUR
                             {{-- Adjust currency --}}</p>
                         <p><strong>Bank Name:</strong> {{ $bankTransferRequest->bank_name }}</p>
                         <p><strong>Account Holder Name:</strong> {{ $bankTransferRequest->account_name }}</p>
@@ -145,8 +139,7 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
-                                <input type="text" hidden name="amout_rejected"
-                                    value="{{ $bankTransferRequest->amount_hra }}">
+                                <input type="text" hidden name="amout_rejected" value="{{$bankTransferRequest->amount_hra}}">
                                 <button type="submit" class="btn btn-danger">Reject Request</button>
                             </form>
                         </div>
