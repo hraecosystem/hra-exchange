@@ -3,7 +3,6 @@
     <?php
     
     use App\Traits\CoinTrait;
-    use CoinTrait;
 
     $totalBalanceEuro = toHumanReadable($this->calculateEuroCoins($bankTransferRequest->amount_hra));
     ?>
