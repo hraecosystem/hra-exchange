@@ -49,7 +49,7 @@
                                 <td>{{ $request->bank_name }}</td>
                                 <td>{{ $request->iban }}</td>
                                 <td>
-                                    <span class="badge badge-{{ $request->status == 'pending' ? 'warning' : ($request->status == 'approved' ? 'success' : 'danger') }}">
+                                    <span style="color: {{ $request->status == 'pending' ? 'orang' : ($request->status == 'approved' ? 'green' : 'red') }}" class="badge badge-{{ $request->status == 'pending' ? 'warning' : ($request->status == 'approved' ? 'success' : 'danger') }}">
                                         {{ ucfirst($request->status) }}
                                     </span>
                                 </td>
